@@ -31,7 +31,7 @@ const images = [
     },
     {
       url: '/images/torturi.jpeg',
-      title: 'Torturi',
+      title: 'Tort',
       width: '20%',
     },
   ];

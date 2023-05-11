@@ -32,28 +32,33 @@ async function getRecords(Model, req, res) {
 
 async function getFilteredRecords(Model, req, res) {
     try {
-        let recs = await Model.findAll();
+        let categ = req.params['categorie'];
+        let recs = await Model.findAll(
+            {
+                where: {
+                    categorie: categ
+                }
+            }
+        );
 
         if (recs.length > 0) {
-            let categ = req.params['categorie'];
 
             // const data = recs.filter((x) => {
             //     return x.dataValues.categorie == categ
             // });
 
-            const data = await Model.findAll({
-                where: {
-                    categorie: categ
-                }
-            });
-            res.status(200).json({ data});
+            // const data = await Model.findAll({
+            //     where: {
+            //         categorie: categ
+            //     }
+            // });
+            res.status(200).json(recs);
         } else {
             res.status(204).send();
         }
         
     } catch (err) {
         res.status(500).json(err);
-        console.log(req + res + err);
     }
 }
 

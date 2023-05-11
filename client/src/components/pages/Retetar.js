@@ -1,12 +1,11 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import './Retetar.css';
 import {Button} from '@material-ui/core';
-import {Card, CardContent, CardActions, Typography, Stack, Avatar} from '@mui/material';
-import  ButtonsRetetar  from "../ButtonsRetetar";
+import {Card, CardContent,CardActions,Typography,Stack,Avatar} from '@mui/material';
+import ButtonsRetetar from "../ButtonsRetetar";
 
 //poate sa dispara-> pt avatar?????????????????????????????????????
-const images = [
-  {
+const images = [{
     url: '/images/ciocolata.jpeg',
     title: 'Ciocolata',
     width: '20%',
@@ -34,50 +33,44 @@ const images = [
 ];
 
 
-function Retetar(){
+function Retetar() {
 
   const [category, setCategory] = useState();
   const [recipes, setRecipes] = useState([]);
 
-  async function handleClick(category){
+  async function handleClick(category) {
     setCategory(category);
-    try{
+    try {
       const baseURL = "http://localhost:8080";
-      console.log(category);
-      // const res = await fetch (`${baseURL}/produse/categorie`
-    //   ,{
-    //   method: 'GET',
-    //   headers: {
-    //     'categorie': `${category}`,
-    //   },
-    // }    );
-
-    const res = await fetch(`http://localhost:8080/produse/?categorie=${category}`);
-
-      console.log(`${baseURL}/produse/${category}`);        
-      if(res.status === 200){
-          const data = await res.json();
-          setRecipes(data);
-          console.log(data);
+      let categ=category.toLowerCase();
+      console.log(categ);
+      const res = await fetch(`${baseURL}/produse/categorie/${categ}`);
+      console.log(`${baseURL}/produse/categorie/${categ}`);
+      if (res.status === 200) {
+        const data = await res.json();
+        setRecipes(data);
+        console.log(data);
       }
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
   };
 
 
 
-    return (
-      <>
+  return ( 
+    <>
 
-        <div className='container-retetar'>
-          <ButtonsRetetar className="buttons" handleClick={handleClick}/>
-          <Button className='button'><a  id="adaugareReteta" className="add-btn" href={`#/retetar`}>  Adauga reteta+</a></Button>
+    <div className = 'container-retetar' >
+    <ButtonsRetetar className = "buttons"
+    handleClick = { handleClick}/> 
+    <Button className = 'button' >
+       < a id = "adaugareReteta" className = "add-btn"href = {`#/retetar`} > Adauga reteta + </a>
+    </Button >
 
-          <Stack className='lista-retete' direction="row" spacing={2}>
+    <Stack className = 'lista-retete' direction = "row" spacing = {2} >
 
-
-            {recipes.map((recipe) => (
+    {recipes.map((recipe) => (
               <Card sx={{ maxWidth: 345 }}>
             <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -90,12 +83,11 @@ function Retetar(){
         </CardActions>
               </Card>
             ))}
-          </Stack>
+        </Stack> 
         </div>
 
-      </>
-    )
-  }
-  
-  export default Retetar;
-  
+    </>
+  )
+}
+
+export default Retetar;
