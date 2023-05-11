@@ -1,0 +1,32 @@
+*{
+     padding: 0;
+    margin-top: 0; 
+     /* padding-left: 20%; */
+}
+
+.container-retetar{
+padding-left: 6%;
+/* padding-top: 100px; */
+}
+
+.button{
+    text-decoration: none;
+}
+
+.lista-retete{
+text-decoration: none;
+list-style: none;
+display: flexbox;
+flex-direction: row;
+padding-top: 10%;
+padding-left: 5%;
+
+}
+
+li{
+    width: 30%;
+}
+
+.buttons{
+    width: 100%;
+}

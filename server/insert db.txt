@@ -1,0 +1,96 @@
+//produse
+[
+    {
+        "id": "eadb1b5e-347a-4c84-89df-cd009e74ef4a",
+        "denumire": "Ecler cu ciocolata belgiana",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 6
+    },
+    {
+        "id": "b45e3a7f-1642-485c-a4fa-a16244462257",
+        "denumire": "Ecler cu ciocolata cu alune",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 5
+    },
+    {
+        "id": "290e842f-de47-4132-b6a3-43d09d08430e",
+        "denumire": "Ecler cu ciocolata cu lapte",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 6.5
+    },
+    {
+        "id": "eb5f5090-1a53-42be-b6fa-b34f556c5e5d",
+        "denumire": "Ecler cu vanilie",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 6.5
+    },
+    {
+        "id": "7efefeff-c4cc-4af0-b54b-768a8785e05a",
+        "denumire": "Ecler cu zmeura",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 3
+    },
+    {
+        "id": "16e2b320-a2ea-46fb-b662-bf97dbba19a5",
+        "denumire": "Ecler cu mango",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 3
+    },
+    {
+        "id": "3628d46f-5d89-4aaf-a641-d0a506c393a2",
+        "denumire": "Ecler cu tiramisu",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 7
+    },
+    {
+        "id": "35e22ea1-b625-45b2-81d2-40c095fff0a1",
+        "denumire": "Ecler cu fistic",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 3.5
+    },
+    {
+        "id": "e6b09b34-8b8f-4607-a904-14536b3b02df",
+        "denumire": "Ecler snikers",
+        "categorie": "ecler",
+        "pret_vanzare": 15,
+        "profit": 5.5
+    }
+]
+
+//retetar
+
+[
+    {
+        "id": "ef4d0c2a-eecd-4f68-9a87-770e76da62ba",
+        "denumire": "Ecler cu cu ciocolata belgiana",
+        "numar_produse": 38,
+        "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pune si esenta de vanilie, dupa gust. Pentru un gust mai intens, se poate folosi ciocolata amaruie in loc de cea cu lapte Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere cu ciocolata: Daca ai un dui cu varf ascutit poti umple eclerele prin gaurile facute dja in coji. Sau, se foloseste varianta clasica, taiat cojile in 2 si se umplu cu crema. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Se poate folosi si smantana pentru frisca/frisca lichida in loc de lapte.",
+        "valori_nutritionale": "450kcal",
+        "produseId": null
+    },
+    {
+        "id": "fddb4cda-efdd-44a4-bc8c-881ddfd73517",
+        "denumire": "Ecler cu cu ciocolata cu alune",
+        "numar_produse": 40,
+        "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pun alunele maruntite bine. Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere: Umple eclerele prin gaurile facute deja in coji. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Deasupra glazurii se pun 3 alune intregi si logo-ul nostru din ciocolata.",
+        "valori_nutritionale": "435kcal",
+        "produseId": null
+    },
+    {
+        "id": "65090baf-33b6-40c8-91c0-4a22e852e07e",
+        "denumire": "Ecler cu cu zmeura",
+        "numar_produse": 30,
+        "mod_preparare": "Incalziti smantana lichida si turnati-o apoi peste ciocolata alba rupta bucatele. Omogenizati bine si lasati la racit Bateti bine crème patisserie, opriti 3 linguri si restul incorporati usor in crema de ciocolata alba. Zdrobiti zmeura cu o furculita si adaugati-o in crema, amestacand lejer. Amestecati piureul de zmeura (obtinut din 100 gr zmeura pasata si trecuta prin sita) cu frisca oprita si glazurati capacele de la eclere cu o pensula. Umpleti eclerele cu crema de zmeura, puneti capacele glazurate si ornati cu 3 fructe de zmeura apoi adaugati logo-ul nostru din ciocolata",
+        "valori_nutritionale": "400kcal",
+        "produseId": null
+    }
+]
+
