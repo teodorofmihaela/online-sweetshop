@@ -62,6 +62,29 @@ async function getFilteredRecords(Model, req, res) {
     }
 }
 
+
+
+async function getFilteredRecipe(Model, req, res) {
+    try {
+        let idProd = req.params['produseId'];
+        let recs = await Model.findAll(
+            {
+                where: {
+                    produseId: idProd
+                }
+            }
+        );
+        if (recs.length > 0) {
+            res.status(200).json(recs);
+        } else {
+            res.status(204).send();
+        }
+        
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
+
 async function headRecord(Model, req, res) {
     try {
         let rec = await Model.findByPk(req.params.id);
@@ -233,5 +256,6 @@ export {
     deleteRecord,
     getAttributes,
     getFilteredRecords,
+    getFilteredRecipe,
     login
 }

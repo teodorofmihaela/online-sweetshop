@@ -36,20 +36,19 @@ const images = [{
 function Retetar() {
 
   const [category, setCategory] = useState();
-  const [recipes, setRecipes] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  const baseURL = "http://localhost:8080";
 
   async function handleClick(category) {
     setCategory(category);
     try {
-      const baseURL = "http://localhost:8080";
+      
       let categ=category.toLowerCase();
-      console.log(categ);
       const res = await fetch(`${baseURL}/produse/categorie/${categ}`);
-      console.log(`${baseURL}/produse/categorie/${categ}`);
       if (res.status === 200) {
         const data = await res.json();
-        setRecipes(data);
-        console.log(data);
+        setProducts(data);
       }
     } catch (err) {
       console.log(err);
@@ -57,31 +56,44 @@ function Retetar() {
   };
 
 
+  async function clickVeziReteta(idProduct){
+    try {
+    console.log(idProduct);
+    const res = await fetch(`http://localhost:8080/retetar/produseId/${idProduct}`);
+    console.log(`${baseURL}/retetar/produseId/${idProduct}`);
+    if (res.status === 200) {
+      const data = await res.json();
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  };
+
 
   return ( 
     <>
 
     <div className = 'container-retetar' >
-    <ButtonsRetetar className = "buttons"
-    handleClick = { handleClick}/> 
-    <Button className = 'button' >
-       < a id = "adaugareReteta" className = "add-btn"href = {`#/retetar`} > Adauga reteta + </a>
-    </Button >
-
+      <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
+    <div className = 'add-button'>
+      <Button  >
+        < a id = "adaugareReteta" href = {`retetar/add`} > Adauga reteta + </a>
+      </Button >
+    </div>
     <Stack className = 'lista-retete' direction = "row" spacing = {2} >
 
-    {recipes.map((recipe) => (
-              <Card sx={{ maxWidth: 345 }}>
-            <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          <Avatar alt={recipe.denumire} src="`url(${image.url})`" />
-          {recipe.denumire}
-           </Typography>
-          </CardContent>
+    {products.map((product) => (
+      <Card sx={{ maxWidth: 345 }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            <Avatar alt={product.denumire} src="`url(${image.url})`" />
+            {product.denumire}
+            </Typography>
+        </CardContent>
           <CardActions>
-        <Button size="small">Vezi reteta</Button>
-        </CardActions>
-              </Card>
+            <Button onClick={event => clickVeziReteta(product.id)} size="small">Vezi reteta</Button>
+          </CardActions>
+      </Card>
             ))}
         </Stack> 
         </div>

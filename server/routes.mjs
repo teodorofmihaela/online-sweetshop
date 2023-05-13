@@ -2,7 +2,7 @@ import express from 'express';
 import { Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
     Vanzari, Ingrediente_In_Retete, Program_aparatura, Produse, Angajati, Utilizatori, Drepturi} from './repository.mjs';
 import { getRecord, getRecords, headRecord, postRecord, putRecord, patchRecord, deleteRecord, deleteRecords,
-    getAttributes, getFilteredRecords, login} from './service.mjs';
+    getAttributes, getFilteredRecords,getFilteredRecipe, login} from './service.mjs';
 
 
 const router=express.Router();
@@ -19,9 +19,9 @@ router.route('/ingrediente')
     .get((req,res)=>getRecords(Ingrediente,req,res))
     .put((req,res)=>putRecord(Ingrediente,req,res));
 
-//ruta pt cand dai click pe o anumita reteta
+//ruta pt cand dai click pe o anumita categorie
 router.route(`/produse/categorie/:categorie`)
-.get((req,res)=>getFilteredRecords(Produse,req,res));
+    .get((req,res)=>getFilteredRecords(Produse,req,res));
 
 
 //ruta pt un anumit produs produsele dupa id
@@ -41,6 +41,17 @@ router.route('/produse')
     .put((req,res)=>putRecord(Produse,req,res));
 
 
+//ruta pt cand dai click pe o anumita reteta
+router.route('/retetar/produseId/:produseId')
+    .get((req,res)=>getFilteredRecipe(Retetar,req,res));
+
+
+//ruta pt cand dai click pe o anumita reteta
+router.route('/retetar/:id')
+    .delete((req,res) => deleteRecord(Retetar,req,res))
+    .patch((req,res)=>patchRecord(Retetar,req,res)) 
+    .head((req,res)=>headRecord(Retetar,req,res))//verific daca exista acel id
+    .get((req,res)=>getRecord(Retetar,req,res));
 
 
 //ruta pt toate retetele
@@ -50,12 +61,7 @@ router.route('/retetar')
     .get((req,res)=>getRecords(Retetar,req,res))
     .put((req,res)=>putRecord(Retetar,req,res));
 
-//ruta pt cand dai click pe o anumita reteta
-router.route('/retetar/:id')
-.delete((req,res) => deleteRecord(Retetar,req,res))
-.patch((req,res)=>patchRecord(Retetar,req,res)) 
-.head((req,res)=>headRecord(Retetar,req,res))//verific daca exista acel id
-.get((req,res)=>getRecord(Retetar,req,res));
+
 
 //ruta pt toate vanzarile
 router.route('/vanzari')
