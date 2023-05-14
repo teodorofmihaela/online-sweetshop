@@ -1,0 +1,27 @@
+.recipe-content{
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+#form{
+    display: flex;
+    /* flex-direction: column;*/
+    gap: 16%;
+    justify-content: flex-start; 
+}
+
+.form-icon {
+    padding-right: 2%;
+    color: rgb(193, 161, 232);
+}
+
+.input{
+    color: rgb(226, 161, 232);
+}
+
+.button-add{
+    display: flex;
+    flex-direction: row;
+    gap: 6%;
+    justify-content: center;
+}

@@ -5,7 +5,8 @@ import Home from './components/pages/Home';
 import SignIn from './components/pages/SignIn';
 import SignUp from './components/pages/SignUp';
 import Retetar from './components/pages/Retetar';
-
+import AddRecipe from './components/pages/AddRecipe';
+import Recipe from './components/pages/AddRecipe';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
 
@@ -58,6 +59,8 @@ function App() {
              {/* swich is replaced  by routes */}
             <Route  path='/' element={<Home/>} />            
             <Route path='/retetar' element={<Retetar/>} />
+            <Route path='/retetar/:retetarId' element={<Recipe/>} />
+            <Route path='/retetar/add' element={<AddRecipe/>} />
             <Route path='/home' element={<Home/>} />
             <Route path='/sign-in' element={<SignIn/>} />
             <Route path='/sign-up' element={<SignUp/>} />       

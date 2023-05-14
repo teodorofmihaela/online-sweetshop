@@ -37,6 +37,7 @@ function Retetar() {
 
   const [category, setCategory] = useState();
   const [products, setProducts] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
   const baseURL = "http://localhost:8080";
 
@@ -63,6 +64,8 @@ function Retetar() {
     console.log(`${baseURL}/retetar/produseId/${idProduct}`);
     if (res.status === 200) {
       const data = await res.json();
+      setRecipes(data);
+      console.log(recipes);
     }
   } catch (err) {
     console.log(err);
@@ -91,7 +94,11 @@ function Retetar() {
             </Typography>
         </CardContent>
           <CardActions>
-            <Button onClick={event => clickVeziReteta(product.id)} size="small">Vezi reteta</Button>
+            <Button onClick={event => clickVeziReteta(product.id)} size="small">
+            {/* {recipes.map((recipe) => ( */}
+            < a id = "veziReteta" href = {`retetar/${recipes.id}`} >  Vezi reteta </a>
+           
+            </Button>
           </CardActions>
       </Card>
             ))}
