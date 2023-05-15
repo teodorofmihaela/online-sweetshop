@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './AddRecipe.css';
 import {Typography,FormGroup, Grid, Button, IconButton, InputAdornment,
-     TextField, TextareaAutosize, AlertTitle, Card, Fade  } from '@material-ui/core';
+     TextField, TextareaAutosize, Checkbox, FormControlLabel, AlertTitle, Card, Fade  } from '@material-ui/core';
 import Alert from '@mui/material/Alert';
 import { Stack } from '@mui/material';
 // import {Item} from '@material-ui/core';
@@ -15,11 +15,37 @@ import EggIcon from '@mui/icons-material/Egg';
 
 function Recipe() {
 
-    const [recipeNameInput, setRecipeNameInput] = useState();
-    const [productsNumberInput, setProductsNumberInput] = useState();
-    const [valoriNutritionaleInput, setValoriNutritionaleInput] = useState();
-    const [ingredientsInput, setIngredientsInput] = useState();
-    const [instructionsInput, setInstructionsInput] = useState();
+const [recipeNameInput, setRecipeNameInput] = useState();
+const [productsNumberInput, setProductsNumberInput] = useState();
+const [valoriNutritionaleInput, setValoriNutritionaleInput] = useState();
+const [ingredientsInput, setIngredientsInput] = useState();
+const [instructionsInput, setInstructionsInput] = useState();
+const [ingredients, setIngredients] = useState();
+
+
+const baseURL = "http://localhost:8080";
+
+useEffect(() =>{
+    const dataFetch = async () => {
+        const data = await (
+            await fetch(`${baseURL}/ingrediente`)).json();
+            setIngredients(data);
+    };
+    dataFetch();
+},[]);
+
+async function allIngredients() {
+  try {
+      const res = await fetch(`${baseURL}/ingrediente`);
+    if (res.status === 200) {
+      const data = await res.json();
+      setIngredients(data);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 
 
 function onReset() {
@@ -52,7 +78,7 @@ function onReset() {
                             </div>
                             <div>
                                 <FoodBankIcon className='form-icon' fontSize='large' />
-                                <TextareaAutosize minRows={3} placeholder="Mod de preparare reteta" variant="outlined" style={{ width: "250px" }}
+                                <TextareaAutosize minRows={3} placeholder="Mod de preparare reteta"  variant="outlined" style={{ width: "250px" }}
                                 value={instructionsInput} onChange={event => setInstructionsInput(event.target.value)}></TextareaAutosize>
                             </div>
                             <div>
@@ -76,13 +102,26 @@ function onReset() {
                                 <EggIcon className='form-icon' fontSize='large' />
                                 <TextField className="input" value={ingredientsInput} size="small" style={{ width: "250px" }}
                                     onChange={event => setIngredientsInput(event.target.value)}
-                                    label="Ingrediente" variant="outlined">
+                                    label="Cantitate ingredient" variant="outlined">
                                 </TextField>
+                            <div>
+                                {ingredients && ingredients.map((ingredient) => (
+ <FormGroup>
+                                <FormControlLabel control={<Checkbox  />} label={`${ingredient.nume} (${ingredient.unitate_masura})`}/>
+                                <EggIcon className='form-icon' fontSize='large' />
+
+                                 <FormControlLabel className="input" control={<TextField type="number" value={ingredientsInput} size="small" style={{ width: "250px" }}
+                                    onChange={event => setIngredientsInput(event.target.value)}
+                                    label="Cantitate ingredient" variant="outlined"/>}/>
+                                 </FormGroup> 
+                                ))}
+                                
+                            </div>  
                             </div>
                             {/* <Item> */}
                                 <div className='button-add'>
-                                    <Button  variant="contained" color="Primary" onClick={onReset}>Adauga <AddCircleOutlineIcon style={{ paddingLeft: "7px" }} /></Button>
-                                    <Button  variant="contained" color="Primary" onClick={onReset}>Reset <AutorenewIcon style={{ paddingLeft: "7px" }} /></Button>
+                                    <Button  variant="contained" color="primary" onClick={onReset}>Adauga <AddCircleOutlineIcon style={{ paddingLeft: "7px" }} /></Button>
+                                    <Button  variant="contained" color="primary" onClick={onReset}>Reset <AutorenewIcon style={{ paddingLeft: "7px" }} /></Button>
                                 </div>
                             {/* </Item> */}
                             <div>
