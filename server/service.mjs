@@ -116,8 +116,8 @@ async function postRecord(Model, req, res) {
     try {
         if (isValid(Model, req.body)) {
             let rec = await Model.create(req.body);
-            res.status(201)
-                .location(`http://${req.headers.host}${req.baseUrl}${req.url}/${rec.id}`).send();
+            res.status(201).send();
+                // .location(`http://${req.headers.host}${req.baseUrl}${req.url}/${rec.id}`).send();
 
         } else {
             res.status(400).send();

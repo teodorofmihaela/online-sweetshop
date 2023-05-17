@@ -78,19 +78,15 @@ const Retetar = sequelize.define('retetar',{
     },
     denumire:{
         type:Sequelize.STRING,
-        allowNull:false
     },
     numar_produse:{
         type:Sequelize.FLOAT(5,2),
-        allowNull:false
     },
     mod_preparare:{
         type:Sequelize.STRING,
-        allowNull:false
     },
     valori_nutritionale:{
         type:Sequelize.STRING,
-        allowNull:false
     }
 })
 

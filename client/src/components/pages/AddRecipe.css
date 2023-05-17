@@ -6,7 +6,7 @@
 #form{
     display: flex;
     /* flex-direction: column;*/
-    gap: 16%;
+    gap: 20%;
     justify-content: flex-start; 
 }
 
@@ -17,6 +17,16 @@
 
 .input{
     color: rgb(226, 161, 232);
+}
+
+.checkbox-input{
+    padding-left: 4%;
+    margin-top: -6%;
+}
+
+.checkbox-icon{
+    margin: 0% 3% -3% 0%;
+    color: rgb(193, 161, 232);
 }
 
 .button-add{

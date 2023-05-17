@@ -9,10 +9,10 @@ padding-left: 6%;
 /* padding-top: 100px; */
 }
 
-.add-btn{
-    text-decoration: none;
-    padding-left: 60%;
-    width: 100%;
+.add-button{
+    padding-left: 4%;
+    padding-top: 5px;
+    width: 20%;
 }
 
 .lista-retete{

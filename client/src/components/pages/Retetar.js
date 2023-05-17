@@ -78,9 +78,9 @@ function Retetar() {
 
     <div className = 'container-retetar' >
       <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
-    <div className = 'add-button'>
-      <Button  >
-        < a id = "adaugareReteta" href = {`retetar/add`} > Adauga reteta + </a>
+    <div className='add-button'>
+      <Button  variant="contained" color="primary" href = {`retetar/add`}>
+        Adauga reteta + 
       </Button >
     </div>
     <Stack className = 'lista-retete' direction = "row" spacing = {2} >
@@ -94,9 +94,8 @@ function Retetar() {
             </Typography>
         </CardContent>
           <CardActions>
-            <Button onClick={event => clickVeziReteta(product.id)} size="small">
-            {/* {recipes.map((recipe) => ( */}
-            < a id = "veziReteta" href = {`retetar/${recipes.id}`} >  Vezi reteta </a>
+            <Button variant="contained" color="primary" href = {`retetar/${recipes.id}`} onClick={event => clickVeziReteta(product.id)} size="small">
+              Vezi reteta 
            
             </Button>
           </CardActions>
