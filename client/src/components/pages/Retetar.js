@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Retetar.css';
 import {Button} from '@material-ui/core';
-import {Card, CardContent,CardActions,Typography,Stack,Avatar} from '@mui/material';
+import {Card, CardContent,CardActions,Typography,Stack,Avatar, Box} from '@mui/material';
 import ButtonsRetetar from "../ButtonsRetetar";
 
 //poate sa dispara-> pt avatar?????????????????????????????????????
@@ -83,10 +83,9 @@ function Retetar() {
         Adauga reteta + 
       </Button >
     </div>
-    <Stack className = 'lista-retete' direction = "row" spacing = {2} >
-
+    <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '90%' }}>
     {products.map((product) => (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345 }} className='products' >
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
             <Avatar alt={product.denumire} src="`url(${image.url})`" />
@@ -96,12 +95,11 @@ function Retetar() {
           <CardActions>
             <Button variant="contained" color="primary" href = {`retetar/${recipes.id}`} onClick={event => clickVeziReteta(product.id)} size="small">
               Vezi reteta 
-           
             </Button>
           </CardActions>
       </Card>
             ))}
-        </Stack> 
+        </Box>
         </div>
 
     </>
