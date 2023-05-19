@@ -83,7 +83,7 @@ function Retetar() {
         Adauga reteta + 
       </Button >
     </div>
-    <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '90%' }}>
+    <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '80%' }}>
     {products.map((product) => (
       <Card sx={{ maxWidth: 345 }} className='products' >
           <CardContent>
