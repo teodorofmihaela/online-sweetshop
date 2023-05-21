@@ -42,7 +42,7 @@ router.route('/produse')
 
 
 //ruta pt cand dai click pe o anumita reteta
-router.route('/retetar/produseId/:produseId')
+router.route('/retetar/denumire/:denumire')
     .get((req,res)=>getFilteredRecipe(Retetar,req,res));
 
 

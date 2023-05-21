@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Retetar.css';
 import {Button} from '@material-ui/core';
-import {Card, CardContent,CardActions,Typography,Stack,Avatar, Box} from '@mui/material';
+import {Card, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
 import ButtonsRetetar from "../ButtonsRetetar";
 
 //poate sa dispara-> pt avatar?????????????????????????????????????
@@ -57,20 +57,20 @@ function Retetar() {
   };
 
 
-  async function clickVeziReteta(idProduct){
-    try {
-    console.log(idProduct);
-    const res = await fetch(`http://localhost:8080/retetar/produseId/${idProduct}`);
-    console.log(`${baseURL}/retetar/produseId/${idProduct}`);
-    if (res.status === 200) {
-      const data = await res.json();
-      setRecipes(data);
-      console.log(recipes);
-    }
-  } catch (err) {
-    console.log(err);
-  }
-  };
+  // async function clickVeziReteta(denumire){
+  //   try {
+  //   console.log(denumire);
+  //   const res = await fetch(`http://localhost:8080/retetar/denumire/${denumire}`);
+  //   console.log(`${baseURL}/retetar/denumire/${denumire}`);
+  //   if (res.status === 200) {
+  //     const data = await res.json();
+  //     setRecipes(data);
+  //     console.log(recipes);
+  //   }
+  // } catch (err) {
+  //   console.log(err);
+  // }
+  // };
 
 
   return ( 
@@ -93,7 +93,11 @@ function Retetar() {
             </Typography>
         </CardContent>
           <CardActions>
-            <Button variant="contained" color="primary" href = {`retetar/${recipes.id}`} onClick={event => clickVeziReteta(product.id)} size="small">
+            <Button variant="contained" color="primary"
+             href = {`retetar/${product.denumire}`} 
+              //  onClick={event => veziRetetaClick(product.denumire)} 
+               size="small">
+                
               Vezi reteta 
             </Button>
           </CardActions>

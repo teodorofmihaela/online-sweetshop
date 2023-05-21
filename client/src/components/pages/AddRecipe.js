@@ -77,6 +77,7 @@ async function adauga() {
             }
             else if(res.status!=201 || res==null){
                 notifyError();
+                //TODO: validare sa nu poti introduce mai multe retete pentru acelasi produs
             }
     }catch (err) {
         console.log(err);

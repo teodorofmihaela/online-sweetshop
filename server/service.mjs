@@ -66,11 +66,11 @@ async function getFilteredRecords(Model, req, res) {
 
 async function getFilteredRecipe(Model, req, res) {
     try {
-        let idProd = req.params['produseId'];
+        let den = req.params['denumire'];
         let recs = await Model.findAll(
             {
                 where: {
-                    produseId: idProd
+                    denumire: den
                 }
             }
         );
