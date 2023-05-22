@@ -69,31 +69,62 @@
 
 [
     {
-        "id": "ef4d0c2a-eecd-4f68-9a87-770e76da62ba",
-        "denumire": "Ecler cu cu ciocolata belgiana",
+        "id": "2f5a2356-4def-400d-bf7e-f04c0aff828b",
+        "denumire": "Ecler cu ciocolata belgiana",
         "numar_produse": 38,
         "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pune si esenta de vanilie, dupa gust. Pentru un gust mai intens, se poate folosi ciocolata amaruie in loc de cea cu lapte Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere cu ciocolata: Daca ai un dui cu varf ascutit poti umple eclerele prin gaurile facute dja in coji. Sau, se foloseste varianta clasica, taiat cojile in 2 si se umplu cu crema. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Se poate folosi si smantana pentru frisca/frisca lichida in loc de lapte.",
         "valori_nutritionale": "450kcal",
         "produseId": null
     },
     {
-        "id": "fddb4cda-efdd-44a4-bc8c-881ddfd73517",
-        "denumire": "Ecler cu cu ciocolata cu alune",
+        "id": "c0ebc76c-c713-459a-956e-a898c239414e",
+        "denumire": "Ecler cu ciocolata cu alune",
         "numar_produse": 40,
         "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pun alunele maruntite bine. Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere: Umple eclerele prin gaurile facute deja in coji. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Deasupra glazurii se pun 3 alune intregi si logo-ul nostru din ciocolata.",
         "valori_nutritionale": "435kcal",
         "produseId": null
     },
     {
-        "id": "65090baf-33b6-40c8-91c0-4a22e852e07e",
-        "denumire": "Ecler cu cu zmeura",
+        "id": "2b5c1088-893a-4eaa-b770-8cc25d9c46d1",
+        "denumire": "Ecler cu zmeura",
         "numar_produse": 30,
         "mod_preparare": "Incalziti smantana lichida si turnati-o apoi peste ciocolata alba rupta bucatele. Omogenizati bine si lasati la racit Bateti bine crème patisserie, opriti 3 linguri si restul incorporati usor in crema de ciocolata alba. Zdrobiti zmeura cu o furculita si adaugati-o in crema, amestacand lejer. Amestecati piureul de zmeura (obtinut din 100 gr zmeura pasata si trecuta prin sita) cu frisca oprita si glazurati capacele de la eclere cu o pensula. Umpleti eclerele cu crema de zmeura, puneti capacele glazurate si ornati cu 3 fructe de zmeura apoi adaugati logo-ul nostru din ciocolata",
         "valori_nutritionale": "400kcal",
         "produseId": null
+    },
+    {
+        "id": "6e4ed930-6131-4590-9639-b4df1388aaaa",
+        "denumire": "Pralina cu ciocolata alba",
+        "numar_produse": 100,
+        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele.Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste ganache-ul de ciocolata alba cu care se vor umple pralinele. Ciocolata alba se rupe in bucati si se pune intr-un bol impreuna cu smantana pentru frisca. Se toarna cate putin din ganache in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma.  ",
+        "valori_nutritionale": "40kcal",
+        "produseId": null
+    },
+    {
+        "id": "937fbe17-ccf8-4a24-b6d3-4028b8dc4aac",
+        "denumire": "Pralina cu lavanda",
+        "numar_produse": 80,
+        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele. Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste umplutura de lavanda gata preparata cu care se vor umple pralinele. Se toarna cate putin dinumplutura in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma. ",
+        "valori_nutritionale": "39",
+        "produseId": null
+    },
+    {
+        "id": "64807441-169b-4313-8149-c2cc38693919",
+        "denumire": "Pralina simpla",
+        "numar_produse": 120,
+        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele. Se dau formele umplute la congelator pentru 20 minute si se pot scoate din forma.",
+        "valori_nutritionale": "35",
+        "produseId": null
+    },
+    {
+        "id": "88d4eaf8-3601-4167-8dee-8f099dfcc22b",
+        "denumire": "Pralina cu ciocolata alba",
+        "numar_produse": 100,
+        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele.Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste ganache-ul de ciocolata alba cu care se vor umple pralinele. Ciocolata alba se rupe in bucati si se pune intr-un bol impreuna cu smantana pentru frisca. Se toarna cate putin din ganache in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma.  ",
+        "valori_nutritionale": "40kcal",
+        "produseId": null
     }
 ]
-
 
 
 

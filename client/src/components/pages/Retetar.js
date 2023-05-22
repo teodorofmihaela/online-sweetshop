@@ -3,6 +3,7 @@ import './Retetar.css';
 import {Button} from '@material-ui/core';
 import {Card, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
 import ButtonsRetetar from "../ButtonsRetetar";
+import AddIcon from '@mui/icons-material/Add';
 
 //poate sa dispara-> pt avatar?????????????????????????????????????
 const images = [{
@@ -79,8 +80,8 @@ function Retetar() {
     <div className = 'container-retetar' >
       <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
     <div className='add-button'>
-      <Button  variant="contained" color="primary" href = {`retetar/add`}>
-        Adauga reteta + 
+      <Button  variant="contained" color="primary" href = {`retetar/add`} startIcon={<AddIcon />}>
+        Adauga reteta  
       </Button >
     </div>
     <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '80%' }}>

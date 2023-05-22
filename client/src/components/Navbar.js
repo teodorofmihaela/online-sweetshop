@@ -43,7 +43,7 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-links'  onClick={closeMobieMenu}>
+            <Link to='/aprovizionare' className='nav-links'  onClick={closeMobieMenu}>
             <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-cubes-stacked" />Aprovizionare
             </Link>
           </li>

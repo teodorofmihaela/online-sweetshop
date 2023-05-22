@@ -1,3 +1,16 @@
+*{
+padding: 0;
+margin: 0;
+}
+
 .description-content{
-    margin-left: 10%;
+    margin-left: 9.5%;
+}
+
+[class^='box'], [class*=' box']{
+padding-left: 2%;
+}
+
+.box-text{
+padding-right: 2%;
 }

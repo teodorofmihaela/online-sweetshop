@@ -7,6 +7,7 @@ import SignUp from './components/pages/SignUp';
 import Retetar from './components/pages/Retetar';
 import AddRecipe from './components/pages/AddRecipe';
 import Recipe from './components/pages/Recipe';
+import Supply from './components/pages/Supply';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
 
@@ -61,6 +62,7 @@ function App() {
             <Route path='/retetar' element={<Retetar/>} />
             <Route exact path='/retetar/:denumire' element={<Recipe/>} />
             <Route exact path='/retetar/add' element={<AddRecipe/>} />
+            <Route exact path='/aprovizionare' element={<Supply/>} />
             <Route path='/home' element={<Home/>} />
             <Route path='/sign-in' element={<SignIn/>} />
             <Route path='/sign-up' element={<SignUp/>} />       
