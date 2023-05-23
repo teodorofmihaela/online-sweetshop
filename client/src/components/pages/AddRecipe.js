@@ -92,6 +92,7 @@ function onReset() {
     setIngredientsInput("");
     setInstructionsInput("");
     setProductId("");
+    setProducts("");
 }
 
 
@@ -113,8 +114,8 @@ function onReset() {
                             </div>
                             <div>
                                 <FoodBankIcon className='form-icon' fontSize='large' />
-                                <TextareaAutosize minRows={3} placeholder="Mod de preparare reteta"  variant="outlined" style={{ width: "285px" }}
-                                value={instructionsInput} onChange={event => setInstructionsInput(event.target.value)}></TextareaAutosize>
+                                <TextareaAutosize minRows={3} placeholder="Mod de preparare reteta" variant="outlined" style={{ width: "285px", fontSize: 20  }}
+                                value={instructionsInput} onChange={event => setInstructionsInput(event.target.value)} ></TextareaAutosize>
                             </div>
                             <div>
                                 <InventoryIcon className='form-icon' fontSize='large' />

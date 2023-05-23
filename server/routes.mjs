@@ -70,5 +70,13 @@ router.route('/vanzari')
     .get((req,res)=>getRecords(Vanzari,req,res))
     .put((req,res)=>putRecord(Vanzari,req,res));
 
+//ruta pt toti furnizorii
+router.route('/furnizori')
+    .post((req,res)=>postRecord(Furnizori,req,res))
+    .delete((req,res) => deleteRecords(Furnizori,req,res))
+    .get((req,res)=>getRecords(Furnizori,req,res))
+    .put((req,res)=>putRecord(Furnizori,req,res));
+
+
 
 export default router;

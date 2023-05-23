@@ -8,6 +8,9 @@ import Retetar from './components/pages/Retetar';
 import AddRecipe from './components/pages/AddRecipe';
 import Recipe from './components/pages/Recipe';
 import Supply from './components/pages/Supply';
+import Provider from './components/pages/Provider';
+import Products from './components/pages/Products';
+import Sales from './components/pages/Sales';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
 
@@ -63,6 +66,9 @@ function App() {
             <Route exact path='/retetar/:denumire' element={<Recipe/>} />
             <Route exact path='/retetar/add' element={<AddRecipe/>} />
             <Route exact path='/aprovizionare' element={<Supply/>} />
+            <Route exact path='/furnizori' element={<Provider/>} />
+            <Route exact path='/produse' element={<Products/>} />
+            <Route exact path='/vanzari' element={<Sales/>} />
             <Route path='/home' element={<Home/>} />
             <Route path='/sign-in' element={<SignIn/>} />
             <Route path='/sign-up' element={<SignUp/>} />       

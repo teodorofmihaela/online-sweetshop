@@ -79,11 +79,15 @@ function Retetar() {
 
     <div className = 'container-retetar' >
       <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
-    <div className='add-button'>
+    {/* <div className='add-button'> */}
+    <Box className='add-button' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,  minWidth: 300, width: '80%' }}>
       <Button  variant="contained" color="primary" href = {`retetar/add`} startIcon={<AddIcon />}>
         Adauga reteta  
       </Button >
-    </div>
+      <Button  variant="contained" color='secondary' href = {`/`}  startIcon={<AddIcon />}>
+        Adauga produs 
+      </Button >
+      </Box>
     <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '80%' }}>
     {products.map((product) => (
       <Card sx={{ maxWidth: 345 }} className='products' >

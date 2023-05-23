@@ -136,20 +136,31 @@
         "nume": "oua",
         "cantitate_stoc": 100,
         "unitate_masura": "buc",
-        "pret": 0.2
+        "pret": 0.2,
+        "nume_furnizor": null
     },
     {
         "id": "fa937ff1-6ef4-4b58-a8fb-69dea450bb9e\n",
         "nume": "lapte",
         "cantitate_stoc": 10,
         "unitate_masura": "litri",
-        "pret": 4.5
+        "pret": 4.5,
+        "nume_furnizor": null
     },
     {
         "id": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b\n",
         "nume": "ciocolata decor",
         "cantitate_stoc": 100,
         "unitate_masura": "buc",
-        "pret": 0.1
+        "pret": 0.1,
+        "nume_furnizor": null
+    },
+    {
+        "id": "761d7090-795c-403b-a3fb-2d1573561052",
+        "nume": "unt",
+        "cantitate_stoc": 3000,
+        "unitate_masura": "gram(e)",
+        "pret": 5,
+        "nume_furnizor": null
     }
 ]

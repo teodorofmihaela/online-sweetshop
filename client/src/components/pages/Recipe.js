@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams  } from 'react-router-dom'
-import {Card, Button, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
+import {Card, Button,Typography,Box} from '@mui/material';
 import { Dialog ,DialogActions , DialogContent , DialogContentText, DialogTitle}  from '@mui/material';
 import './Recipe.css';
 import DeleteIcon from '@mui/icons-material/Delete';

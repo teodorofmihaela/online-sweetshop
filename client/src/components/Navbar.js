@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BarChartIcon from '@mui/icons-material/BarChart';
 import './Navbar.css';
 import CakeIcon from '@mui/icons-material/Cake';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+
+
 
 
 
@@ -45,6 +49,16 @@ function Navbar() {
           <li className='nav-item'>
             <Link to='/aprovizionare' className='nav-links'  onClick={closeMobieMenu}>
             <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-cubes-stacked" />Aprovizionare
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/produse' className='nav-links'  onClick={closeMobieMenu}>
+            <CakeIcon/>Produse
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/vanzari' className='nav-links'  onClick={closeMobieMenu}>
+            <PointOfSaleIcon/>Vanzari
             </Link>
           </li>
           <li className='nav-item'>

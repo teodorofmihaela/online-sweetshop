@@ -32,6 +32,9 @@ const Ingrediente = sequelize.define('ingrediente',{
     pret:{
         type:Sequelize.FLOAT(5,2),
         allowNull:false
+    },
+    nume_furnizor:{ //fiecare ingredient e luat de la un furnizor si are un pret
+        type:Sequelize.STRING,
     }
 })
 
