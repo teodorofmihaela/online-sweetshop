@@ -62,7 +62,7 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobieMenu}>
+            <Link to='/statistici' className='nav-links' onClick={closeMobieMenu}>
             <BarChartIcon className="icon-menu" />Statistici
             </Link>
           </li>

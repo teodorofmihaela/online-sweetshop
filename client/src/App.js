@@ -11,6 +11,7 @@ import Supply from './components/pages/Supply';
 import Provider from './components/pages/Provider';
 import Products from './components/pages/Products';
 import Sales from './components/pages/Sales';
+import Statistics from './components/pages/Statistics';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
 
@@ -69,6 +70,7 @@ function App() {
             <Route exact path='/furnizori' element={<Provider/>} />
             <Route exact path='/produse' element={<Products/>} />
             <Route exact path='/vanzari' element={<Sales/>} />
+            <Route exact path='/statistici' element={<Statistics/>} />
             <Route path='/home' element={<Home/>} />
             <Route path='/sign-in' element={<SignIn/>} />
             <Route path='/sign-up' element={<SignUp/>} />       

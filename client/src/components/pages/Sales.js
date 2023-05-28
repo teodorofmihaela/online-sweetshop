@@ -4,6 +4,7 @@ import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Moment from 'moment';
 
 import './Sales.css';
@@ -45,7 +46,8 @@ function Sales() {
         <Button  variant="contained" color="success" href = {`/`}  startIcon={<AddIcon />}>
         Inregistreaza vanzare 
       </Button >
-       
+      <Button variant="contained"  href = {`/furnizori`} startIcon={<ShoppingCartIcon />}>Achizitii</Button>
+
       </Box>
       <TableContainer component={Paper} sx={{width: '97%' }}>
       <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table">
@@ -66,7 +68,7 @@ function Sales() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">{nr++}</TableCell>
-              <TableCell align="right">{Moment(`${sale.data}`).format('DD-MM-YYYY HH:mm')}</TableCell>
+              <TableCell align="right">{Moment(`${sale.data}`).format('HH:mm DD-MM-YYYY')}</TableCell>
               <TableCell align="right">{sale.cantitate_vanduta}</TableCell>
               <TableCell align="right">{sale.produsId}</TableCell>
               <TableCell align="right">{sale.valoare_totala}</TableCell>
