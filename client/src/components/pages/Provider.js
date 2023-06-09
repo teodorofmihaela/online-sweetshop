@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Card, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
 
 import './Provider.css';
 
@@ -16,9 +17,9 @@ function Provider() {
                 if (res.status === 200) {
                 const data = await res.json();
                 setFurnizori(data);
-                
+                console.log(data);
+                return dataFetch;
                 }
-    
             }catch(err){
                 console.log(err);
             }};
@@ -34,13 +35,18 @@ function Provider() {
         <>
         <div className='provider-content'>
         {furnizori && furnizori.map((furnizor) => (
-            <div>
-            {furnizor.nume}
-            </div>
-        ))}
-             Here is provider
-
+        <Box  sx={{  display: 'flex',flexDirection:'row', flexWrap: 'wrap', gap: 5, width: '80%' }}>
+        <Card  >
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            {furnizor.nume_furnizor}
+            </Typography>
+            </CardContent>
+        </Card>
+        </Box>
+         ))}
         </div>
+
     </>
 )}
 

@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Card, Button, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
+import {Card, Button, CardContent,CardActions,Typography, Tooltip, Stack, Avatar, Box} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import './Products.css';
 
 
@@ -36,7 +37,7 @@ function Products() {
     return ( 
         <>
         <div className='products-content' >
-        <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '100%' }}>
+        <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '90%' }}>
         <Button  variant="contained" color="success" href = {`/`}  startIcon={<AddIcon />}>
         Adauga produs 
       </Button >
@@ -46,7 +47,7 @@ function Products() {
 
         {products && products.map((product) => (
             <div key={product.id}>
-                <Card sx={{ maxWidth: 345 }} className='products' >
+                <Card sx={{ minWidth: 345 }} className='products' >
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
             <Avatar alt={product.denumire} src="`url(${image.url})`" />
@@ -55,19 +56,19 @@ function Products() {
         </CardContent>
           <CardActions>
             <Button variant="contained" color="primary"
-             href = {`retetar/${product.denumire}`} 
+             href = {`retetar/${product.denumire}`}  startIcon={<VisibilityIcon />}
               //  onClick={event => veziRetetaClick(product.denumire)} 
                size="small">
                 
               Vezi reteta 
             </Button>
-
-            <Button  variant="contained" color="error" onClick={'/'} startIcon={<DeleteIcon />}>
-        Sterge acest produs!
-      </Button >
-      <Button  variant="contained" color="primary" href = {`/`} startIcon={<EditIcon />}>
-        Editeaza acest produs 
-      </Button >
+            <Button 
+                // onClick={openDialog(ingredient)} 
+                color="error"><Tooltip title="Sterge acest produs">
+                  <DeleteIcon /></Tooltip> </Button>
+                  <Button><Tooltip title="Editeaza acest produs">
+                  <EditIcon /></Tooltip>
+                </Button>
           </CardActions>
       </Card>
             </div>

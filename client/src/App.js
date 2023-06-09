@@ -62,7 +62,7 @@ function App() {
         <div className="container">
           <Routes>
              {/* swich is replaced  by routes */}
-            <Route  path='/' element={<Home/>} />            
+            <Route  path='/' element={<Retetar/>} />            
             <Route path='/retetar' element={<Retetar/>} />
             <Route exact path='/retetar/:denumire' element={<Recipe/>} />
             <Route exact path='/retetar/add' element={<AddRecipe/>} />
@@ -71,7 +71,7 @@ function App() {
             <Route exact path='/produse' element={<Products/>} />
             <Route exact path='/vanzari' element={<Sales/>} />
             <Route exact path='/statistici' element={<Statistics/>} />
-            <Route path='/home' element={<Home/>} />
+            <Route path='/home' element={<Retetar/>} />
             <Route path='/sign-in' element={<SignIn/>} />
             <Route path='/sign-up' element={<SignUp/>} />       
        

@@ -32,10 +32,11 @@ const Ingrediente = sequelize.define('ingrediente',{
     pret:{
         type:Sequelize.FLOAT(5,2),
         allowNull:false
-    },
-    nume_furnizor:{ //fiecare ingredient e luat de la un furnizor si are un pret
-        type:Sequelize.STRING,
     }
+    // ,
+    // nume_furnizor:{ //fiecare ingredient e luat de la un furnizor si are un pret
+    //     type:Sequelize.STRING,
+    // }
 })
 
 const Furnizori = sequelize.define('furnizori',{
@@ -259,10 +260,10 @@ Aparatura.belongsTo(Retetar,{foreignKey:'retetarId'});
 Produse.hasOne(Retetar,{foreignKey:'produseId'});
 Retetar.belongsTo(Produse,{foreignKey:'produseId'});
 
-Ingrediente.hasMany(Ingrediente_In_Retete,{foreignKey:'ingredienteId'});
+Ingrediente.hasMany(Ingrediente_In_Retete,{foreignKey:'ingredienteId'}); //todo has one
 Ingrediente_In_Retete.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 
-Retetar.hasMany(Ingrediente_In_Retete,{foreignKey:'retetarId'});
+Retetar.hasMany(Ingrediente_In_Retete,{foreignKey:'retetarId'});//todo has one
 Ingrediente_In_Retete.belongsTo(Retetar,{foreignKey:'retetarId'});
 
 Produse.hasMany(Vanzari,{foreignKey:'produseId'});

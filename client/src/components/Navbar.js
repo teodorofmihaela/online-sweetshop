@@ -81,7 +81,7 @@ function Navbar() {
             <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-user-gear" />Administrare
             </Link>
           </li>
-          <li className='support'>
+          {/* <li className='support'>
             Support: 
             </li> 
             <li className='support'>
@@ -92,7 +92,7 @@ function Navbar() {
             <li className='support'>
           <FontAwesomeIcon icon="fa-solid fa-phone" />
           <a href='tel:+40761324489' target={"_blank"} rel="noreferrer"> 0761324489</a>
-          </li>
+          </li> */}
         </ul>
     </div>
     </nav>

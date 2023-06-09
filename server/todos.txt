@@ -1,0 +1,3 @@
+Generare raportul Z?
+Generare pe zi rapoarte cu produsele vandute pret si cantitati
+introducere de comenzi
