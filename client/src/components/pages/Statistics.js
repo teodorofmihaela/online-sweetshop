@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Card, Button, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import AddIcon from '@mui/icons-material/Add';
+import EmailIcon from '@mui/icons-material/Email';
 import { useTheme } from "@mui/material";
 import './Statistics.css';
 import { ResponsiveLine } from '@nivo/line'
@@ -36,20 +36,6 @@ function Statistics() {
 
 
     useEffect(() =>{
-        const dataFetch = async () => {
-            try {
-            const request = await fetch(`${baseURL}/produse`);
-                if (request.status === 200) {
-                const response = await request.json();
-                setProducts(response)
-                return response;           
-                }
-            }catch(err){
-                console.log(err);
-            }};
-        dataFetch();
-
-
         const dataVanzari = async () => {
             try {
              let [requestVanzari, requestProduse ]= await Promise.all([
@@ -59,12 +45,13 @@ function Statistics() {
                 if (requestVanzari.status === 200 && requestProduse.status ===200) {
                 const responseVanzari = await requestVanzari.json();
                 const responseProduse = await requestProduse.json();
-                setSales(responseVanzari);
-                setProducts(responseProduse)
+
                 responseVanzari.sort(custom_sort);
                 setDataFromRequest(getMonthSums(responseVanzari));
                 TotalSalesSum(responseVanzari);
                 SalesCategory(responseVanzari, responseProduse);
+                setSales(responseVanzari);
+                setProducts(responseProduse);
                 setDataPieFromRequest(SalesCateg);
                 return responseVanzari;        
                 }
@@ -167,15 +154,17 @@ function setDataPieFromRequest(salesCat){
         }
         
   }
+  // <a href="mailto:teodorofmihaela19@stud.ase.ro?subject='Cerere previzionare vanzari'&body={salesCateg}">
+
 
     return ( 
         <>
         <div className='products-content' style={{height: 400, paddingTop : 20}}>
-        {/* <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '98%' }}>
-        <Button  variant="contained" color="success" href = {`/`}  startIcon={<AddIcon />}>
-        Adauga ????? 
+        <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '98%' }}>
+        <Button  variant="contained" color="primary" startIcon={<EmailIcon />}
+        href={`mailto:teodorofmihaela19@stud.ase.ro?subject=${`Cerere previzionare vanzari`}&body=${sales.data}`}> Cere previzionare vanzari
       </Button >
-      </Box> */}
+      </Box>
 
         <Typography variant="h6" style={{display: 'flex', flexWrap: 'wrap',  justifyContent: 'center',minWidth: 300, width: '98%' }}>Vanzari lunare totale (lei)</Typography>
 

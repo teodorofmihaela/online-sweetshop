@@ -11,6 +11,8 @@ import Supply from './components/pages/Supply';
 import Provider from './components/pages/Provider';
 import Products from './components/pages/Products';
 import Sales from './components/pages/Sales';
+import Orders from './components/pages/Orders';
+import AddOrders from './components/pages/AddOrders';
 import Statistics from './components/pages/Statistics';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
@@ -70,6 +72,8 @@ function App() {
             <Route exact path='/furnizori' element={<Provider/>} />
             <Route exact path='/produse' element={<Products/>} />
             <Route exact path='/vanzari' element={<Sales/>} />
+            <Route exact path='/comenzi' element={<Orders/>} />
+            <Route exact path='/comenzi/adaugare' element={<AddOrders/>} />
             <Route exact path='/statistici' element={<Statistics/>} />
             <Route path='/home' element={<Retetar/>} />
             <Route path='/sign-in' element={<SignIn/>} />

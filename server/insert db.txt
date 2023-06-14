@@ -239,70 +239,70 @@
         "cantitate_vanduta": 2,
         "data": "2023-03-29T00:00:00.000Z",
         "valoare_totala": 30,
-        "produseId": "e6b09b34-8b8f-4607-a904-14536b3b02df"
+        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
     },
     {
         "id": "9aa998df-7894-4574-973e-6fe67b623eef",
         "cantitate_vanduta": 5,
         "data": "2023-03-29T00:00:00.000Z",
         "valoare_totala": 75,
-        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+        "produseId": "b45e3a7f-1642-485c-a4fa-a16244462257"
     },
     {
         "id": "2e01ea25-2aba-492e-8d18-f19b0b83833e",
         "cantitate_vanduta": 10,
         "data": "2023-05-29T00:00:00.000Z",
         "valoare_totala": 150,
-        "produseId": "db30d4fe-94c6-4164-b389-0df4fffd5424"
+        "produseId": "290e842f-de47-4132-b6a3-43d09d08430e"
     },
     {
         "id": "12af9acf-99e7-409b-ab29-85124f3a7278",
         "cantitate_vanduta": 20,
         "data": "2023-05-25T16:00:00.000Z",
         "valoare_totala": 300,
-        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+        "produseId": "eb5f5090-1a53-42be-b6fa-b34f556c5e5d"
     },
     {
         "id": "e5ee670e-512d-4870-a33f-7a2521edec62",
         "cantitate_vanduta": 4,
         "data": "2023-04-02T16:00:00.000Z",
         "valoare_totala": 60,
-        "produseId": "290e842f-de47-4132-b6a3-43d09d08430e"
+        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
     },
     {
         "id": "1104a824-6d9e-41a8-a8e6-943cc79d3422",
         "cantitate_vanduta": 6,
         "data": "2023-04-06T14:40:00.000Z",
         "valoare_totala": 90,
-        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
+        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
     },
     {
         "id": "76b44c24-7d2f-4067-824d-930fa4813901",
         "cantitate_vanduta": 25,
         "data": "2023-05-18T12:05:00.000Z",
         "valoare_totala": 375,
-        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
+        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
     },
     {
         "id": "60e9bb0a-9177-4bf1-89d7-ad5a77b7a213",
         "cantitate_vanduta": 20,
         "data": "2023-05-20T17:35:00.000Z",
         "valoare_totala": 300,
-        "produseId": "290e842f-de47-4132-b6a3-43d09d08430e"
+        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
     },
     {
         "id": "0c49236d-a3e3-4911-9e78-bd5b37d9b7ff",
         "cantitate_vanduta": 20,
         "data": "2022-12-20T12:25:00.000Z",
         "valoare_totala": 300,
-        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
     },
     {
         "id": "9936ddab-23bc-43fb-bc62-7a9a5bf6daef",
         "cantitate_vanduta": 15,
         "data": "2022-12-29T10:25:00.000Z",
         "valoare_totala": 225,
-        "produseId": "b45e3a7f-1642-485c-a4fa-a16244462257"
+        "produseId": "e6b09b34-8b8f-4607-a904-14536b3b02df"
     },
     {
         "id": "f31667b0-0f81-43c4-996e-9ace3600d8f6",
@@ -316,7 +316,7 @@
         "cantitate_vanduta": 10,
         "data": "2023-02-25T15:25:00.000Z",
         "valoare_totala": 70,
-        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+        "produseId": "49de2c74-e281-4386-a14d-562ec79c979e"
     },
     {
         "id": "0c2537a9-2ebe-4c68-8526-a80d76016184",
@@ -366,6 +366,13 @@
         "data": "2023-03-13T12:08:00.000Z",
         "valoare_totala": 260,
         "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
+    },
+    {
+        "id": "7cf01457-7d0c-4a90-a19b-6d4bed12acd8",
+        "cantitate_vanduta": 10,
+        "data": "2023-05-18T11:28:00.000Z",
+        "valoare_totala": 80,
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
     }
 ]
 
@@ -412,5 +419,190 @@
     {
         "id": "e5b58cde-b5db-43b1-a4c9-dc56484e6f94",
         "nume_furnizor": "SC.Carpati.SRL"
+    }
+]
+
+
+//comenzi
+[
+    {
+        "id": "e4c3745b-e896-4b9c-96ac-b8d55cd5581d",
+        "nume": "Teodorof Mihaela",
+        "cantitate": 2,
+        "dataRidicare": "2023-06-15T10:30:00.000Z",
+        "valoare_totala": 30,
+        "status_comanda": "initiata",
+        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
+    },
+    {
+        "id": "d70df0d5-1d89-4fd8-a2fa-b961843d5270",
+        "nume": "Teodorof Felicia",
+        "cantitate": 2,
+        "dataRidicare": "2023-06-15T10:00:00.000Z",
+        "valoare_totala": 260,
+        "status_comanda": "preluata",
+        "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
+    },
+    {
+        "id": "560b1a74-dcc2-4e7e-9844-053e31060b55",
+        "nume": "Pascanu Stefan",
+        "cantitate": 20,
+        "dataRidicare": "2023-06-15T15:00:00.000Z",
+        "valoare_totala": 100,
+        "status_comanda": "preparata",
+        "produseId": "a9e0b9ae-46ec-4948-abbf-041e77ad4363"
+    },
+    {
+        "id": "ee283ecb-31d0-4b5f-94d7-f741be9bf297",
+        "nume": "Client Test",
+        "cantitate": 2,
+        "dataRidicare": "2023-06-14T15:25:51.668Z",
+        "valoare_totala": 30,
+        "status_comanda": "initiata",
+        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
+    },
+    {
+        "id": "f9d6baca-35e7-440d-b914-bf04884b18c4",
+        "nume": "Pascanu Irina",
+        "cantitate": 5,
+        "dataRidicare": "2023-06-14T15:33:41.709Z",
+        "valoare_totala": 75,
+        "status_comanda": "initiata",
+        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+    },
+    {
+        "id": "7ffc5e60-5cd0-4485-bd34-7c1c95b25306",
+        "nume": "Pascanu Irina",
+        "cantitate": 4,
+        "dataRidicare": "2023-06-14T18:02:32.908Z",
+        "valoare_totala": 24,
+        "status_comanda": "initiata",
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "d84f2628-2b94-412b-9db5-c2cfecb53ea9",
+        "nume": "Suciu Maria",
+        "cantitate": 8,
+        "dataRidicare": "2023-06-14T18:30:28.246Z",
+        "valoare_totala": 120,
+        "status_comanda": "preluata",
+        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
+    },
+    {
+        "id": "91d80dfa-3161-43f3-8c4a-7ae63c8af335",
+        "nume": "Teodorof Mihaela",
+        "cantitate": 7,
+        "dataRidicare": "2023-06-14T19:08:34.711Z",
+        "valoare_totala": 42,
+        "status_comanda": "initiata",
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "f13d94cf-fdc5-4ed2-a4b0-99128b2f5427",
+        "nume": "Stroe Diana",
+        "cantitate": 4,
+        "dataRidicare": "2023-06-15T10:00:00.000Z",
+        "valoare_totala": 32,
+        "status_comanda": "ridicata",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "7033d662-34ea-4339-a107-c1a2b26fbe70",
+        "nume": "Andrei Emanuel",
+        "cantitate": 3,
+        "dataRidicare": "2023-06-14T19:29:28.537Z",
+        "valoare_totala": 60,
+        "status_comanda": "preluata",
+        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
+    },
+    {
+        "id": "071de153-27e6-40de-8ade-51023bd63d4c",
+        "nume": "Stirbescu Bianca",
+        "cantitate": 4,
+        "dataRidicare": "2023-06-14T19:30:32.240Z",
+        "valoare_totala": 80,
+        "status_comanda": "preluata",
+        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
+    },
+    {
+        "id": "dbb58eca-8731-4fb3-bf49-6372fd795985",
+        "nume": "Client",
+        "cantitate": 4,
+        "dataRidicare": "2023-06-14T19:33:07.791Z",
+        "valoare_totala": 80,
+        "status_comanda": "initiata",
+        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
+    },
+    {
+        "id": "39335e6b-868c-4d3a-a86e-2e7b713656d5",
+        "nume": "Perju Clara",
+        "cantitate": 5,
+        "dataRidicare": "2023-06-14T19:58:34.644Z",
+        "valoare_totala": 75,
+        "status_comanda": "initiata",
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
+    },
+    {
+        "id": "16580b7d-aef9-46fe-aea6-1f1c91c022ea",
+        "nume": "Codreanu Maria",
+        "cantitate": 10,
+        "dataRidicare": "2023-06-14T19:59:39.062Z",
+        "valoare_totala": 150,
+        "status_comanda": "initiata",
+        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
+    },
+    {
+        "id": "4e1221ad-a055-416b-adb3-f5ba92b38a61",
+        "nume": "Oanea Nicola",
+        "cantitate": 15,
+        "dataRidicare": "2023-06-14T20:01:02.391Z",
+        "valoare_totala": 75,
+        "status_comanda": "initiata",
+        "produseId": "a9e0b9ae-46ec-4948-abbf-041e77ad4363"
+    },
+    {
+        "id": "02ec1624-7443-4feb-b11c-948ea8233b34",
+        "nume": "Sufragiu Ana",
+        "cantitate": 20,
+        "dataRidicare": "2023-06-14T20:03:09.376Z",
+        "valoare_totala": 300,
+        "status_comanda": "initiata",
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
+    },
+    {
+        "id": "bc504ac6-5b74-4121-841d-1deb425bb975",
+        "nume": "Vladu Maia",
+        "cantitate": 6,
+        "dataRidicare": "2023-06-22T09:00:00.000Z",
+        "valoare_totala": 90,
+        "status_comanda": "initiata",
+        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
+    },
+    {
+        "id": "110b6abf-7765-4477-893b-ed491becf36f",
+        "nume": "Popa Andrei",
+        "cantitate": 30,
+        "dataRidicare": "2023-06-29T07:40:00.000Z",
+        "valoare_totala": 450,
+        "status_comanda": "preparata",
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
+    },
+    {
+        "id": "b867a2fb-3f14-416d-a5b4-cafed61c8a8a",
+        "nume": "Gherghescu Miruna",
+        "cantitate": 100,
+        "dataRidicare": "2023-08-23T05:55:00.000Z",
+        "valoare_totala": 700,
+        "status_comanda": "ridicata",
+        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
+    },
+    {
+        "id": "e1a97985-f8fa-4020-a473-20f66013b056",
+        "nume": "Stefanescu Alina",
+        "cantitate": 50,
+        "dataRidicare": "2023-07-23T08:10:00.000Z",
+        "valoare_totala": 350,
+        "status_comanda": "preparata",
+        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
     }
 ]

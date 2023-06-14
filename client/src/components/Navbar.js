@@ -6,7 +6,7 @@ import './Navbar.css';
 import CakeIcon from '@mui/icons-material/Cake';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
 
 
 
@@ -59,6 +59,11 @@ function Navbar() {
           <li className='nav-item'>
             <Link to='/vanzari' className='nav-links'  onClick={closeMobieMenu}>
             <PointOfSaleIcon/>Vanzari
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/comenzi' className='nav-links'  onClick={closeMobieMenu}>
+            <NoteAddIcon/>Comenzi
             </Link>
           </li>
           <li className='nav-item'>

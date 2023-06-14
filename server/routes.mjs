@@ -1,6 +1,6 @@
 import express from 'express';
 import { Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Program_aparatura, Produse, Angajati, Utilizatori, Drepturi} from './repository.mjs';
+    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi} from './repository.mjs';
 import { getRecord, getRecords, headRecord, postRecord, putRecord, patchRecord, deleteRecord, deleteRecords,
     getAttributes, getFilteredRecords,getFilteredRecipe, login} from './service.mjs';
 
@@ -77,6 +77,12 @@ router.route('/furnizori')
     .get((req,res)=>getRecords(Furnizori,req,res))
     .put((req,res)=>putRecord(Furnizori,req,res));
 
+//ruta pt comenzi
+router.route('/comenzi')
+    .post((req,res)=>postRecord(Comenzi,req,res))
+    .delete((req,res) => deleteRecords(Comenzi,req,res))
+    .get((req,res)=>getRecords(Comenzi,req,res))
+    .put((req,res)=>putRecord(Comenzi,req,res));
 
 
 export default router;

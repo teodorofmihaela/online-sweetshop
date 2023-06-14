@@ -66,7 +66,6 @@ function SalesCategory(sales, products){
     
     }
 
-
     return (   
         <>
         <div className='sales-content' style={{ paddingLeft: 20}}>

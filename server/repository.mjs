@@ -49,6 +49,27 @@ const Furnizori = sequelize.define('furnizori',{
     nume_furnizor:{
         type:Sequelize.STRING,
         allowNull:false
+    },
+    adresa:{
+        type:Sequelize.STRING
+    },
+    telefon:{
+        type:Sequelize.STRING
+    },
+    persoana_contact:{
+        type:Sequelize.STRING
+    }
+})
+
+const Ingrediente_furnizori = sequelize.define('ingrediente_furnizori',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    pret_ingredient:{
+        type:Sequelize.STRING,
     }
 })
 
@@ -186,6 +207,30 @@ const Produse = sequelize.define('produse',{
     }
 })
 
+const Comenzi = sequelize.define('comenzi',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    nume:{
+        type:Sequelize.STRING
+    },
+    cantitate:{
+        type:Sequelize.INTEGER,
+    },
+    dataRidicare:{
+        type:Sequelize.DATE,
+    },
+    valoare_totala:{
+        type:Sequelize.FLOAT(5.2),
+    },
+    status_comanda:{
+        type:Sequelize.STRING,
+    }
+})
+
 const Angajati = sequelize.define('angajati',{
     id:{
         type:Sequelize.UUID,
@@ -266,8 +311,17 @@ Ingrediente_In_Retete.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 Retetar.hasMany(Ingrediente_In_Retete,{foreignKey:'retetarId'});//todo has one
 Ingrediente_In_Retete.belongsTo(Retetar,{foreignKey:'retetarId'});
 
+Ingrediente.hasMany(Ingrediente_furnizori,{foreignKey:'ingredienteId'}); 
+Ingrediente_furnizori.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
+
+Retetar.hasMany(Ingrediente_furnizori,{foreignKey:'furnizorId'});
+Ingrediente_furnizori.belongsTo(Retetar,{foreignKey:'furnizorId'});
+
 Produse.hasMany(Vanzari,{foreignKey:'produseId'});
 Vanzari.belongsTo(Produse,{foreignKey:'produseId'});
+
+Produse.hasMany(Comenzi,{foreignKey:'produseId'});
+Comenzi.belongsTo(Produse,{foreignKey:'produseId'});
 
 Angajati.hasOne(Utilizatori,{foreignKey:'angajatiId'});
 Utilizatori.belongsTo(Angajati,{foreignKey:'angajatiId'});
@@ -283,5 +337,5 @@ async function initialize(){
 export {
     initialize,
     Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Program_aparatura, Produse, Angajati, Utilizatori, Drepturi
+    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi
 }
