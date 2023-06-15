@@ -234,7 +234,7 @@ function onReset() {
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '70%' }}>
                                 <PaymentsIcon className='form-icon' fontSize='large'/>
                                 <Card style={{ minWidth: 230 }}>
-                                <Typography> Valoare comanda: {valoareTotala}</Typography>
+                                <Typography> Valoare comanda: {valoareTotala} lei</Typography>
                                 </Card>
                                 </Box>
                                 </div>

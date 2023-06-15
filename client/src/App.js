@@ -11,6 +11,7 @@ import Supply from './components/pages/Supply';
 import Provider from './components/pages/Provider';
 import Products from './components/pages/Products';
 import Sales from './components/pages/Sales';
+import AddSale from './components/pages/AddSale';
 import Orders from './components/pages/Orders';
 import AddOrders from './components/pages/AddOrders';
 import Statistics from './components/pages/Statistics';
@@ -72,6 +73,7 @@ function App() {
             <Route exact path='/furnizori' element={<Provider/>} />
             <Route exact path='/produse' element={<Products/>} />
             <Route exact path='/vanzari' element={<Sales/>} />
+            <Route exact path='/vanzari/adaugare' element={<AddSale/>} />
             <Route exact path='/comenzi' element={<Orders/>} />
             <Route exact path='/comenzi/adaugare' element={<AddOrders/>} />
             <Route exact path='/statistici' element={<Statistics/>} />

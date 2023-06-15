@@ -70,7 +70,7 @@ function SalesCategory(sales, products){
         <>
         <div className='sales-content' style={{ paddingLeft: 20}}>
         <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '98%' }}>
-        <Button  variant="contained" color="success" href = {`/`}  startIcon={<AddIcon />}>
+        <Button  variant="contained" color="success" href = {`/vanzari/adaugare`}  startIcon={<AddIcon />}>
         Inregistreaza vanzare 
       </Button >
       <Button variant="contained"  href = {`/furnizori`} startIcon={<ShoppingCartIcon />}>Achizitii</Button>
@@ -85,7 +85,7 @@ function SalesCategory(sales, products){
             <TableCell align="center">Data</TableCell>
             <TableCell align="center">Cantitate</TableCell>
             <TableCell align="center">Produs</TableCell>
-            <TableCell align="center">Pret</TableCell>
+            <TableCell align="center">Pret unitar</TableCell>
             <TableCell align="center">Valoare totala</TableCell>
             <TableCell align="center">Actiuni</TableCell>
           </TableRow>
@@ -98,10 +98,10 @@ function SalesCategory(sales, products){
             >
               <TableCell component="center" scope="row">{nr++}</TableCell>
               <TableCell align="center">{Moment(`${sale.data}`).format('HH:mm DD-MM-YYYY')}</TableCell>
-              <TableCell align="center">{sale.cantitate_vanduta}</TableCell>
+              <TableCell align="center">{sale.cantitate_vanduta} buc</TableCell>
               <TableCell align="center">{sale.denumire}</TableCell>
-              <TableCell align="center">{sale.pret_vanzare}</TableCell>
-              <TableCell align="center">{sale.valoare_totala}</TableCell>
+              <TableCell align="center">{sale.pret_vanzare} lei</TableCell>
+              <TableCell align="center">{sale.valoare_totala} lei</TableCell>
               <TableCell align="center"> 
                 <Button 
                 // onClick={openDialog(ingredient)} 

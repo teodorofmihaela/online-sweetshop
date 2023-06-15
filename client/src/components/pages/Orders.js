@@ -22,7 +22,6 @@ function Orders() {
     useEffect(() =>{
         const dataFetch = async () => {
             try {
-
                 let [requestComenzi, requestProduse ]= await Promise.all([
                     fetch(`${baseURL}/comenzi`),
                     fetch(`${baseURL}/produse`)
@@ -73,6 +72,7 @@ function productsOrdered(orders, products){
                 <TableCell align="center">Nume Client</TableCell>
                 <TableCell align="center">Dată și oră ridicare</TableCell>
                 <TableCell align="center">Produs</TableCell>
+                <TableCell align="center">Pret unitar</TableCell>
                 <TableCell align="center">Cantitate</TableCell>
                 <TableCell align="center">Valoare totală</TableCell>
                 <TableCell align="center">Status</TableCell>
@@ -90,8 +90,9 @@ function productsOrdered(orders, products){
                 <TableCell align="center">{prod.nume}</TableCell>
                 <TableCell align="center">{Moment(`${prod.dataRidicare}`).format('DD-MM-YYYY HH:mm')}</TableCell>
                 <TableCell align="center">{prod.denumire}</TableCell>
-                <TableCell align="center">{prod.cantitate}</TableCell>
-                <TableCell align="center">{prod.valoare_totala}</TableCell>
+                <TableCell align="center">{prod.pret_vanzare} lei</TableCell>
+                <TableCell align="center">{prod.cantitate} buc</TableCell>
+                <TableCell align="center">{prod.valoare_totala} lei</TableCell>
                 <TableCell align="center">{prod.status_comanda}</TableCell>
                 <TableCell align="center"> 
                     <Button 

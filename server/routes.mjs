@@ -1,6 +1,6 @@
 import express from 'express';
 import { Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi} from './repository.mjs';
+    Vanzari, Ingrediente_In_Retete, Casare,Stoc_ingrediente, Stoc_produse, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi} from './repository.mjs';
 import { getRecord, getRecords, headRecord, postRecord, putRecord, patchRecord, deleteRecord, deleteRecords,
     getAttributes, getFilteredRecords,getFilteredRecipe, login} from './service.mjs';
 
@@ -61,8 +61,6 @@ router.route('/retetar')
     .get((req,res)=>getRecords(Retetar,req,res))
     .put((req,res)=>putRecord(Retetar,req,res));
 
-
-
 //ruta pt toate vanzarile
 router.route('/vanzari')
     .post((req,res)=>postRecord(Vanzari,req,res))
@@ -83,6 +81,75 @@ router.route('/comenzi')
     .delete((req,res) => deleteRecords(Comenzi,req,res))
     .get((req,res)=>getRecords(Comenzi,req,res))
     .put((req,res)=>putRecord(Comenzi,req,res));
+
+//ruta pt Ingrediente_furnizori
+router.route('/ingrediente_furnizori')
+    .post((req,res)=>postRecord(Ingrediente_furnizori,req,res))
+    .delete((req,res) => deleteRecords(Ingrediente_furnizori,req,res))
+    .get((req,res)=>getRecords(Ingrediente_furnizori,req,res))
+    .put((req,res)=>putRecord(Ingrediente_furnizori,req,res));
+
+//ruta pt achizitii
+router.route('/achizitii')
+    .post((req,res)=>postRecord(Achizitii,req,res))
+    .delete((req,res) => deleteRecords(Achizitii,req,res))
+    .get((req,res)=>getRecords(Achizitii,req,res))
+    .put((req,res)=>putRecord(Achizitii,req,res));
+
+
+//ruta pt Ingrediente_In_Retete
+router.route('/ingrediente_in_retete')
+    .post((req,res)=>postRecord(Ingrediente_In_Retete,req,res))
+    .delete((req,res) => deleteRecords(Ingrediente_In_Retete,req,res))
+    .get((req,res)=>getRecords(Ingrediente_In_Retete,req,res))
+    .put((req,res)=>putRecord(Ingrediente_In_Retete,req,res));
+
+//ruta pt Ingrediente_furnizori
+router.route('/ingrediente_furnizori')
+    .post((req,res)=>postRecord(Ingrediente_furnizori,req,res))
+    .delete((req,res) => deleteRecords(Ingrediente_furnizori,req,res))
+    .get((req,res)=>getRecords(Ingrediente_furnizori,req,res))
+    .put((req,res)=>putRecord(Ingrediente_furnizori,req,res));
+
+//ruta pt casare
+router.route('/casare')
+    .post((req,res)=>postRecord(Casare,req,res))
+    .delete((req,res) => deleteRecords(Casare,req,res))
+    .get((req,res)=>getRecords(Casare,req,res))
+    .put((req,res)=>putRecord(Casare,req,res));
+
+//ruta pt Stoc_ingrediente
+router.route('/stoc_ingrediente')
+    .post((req,res)=>postRecord(Stoc_ingrediente,req,res))
+    .delete((req,res) => deleteRecords(Stoc_ingrediente,req,res))
+    .get((req,res)=>getRecords(Stoc_ingrediente,req,res))
+    .put((req,res)=>putRecord(Stoc_ingrediente,req,res));
+
+//ruta pt Stoc_produse
+router.route('/stoc_produse')
+    .post((req,res)=>postRecord(Stoc_produse,req,res))
+    .delete((req,res) => deleteRecords(Stoc_produse,req,res))
+    .get((req,res)=>getRecords(Stoc_produse,req,res))
+    .put((req,res)=>putRecord(Stoc_produse,req,res));
+
+router.route('/stoc_produse/:id')
+    .put((req,res)=>putRecord(Stoc_produse,req,res));
+
+//ruta pt Angajati
+router.route('/angajati')
+    .post((req,res)=>postRecord(Angajati,req,res))
+    .delete((req,res) => deleteRecords(Angajati,req,res))
+    .get((req,res)=>getRecords(Angajati,req,res))
+    .put((req,res)=>putRecord(Angajati,req,res));
+
+
+//ruta pt Drepturi
+router.route('/drepturi')
+    .post((req,res)=>postRecord(Drepturi,req,res))
+    .delete((req,res) => deleteRecords(Drepturi,req,res))
+    .get((req,res)=>getRecords(Drepturi,req,res))
+    .put((req,res)=>putRecord(Drepturi,req,res));
+
 
 
 export default router;

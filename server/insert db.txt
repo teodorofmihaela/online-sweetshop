@@ -125,36 +125,28 @@
 
 [
     {
+        "id": "c0ebc76c-c713-459a-956e-a898c239414e",
+        "denumire": "Ecler cu ciocolata cu alune",
+        "numar_produse": 40,
+        "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pun alunele maruntite bine. Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere: Umple eclerele prin gaurile facute deja in coji. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Deasupra glazurii se pun 3 alune intregi si logo-ul nostru din ciocolata.",
+        "valori_nutritionale": "435kcal",
+        "produseId": "b45e3a7f-1642-485c-a4fa-a16244462257"
+    },
+    {
         "id": "2b5c1088-893a-4eaa-b770-8cc25d9c46d1",
         "denumire": "Ecler cu zmeura",
         "numar_produse": 30,
         "mod_preparare": "Incalziti smantana lichida si turnati-o apoi peste ciocolata alba rupta bucatele. Omogenizati bine si lasati la racit Bateti bine crème patisserie, opriti 3 linguri si restul incorporati usor in crema de ciocolata alba. Zdrobiti zmeura cu o furculita si adaugati-o in crema, amestacand lejer. Amestecati piureul de zmeura (obtinut din 100 gr zmeura pasata si trecuta prin sita) cu frisca oprita si glazurati capacele de la eclere cu o pensula. Umpleti eclerele cu crema de zmeura, puneti capacele glazurate si ornati cu 3 fructe de zmeura apoi adaugati logo-ul nostru din ciocolata",
         "valori_nutritionale": "400kcal",
-        "produseId": null
-    },
-    {
-        "id": "6e4ed930-6131-4590-9639-b4df1388aaaa",
-        "denumire": "Pralina cu ciocolata alba",
-        "numar_produse": 100,
-        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele.Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste ganache-ul de ciocolata alba cu care se vor umple pralinele. Ciocolata alba se rupe in bucati si se pune intr-un bol impreuna cu smantana pentru frisca. Se toarna cate putin din ganache in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma.  ",
-        "valori_nutritionale": "40kcal",
-        "produseId": null
+        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
     },
     {
         "id": "937fbe17-ccf8-4a24-b6d3-4028b8dc4aac",
         "denumire": "Pralina cu lavanda",
         "numar_produse": 80,
         "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele. Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste umplutura de lavanda gata preparata cu care se vor umple pralinele. Se toarna cate putin dinumplutura in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma. ",
-        "valori_nutritionale": "39",
-        "produseId": null
-    },
-    {
-        "id": "88d4eaf8-3601-4167-8dee-8f099dfcc22b",
-        "denumire": "Pralina cu ciocolata alba",
-        "numar_produse": 100,
-        "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele.Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme pret de 2 minute, cat sa apuce sa adere cat de cat la peretii formelor, apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste ganache-ul de ciocolata alba cu care se vor umple pralinele. Ciocolata alba se rupe in bucati si se pune intr-un bol impreuna cu smantana pentru frisca. Se toarna cate putin din ganache in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma.  ",
-        "valori_nutritionale": "40kcal",
-        "produseId": null
+        "valori_nutritionale": "39kcal",
+        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
     },
     {
         "id": "2f5a2356-4def-400d-bf7e-f04c0aff828b",
@@ -162,31 +154,31 @@
         "numar_produse": 38,
         "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pune si esenta de vanilie, dupa gust. Pentru un gust mai intens, se poate folosi ciocolata amaruie in loc de cea cu lapte Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere cu ciocolata: Daca ai un dui cu varf ascutit poti umple eclerele prin gaurile facute dja in coji. Sau, se foloseste varianta clasica, taiat cojile in 2 si se umplu cu crema. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Se poate folosi si smantana pentru frisca/frisca lichida in loc de lapte.",
         "valori_nutritionale": "450kcal",
-        "produseId": null
+        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
     },
     {
         "id": "64807441-169b-4313-8149-c2cc38693919",
         "denumire": "Pralina simpla",
         "numar_produse": 120,
         "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele. Se dau formele umplute la congelator pentru 20 minute si se pot scoate din forma.",
-        "valori_nutritionale": "35",
-        "produseId": null
-    },
-    {
-        "id": "c0ebc76c-c713-459a-956e-a898c239414e",
-        "denumire": "Ecler cu ciocolata cu alune",
-        "numar_produse": 40,
-        "mod_preparare": "Galbenusurile si zaharul se pun intr-o cratita si amesteca bine. Se adauga si amidonul si se omogenizeaza, dupa care se toarna laptele, putin cate putin, amestecand continuu, sa nu se formeze cocoloase. Vasul se pune pe foc mic sau la baie de aburi. Fara sa dea in clocot, se fierbe compozitia pana se ingroasa, amestecand continuu. Se da deoparte de pe foc, se adauga ciocolata rupta bucatele si se amesteca pana ciocolata se topeste si crema de omogenizeaza. Se pun alunele maruntite bine. Peste crema racorita se pune o folie alimentara, direct pe suprafata cremei si se da la frigider pana este bine racita si se intareste. Budinca racita se mixeaza putin, cat sa se desfaca si se adauga mascarponele. Se mixeaza (nu pra mult) pana se obtine o crema fina si omogena. Umplere eclere: Umple eclerele prin gaurile facute deja in coji. Eclerele umplute se dau la rece pentru cca 1 ora, dupa care se glazureaza cu ciocolata. Pentru glazura de ciocolata, am topit ciocolata, apoi am adaugat lapte, putin cate putin, pana glazura a ajuns la consistenta dorita. Deasupra glazurii se pun 3 alune intregi si logo-ul nostru din ciocolata.",
-        "valori_nutritionale": "435kcal",
-        "produseId": null
+        "valori_nutritionale": "35kcal",
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
     },
     {
         "id": "07c00de0-e83a-45df-abde-8ce1e9d13c56",
         "denumire": "Pralina cu ciocolata si migdale",
         "numar_produse": 130,
         "mod_preparare": "Se rupe in bucati ciocolata cu lapte, se pune intr-un bol si se adauga untul. Bolul se aseaza intr-un vas mai mare cu apa fierbinte (bain-marie). Se umplu cu ciocolata formele.Cu o spatula se indeparteaza ciocolata care depaseste formele. Se lasa ciocolata in forme 2 minute, cat sa apuce sa adere cat de cat la peretii formelor,  apoi se rastoarna deasupra bolului cu ciocolata topita, lasand sa se scurga atata ciocolata din forme cat sa se creeze un gol in interiorul lor. Dati formele la congelator pentru 10 minute. Intre timp, se pregateste ganache-ul de ciocolata cu care se vor umple pralinele. Ciocolata se rupe in bucati si se pune intr-un bol impreuna cu smantana pentru frisca. Se mixeaza migdalele si se adauga in ganache. Se toarna cate putin din crema in fiecare pralina, lansad neaparat un spatiu de aproximativ 3 mm. pana la limita superioara a formei (care va fi necasar pentru a forma baza pralinelor). Se dau formele umplute la congelator pentru 15 minute, apoi se umplu cu restul de ciocolata cu lapte. Formele se mai dau la congelator pentru 10-15 minute, doar cat sa se solidifice baza pralinelor, si se pot scoate din forma.",
-        "valori_nutritionale": "50",
-        "produseId": null
+        "valori_nutritionale": "50kcal",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "72bee025-8461-4b92-a5f6-78398af3e5f9",
+        "denumire": "Tort cu ciocolata",
+        "numar_produse": 1,
+        "mod_preparare": "Cernem într-un bol făina, cacaua, praful de copt și bicarbonatul de sodiu și le amestecăm. Este important ca ele să fie amestecate înainte împreună astfel încât cacaua și agenții de afânare să fie distribuite uniform în aluat. Nu puneți cacaua necernută, fiindcă riscați să obțineți cocoloașe de cacao în aluatul final. Într-un bol încăpător batem ouale cu zahărul alb, zahărul brun și vanilia, cu ajutorul unui tel până ouăle devin ușor aerate. Peste ouă adăugăm uleiul, laptele și smântâna și le omogenizăm în amestec. Adăugăm mixul de făină și cacao și amestecăm ușor până obținem o compoziție omogenă. Adăugăm cafeaua fierbinte în 2-3 tranșe, încorporând bine înainte de a adăuga restul de cafea. La final încoporăm picăturile de ciocolată. Dacă nu găsiți sau nu aveți la dispoziție, folosiți ciocolată negră pe care o tocați cuburi mici. Punem aluatul în 2 tăvi tapetate cu hârtie de copt atât pe bază, cât și pe margini și dăm la cuptorul preîncălzit la 170C pentru 40 minute, sau până trece testul cu scobitoarea. După coacere scoatem blaturile pe un grilaj metalic și le lăsăm să se răcească complet.",
+        "valori_nutritionale": "1000kcal",
+        "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
     }
 ]
 
@@ -196,36 +188,81 @@
 
 [
     {
-        "id": "2dd130fd-320c-4ec9-be2c-679bb21457b7\n",
+        "id": "2dd130fd-320c-4ec9-be2c-679bb21457b7",
         "nume": "oua",
-        "cantitate_stoc": 100,
         "unitate_masura": "buc",
         "pret": 0.2,
-        "nume_furnizor": null
+        "perisabil": true
     },
     {
-        "id": "fa937ff1-6ef4-4b58-a8fb-69dea450bb9e\n",
-        "nume": "lapte",
-        "cantitate_stoc": 10,
-        "unitate_masura": "litri",
-        "pret": 4.5,
-        "nume_furnizor": null
-    },
-    {
-        "id": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b\n",
+        "id": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b",
         "nume": "ciocolata decor",
-        "cantitate_stoc": 100,
         "unitate_masura": "buc",
         "pret": 0.1,
-        "nume_furnizor": null
+        "perisabil": true
     },
     {
         "id": "761d7090-795c-403b-a3fb-2d1573561052",
         "nume": "unt",
-        "cantitate_stoc": 3000,
         "unitate_masura": "gram(e)",
         "pret": 5,
-        "nume_furnizor": null
+        "perisabil": true
+    },
+    {
+        "id": "fa937ff1-6ef4-4b58-a8fb-69dea450bb9e",
+        "nume": "lapte",
+        "unitate_masura": "litri",
+        "pret": 4.5,
+        "perisabil": true
+    },
+    {
+        "id": "b7146021-f254-41ef-9944-1a715abe3f6a",
+        "nume": "smantana",
+        "unitate_masura": "gram(e)",
+        "pret": 3,
+        "perisabil": true
+    },
+    {
+        "id": "c0755b55-94ee-4aef-be65-c8def68b2c5e",
+        "nume": "cacao",
+        "unitate_masura": "gram(e)",
+        "pret": 0.7,
+        "perisabil": true
+    },
+    {
+        "id": "47316f1e-934b-40c8-bea6-2b29826c5cec",
+        "nume": "zahar",
+        "unitate_masura": "gram(e)",
+        "pret": 1,
+        "perisabil": true
+    },
+    {
+        "id": "ff98bdf3-2c61-4e70-b5d0-e9873675ca58",
+        "nume": "esenta vanilie",
+        "unitate_masura": "ml",
+        "pret": 0.2,
+        "perisabil": true
+    },
+    {
+        "id": "61b02825-80d0-40dc-8c81-15fe24fe96a4",
+        "nume": "praf de copt",
+        "unitate_masura": "gram(e)",
+        "pret": 0.1,
+        "perisabil": true
+    },
+    {
+        "id": "847a64eb-092e-4e14-ac98-b2ea02363e2c",
+        "nume": "sare",
+        "unitate_masura": "gram(e)",
+        "pret": 0.3,
+        "perisabil": true
+    },
+    {
+        "id": "7b29ac16-11ff-4b4c-ab44-5b810f7a1054",
+        "nume": "frisca",
+        "unitate_masura": "ml",
+        "pret": 2,
+        "perisabil": true
     }
 ]
 
@@ -260,77 +297,28 @@
         "cantitate_vanduta": 20,
         "data": "2023-05-25T16:00:00.000Z",
         "valoare_totala": 300,
-        "produseId": "eb5f5090-1a53-42be-b6fa-b34f556c5e5d"
+        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
     },
     {
         "id": "e5ee670e-512d-4870-a33f-7a2521edec62",
         "cantitate_vanduta": 4,
         "data": "2023-04-02T16:00:00.000Z",
         "valoare_totala": 60,
-        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
-    },
-    {
-        "id": "1104a824-6d9e-41a8-a8e6-943cc79d3422",
-        "cantitate_vanduta": 6,
-        "data": "2023-04-06T14:40:00.000Z",
-        "valoare_totala": 90,
-        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
-    },
-    {
-        "id": "76b44c24-7d2f-4067-824d-930fa4813901",
-        "cantitate_vanduta": 25,
-        "data": "2023-05-18T12:05:00.000Z",
-        "valoare_totala": 375,
-        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
     },
     {
         "id": "60e9bb0a-9177-4bf1-89d7-ad5a77b7a213",
         "cantitate_vanduta": 20,
         "data": "2023-05-20T17:35:00.000Z",
         "valoare_totala": 300,
-        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
+        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
     },
     {
         "id": "0c49236d-a3e3-4911-9e78-bd5b37d9b7ff",
         "cantitate_vanduta": 20,
         "data": "2022-12-20T12:25:00.000Z",
         "valoare_totala": 300,
-        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
-    },
-    {
-        "id": "9936ddab-23bc-43fb-bc62-7a9a5bf6daef",
-        "cantitate_vanduta": 15,
-        "data": "2022-12-29T10:25:00.000Z",
-        "valoare_totala": 225,
         "produseId": "e6b09b34-8b8f-4607-a904-14536b3b02df"
-    },
-    {
-        "id": "f31667b0-0f81-43c4-996e-9ace3600d8f6",
-        "cantitate_vanduta": 10,
-        "data": "2023-01-29T15:25:00.000Z",
-        "valoare_totala": 80,
-        "produseId": "db30d4fe-94c6-4164-b389-0df4fffd5424"
-    },
-    {
-        "id": "25806e8a-cd9b-4be0-a66c-df69978ba725",
-        "cantitate_vanduta": 10,
-        "data": "2023-02-25T15:25:00.000Z",
-        "valoare_totala": 70,
-        "produseId": "49de2c74-e281-4386-a14d-562ec79c979e"
-    },
-    {
-        "id": "0c2537a9-2ebe-4c68-8526-a80d76016184",
-        "cantitate_vanduta": 10,
-        "data": "2023-02-21T15:25:00.000Z",
-        "valoare_totala": 70,
-        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
-    },
-    {
-        "id": "d88ebbdb-9d6b-4fe5-8b28-d661f87e4096",
-        "cantitate_vanduta": 20,
-        "data": "2023-02-11T12:25:00.000Z",
-        "valoare_totala": 140,
-        "produseId": "49de2c74-e281-4386-a14d-562ec79c979e"
     },
     {
         "id": "1cb3b929-64a3-4afb-b66c-5388576c969f",
@@ -354,13 +342,6 @@
         "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
     },
     {
-        "id": "31d75ff5-3e70-451c-8cd6-3380e6191552",
-        "cantitate_vanduta": 2,
-        "data": "2023-04-27T15:25:00.000Z",
-        "valoare_totala": 260,
-        "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
-    },
-    {
         "id": "21e891bc-7e81-42a5-ab7b-73632301028f",
         "cantitate_vanduta": 2,
         "data": "2023-03-13T12:08:00.000Z",
@@ -372,59 +353,261 @@
         "cantitate_vanduta": 10,
         "data": "2023-05-18T11:28:00.000Z",
         "valoare_totala": 80,
+        "produseId": null
+    },
+    {
+        "id": "9cef72c8-8ba9-41f3-8c72-2b40f33cf71f",
+        "cantitate_vanduta": 2,
+        "data": "2023-06-15T12:11:06.381Z",
+        "valoare_totala": 30,
+        "produseId": null
+    },
+    {
+        "id": "ff3da248-0fc5-449a-9984-b75a356eef3b",
+        "cantitate_vanduta": 10,
+        "data": "2023-06-15T12:16:52.190Z",
+        "valoare_totala": 150,
+        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+    },
+    {
+        "id": "86bcb2cc-b55e-4fce-8f68-883b1dd2be04",
+        "cantitate_vanduta": 10,
+        "data": "2023-06-15T14:35:56.884Z",
+        "valoare_totala": 60,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "eb2758ac-b3b6-409d-b261-f0b6b5a49ffd",
+        "cantitate_vanduta": 10,
+        "data": "2023-06-15T14:40:55.898Z",
+        "valoare_totala": 80,
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "963b2d16-fe3d-42cc-9dcf-3cf7025ab7f5",
+        "cantitate_vanduta": 10,
+        "data": "2023-06-15T14:41:32.502Z",
+        "valoare_totala": 80,
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "ddff3406-b5f2-4082-93df-910d09277426",
+        "cantitate_vanduta": 5,
+        "data": "2023-06-15T14:45:27.054Z",
+        "valoare_totala": 30,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "9bb50c70-23bf-4b3f-ae68-4336731d483f",
+        "cantitate_vanduta": 5,
+        "data": "2023-06-15T14:45:34.693Z",
+        "valoare_totala": 30,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "32285cf4-de12-417d-861c-e4f9eb86c407",
+        "cantitate_vanduta": 5,
+        "data": "2023-06-15T14:45:42.119Z",
+        "valoare_totala": 30,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "152182c8-1ace-4e49-9575-ec297d94fdfd",
+        "cantitate_vanduta": 5,
+        "data": "2023-06-15T14:49:09.692Z",
+        "valoare_totala": 30,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "81291d6e-2229-4029-854a-72c4d7c2550f",
+        "cantitate_vanduta": 5,
+        "data": "2023-06-15T14:55:31.437Z",
+        "valoare_totala": 30,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "70cac897-0f10-44a9-ab3b-371e23e48e1c",
+        "cantitate_vanduta": 3,
+        "data": "2023-06-15T17:49:47.173Z",
+        "valoare_totala": 18,
+        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+    },
+    {
+        "id": "1ecb14fb-1290-4774-a7be-24b3a3ee551f",
+        "cantitate_vanduta": 4,
+        "data": "2023-06-15T17:49:47.173Z",
+        "valoare_totala": 32,
         "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
     }
 ]
-
 
 //furnizori
 
 [
     {
         "id": "287c176c-61c8-4743-9a63-8e70fa089dea",
-        "nume_furnizor": "SC.Kredianis.SRL"
+        "nume_furnizor": "SC.Kredianis.SRL",
+        "adresa": "Str. D. I. Mendeleev 8, București",
+        "telefon": "0765437892",
+        "persoana_contact": "Maican Gina"
     },
     {
         "id": "ee1b1ab5-6fd4-435b-bf87-adb31290f7e3",
-        "nume_furnizor": "SC.Redis.SRL"
+        "nume_furnizor": "SC.Redis.SRL",
+        "adresa": "Strada Observatorului 72B, Cluj-Napoca",
+        "telefon": "0732485491",
+        "persoana_contact": "Anghel Daiana"
     },
     {
         "id": "416f7ebf-4304-49f4-85de-b80462c0da76",
-        "nume_furnizor": "SC.Profix.SRL"
-    },
-    {
-        "id": "bb2975cd-9a2c-4a37-b439-0134c94fbcac",
-        "nume_furnizor": "SC.Nend.SRL"
-    },
-    {
-        "id": "a7d99424-03fa-40b3-90ad-69d1fc07565a",
-        "nume_furnizor": "SC.Marty.SRL"
-    },
-    {
-        "id": "3c272a91-f001-43f7-a922-15caba2fffab",
-        "nume_furnizor": "SC.Klausen.SRL"
-    },
-    {
-        "id": "81882930-1cde-4f09-b345-d67170ec8c20",
-        "nume_furnizor": "SC.Marhaba.SRL"
-    },
-    {
-        "id": "9907f8b0-491a-443c-b85c-ab3f0b244f1b",
-        "nume_furnizor": "SC.Visuin.SRL"
-    },
-    {
-        "id": "85f94794-494a-4b77-91a8-d3dc332e8a5c",
-        "nume_furnizor": "SC.Lemnul-Verde.SRL"
+        "nume_furnizor": "SC.Profix.SRL",
+        "adresa": "corp A, Bulevardul Iuliu Maniu 7, București",
+        "telefon": "0744 356 689",
+        "persoana_contact": "Gotea Sorin"
     },
     {
         "id": "e5b58cde-b5db-43b1-a4c9-dc56484e6f94",
-        "nume_furnizor": "SC.Carpati.SRL"
+        "nume_furnizor": "SC.Carpati.SRL",
+        "adresa": "Strada Secuilor nr.2, Bucuresti, sector 4",
+        "telefon": "0374 282 651",
+        "persoana_contact": "Mihaly Richard"
+    },
+    {
+        "id": "85f94794-494a-4b77-91a8-d3dc332e8a5c",
+        "nume_furnizor": "SC.Lemnul-Verde.SRL",
+        "adresa": "Str. Zaharia Stancu 8G A ",
+        "telefon": " 0751 610 192",
+        "persoana_contact": "Palcau Monica"
+    },
+    {
+        "id": "9907f8b0-491a-443c-b85c-ab3f0b244f1b",
+        "nume_furnizor": "SC.Visuin.SRL",
+        "adresa": "Strada Teodor Mihali 62, Cluj-Napoca",
+        "telefon": "0765483025",
+        "persoana_contact": "Avram Adriana"
+    },
+    {
+        "id": "81882930-1cde-4f09-b345-d67170ec8c20",
+        "nume_furnizor": "SC.Marhaba.SRL",
+        "adresa": "Bulevardul 21 Decembrie 1989",
+        "telefon": " 021 222 6765",
+        "persoana_contact": "Peicu Catalin"
+    },
+    {
+        "id": "3c272a91-f001-43f7-a922-15caba2fffab",
+        "nume_furnizor": "SC.Klausen.SRL",
+        "adresa": "Strada Alexandru Vaida Voevod ",
+        "telefon": " 0371 525 777",
+        "persoana_contact": "Balan Oana"
+    },
+    {
+        "id": "a7d99424-03fa-40b3-90ad-69d1fc07565a",
+        "nume_furnizor": "SC.Marty.SRL",
+        "adresa": "Bulevardul Ion Mihalache 1-7",
+        "telefon": " 021 301 4009",
+        "persoana_contact": "Cristea Alexandru"
+    },
+    {
+        "id": "bb2975cd-9a2c-4a37-b439-0134c94fbcac",
+        "nume_furnizor": "SC.Nend.SRL",
+        "adresa": "Strada Fabricii 5, Cluj-Napoca ",
+        "telefon": "0371 525 777",
+        "persoana_contact": "Olariu Ciprian"
     }
 ]
 
-
 //comenzi
 [
+    {
+        "id": "b867a2fb-3f14-416d-a5b4-cafed61c8a8a",
+        "nume": "Gherghescu Miruna",
+        "cantitate": 100,
+        "dataRidicare": "2023-08-23T05:55:00.000Z",
+        "valoare_totala": 700,
+        "status_comanda": "ridicata",
+        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
+    },
+    {
+        "id": "110b6abf-7765-4477-893b-ed491becf36f",
+        "nume": "Popa Andrei",
+        "cantitate": 30,
+        "dataRidicare": "2023-06-29T07:40:00.000Z",
+        "valoare_totala": 450,
+        "status_comanda": "preparata",
+        "produseId": "7efefeff-c4cc-4af0-b54b-768a8785e05a"
+    },
+    {
+        "id": "2296bfa5-5f4c-4ed0-8a0f-f5b92b87e7cb",
+        "nume": "Teodorof Mihaela",
+        "cantitate": 15,
+        "dataRidicare": "2023-06-16T09:05:00.000Z",
+        "valoare_totala": 120,
+        "status_comanda": "initiata",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "6309dca6-10b6-43e9-b3dd-b3e0f2125294",
+        "nume": "Pascanu Stefan",
+        "cantitate": 1,
+        "dataRidicare": "2023-06-22T14:00:00.000Z",
+        "valoare_totala": 130,
+        "status_comanda": "initiata",
+        "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
+    },
+    {
+        "id": "1d6cbafd-44c4-491b-8310-9da54b831182",
+        "nume": "Pascanu Irina",
+        "cantitate": 40,
+        "dataRidicare": "2023-06-21T07:00:00.000Z",
+        "valoare_totala": 280,
+        "status_comanda": "preluata",
+        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
+    },
+    {
+        "id": "a0328713-dc2c-4e7a-84c2-38ad245ae952",
+        "nume": "Perju Clara",
+        "cantitate": 10,
+        "dataRidicare": "2023-06-19T07:20:00.000Z",
+        "valoare_totala": 80,
+        "status_comanda": "preparata",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "91c948c1-4ee3-4ffc-829f-05968d50b8db",
+        "nume": "Avram Adriana",
+        "cantitate": 25,
+        "dataRidicare": "2023-06-28T08:20:00.000Z",
+        "valoare_totala": 200,
+        "status_comanda": "preluata",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
+    {
+        "id": "ee1ab299-1482-4aaa-ba86-f972154b8ad8",
+        "nume": "Stroe Diana",
+        "cantitate": 30,
+        "dataRidicare": "2023-06-28T21:00:00.000Z",
+        "valoare_totala": 600,
+        "status_comanda": "initiata",
+        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
+    },
+    {
+        "id": "551e5c16-dcab-4dbf-95cf-35f79b095f4a",
+        "nume": "Salavastru Diana",
+        "cantitate": 6,
+        "dataRidicare": "2023-06-30T11:00:00.000Z",
+        "valoare_totala": 90,
+        "status_comanda": "preluata",
+        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+    },
+    {
+        "id": "c7c43153-64a9-4bd4-b3c1-92193ff62d22",
+        "nume": "Ciulei Marian",
+        "cantitate": 39,
+        "dataRidicare": "2023-06-19T11:10:00.000Z",
+        "valoare_totala": 312,
+        "status_comanda": "initiata",
+        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
+    },
     {
         "id": "e4c3745b-e896-4b9c-96ac-b8d55cd5581d",
         "nume": "Teodorof Mihaela",
@@ -442,167 +625,53 @@
         "valoare_totala": 260,
         "status_comanda": "preluata",
         "produseId": "944246bf-e6d9-4bad-8bca-e5d424e50baf"
+    }
+]
+
+
+//ingrediente_furnizori
+
+[
+    {
+        "id": "7add5c52-ce51-4ea5-ad35-6deec6bc800f",
+        "pret_ingredient": "0.2",
+        "timp_livrare": "2",
+        "ingredienteId": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b",
+        "furnizorId": "2b5c1088-893a-4eaa-b770-8cc25d9c46d1"
     },
     {
-        "id": "560b1a74-dcc2-4e7e-9844-053e31060b55",
-        "nume": "Pascanu Stefan",
-        "cantitate": 20,
-        "dataRidicare": "2023-06-15T15:00:00.000Z",
-        "valoare_totala": 100,
-        "status_comanda": "preparata",
-        "produseId": "a9e0b9ae-46ec-4948-abbf-041e77ad4363"
+        "id": "cb3cc409-bfe8-4e89-80f5-5dbae8f7a8e0",
+        "pret_ingredient": "0.5",
+        "timp_livrare": "4",
+        "ingredienteId": "2dd130fd-320c-4ec9-be2c-679bb21457b7",
+        "furnizorId": "64807441-169b-4313-8149-c2cc38693919"
     },
     {
-        "id": "ee283ecb-31d0-4b5f-94d7-f741be9bf297",
-        "nume": "Client Test",
-        "cantitate": 2,
-        "dataRidicare": "2023-06-14T15:25:51.668Z",
-        "valoare_totala": 30,
-        "status_comanda": "initiata",
-        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
+        "id": "d75aea1d-1dcf-4ce1-8e3d-6d1e4a4a01df",
+        "pret_ingredient": "1",
+        "timp_livrare": "2",
+        "ingredienteId": "47316f1e-934b-40c8-bea6-2b29826c5cec",
+        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
     },
     {
-        "id": "f9d6baca-35e7-440d-b914-bf04884b18c4",
-        "nume": "Pascanu Irina",
-        "cantitate": 5,
-        "dataRidicare": "2023-06-14T15:33:41.709Z",
-        "valoare_totala": 75,
-        "status_comanda": "initiata",
-        "produseId": "16e2b320-a2ea-46fb-b662-bf97dbba19a5"
+        "id": "4c3e2b73-394d-493b-9ee6-7cca736fe438",
+        "pret_ingredient": "0.1",
+        "timp_livrare": "3",
+        "ingredienteId": "61b02825-80d0-40dc-8c81-15fe24fe96a4",
+        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
     },
     {
-        "id": "7ffc5e60-5cd0-4485-bd34-7c1c95b25306",
-        "nume": "Pascanu Irina",
-        "cantitate": 4,
-        "dataRidicare": "2023-06-14T18:02:32.908Z",
-        "valoare_totala": 24,
-        "status_comanda": "initiata",
-        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
+        "id": "c206edb1-d923-46c1-a054-4a78db8fef82",
+        "pret_ingredient": "5",
+        "timp_livrare": "4",
+        "ingredienteId": "761d7090-795c-403b-a3fb-2d1573561052",
+        "furnizorId": "64807441-169b-4313-8149-c2cc38693919"
     },
     {
-        "id": "d84f2628-2b94-412b-9db5-c2cfecb53ea9",
-        "nume": "Suciu Maria",
-        "cantitate": 8,
-        "dataRidicare": "2023-06-14T18:30:28.246Z",
-        "valoare_totala": 120,
-        "status_comanda": "preluata",
-        "produseId": "eadb1b5e-347a-4c84-89df-cd009e74ef4a"
-    },
-    {
-        "id": "91d80dfa-3161-43f3-8c4a-7ae63c8af335",
-        "nume": "Teodorof Mihaela",
-        "cantitate": 7,
-        "dataRidicare": "2023-06-14T19:08:34.711Z",
-        "valoare_totala": 42,
-        "status_comanda": "initiata",
-        "produseId": "11d9ae23-6635-49f0-bdea-75e95bdedf16"
-    },
-    {
-        "id": "f13d94cf-fdc5-4ed2-a4b0-99128b2f5427",
-        "nume": "Stroe Diana",
-        "cantitate": 4,
-        "dataRidicare": "2023-06-15T10:00:00.000Z",
-        "valoare_totala": 32,
-        "status_comanda": "ridicata",
-        "produseId": "76168866-cde7-4d90-8a5b-19645011b327"
-    },
-    {
-        "id": "7033d662-34ea-4339-a107-c1a2b26fbe70",
-        "nume": "Andrei Emanuel",
-        "cantitate": 3,
-        "dataRidicare": "2023-06-14T19:29:28.537Z",
-        "valoare_totala": 60,
-        "status_comanda": "preluata",
-        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
-    },
-    {
-        "id": "071de153-27e6-40de-8ade-51023bd63d4c",
-        "nume": "Stirbescu Bianca",
-        "cantitate": 4,
-        "dataRidicare": "2023-06-14T19:30:32.240Z",
-        "valoare_totala": 80,
-        "status_comanda": "preluata",
-        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
-    },
-    {
-        "id": "dbb58eca-8731-4fb3-bf49-6372fd795985",
-        "nume": "Client",
-        "cantitate": 4,
-        "dataRidicare": "2023-06-14T19:33:07.791Z",
-        "valoare_totala": 80,
-        "status_comanda": "initiata",
-        "produseId": "c9e6b10b-c6ea-454b-8c92-1679f5ad7a18"
-    },
-    {
-        "id": "39335e6b-868c-4d3a-a86e-2e7b713656d5",
-        "nume": "Perju Clara",
-        "cantitate": 5,
-        "dataRidicare": "2023-06-14T19:58:34.644Z",
-        "valoare_totala": 75,
-        "status_comanda": "initiata",
-        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
-    },
-    {
-        "id": "16580b7d-aef9-46fe-aea6-1f1c91c022ea",
-        "nume": "Codreanu Maria",
-        "cantitate": 10,
-        "dataRidicare": "2023-06-14T19:59:39.062Z",
-        "valoare_totala": 150,
-        "status_comanda": "initiata",
-        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
-    },
-    {
-        "id": "4e1221ad-a055-416b-adb3-f5ba92b38a61",
-        "nume": "Oanea Nicola",
-        "cantitate": 15,
-        "dataRidicare": "2023-06-14T20:01:02.391Z",
-        "valoare_totala": 75,
-        "status_comanda": "initiata",
-        "produseId": "a9e0b9ae-46ec-4948-abbf-041e77ad4363"
-    },
-    {
-        "id": "02ec1624-7443-4feb-b11c-948ea8233b34",
-        "nume": "Sufragiu Ana",
-        "cantitate": 20,
-        "dataRidicare": "2023-06-14T20:03:09.376Z",
-        "valoare_totala": 300,
-        "status_comanda": "initiata",
-        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
-    },
-    {
-        "id": "bc504ac6-5b74-4121-841d-1deb425bb975",
-        "nume": "Vladu Maia",
-        "cantitate": 6,
-        "dataRidicare": "2023-06-22T09:00:00.000Z",
-        "valoare_totala": 90,
-        "status_comanda": "initiata",
-        "produseId": "3628d46f-5d89-4aaf-a641-d0a506c393a2"
-    },
-    {
-        "id": "110b6abf-7765-4477-893b-ed491becf36f",
-        "nume": "Popa Andrei",
-        "cantitate": 30,
-        "dataRidicare": "2023-06-29T07:40:00.000Z",
-        "valoare_totala": 450,
-        "status_comanda": "preparata",
-        "produseId": "35e22ea1-b625-45b2-81d2-40c095fff0a1"
-    },
-    {
-        "id": "b867a2fb-3f14-416d-a5b4-cafed61c8a8a",
-        "nume": "Gherghescu Miruna",
-        "cantitate": 100,
-        "dataRidicare": "2023-08-23T05:55:00.000Z",
-        "valoare_totala": 700,
-        "status_comanda": "ridicata",
-        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
-    },
-    {
-        "id": "e1a97985-f8fa-4020-a473-20f66013b056",
-        "nume": "Stefanescu Alina",
-        "cantitate": 50,
-        "dataRidicare": "2023-07-23T08:10:00.000Z",
-        "valoare_totala": 350,
-        "status_comanda": "preparata",
-        "produseId": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6"
+        "id": "a4ca9f7a-6786-4ffe-b0fb-f2f998b2596f",
+        "pret_ingredient": "7",
+        "timp_livrare": "2",
+        "ingredienteId": "761d7090-795c-403b-a3fb-2d1573561052",
+        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
     }
 ]

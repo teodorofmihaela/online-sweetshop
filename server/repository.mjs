@@ -22,9 +22,6 @@ const Ingrediente = sequelize.define('ingrediente',{
             len: [3,25]
         }
     },
-    cantitate_stoc:{
-        type:Sequelize.FLOAT(5,2),
-    },
     unitate_masura:{
         type:Sequelize.STRING,
         allowNull:true,
@@ -32,11 +29,22 @@ const Ingrediente = sequelize.define('ingrediente',{
     pret:{
         type:Sequelize.FLOAT(5,2),
         allowNull:false
+    },
+    perisabil:{
+        type:Sequelize.BOOLEAN
     }
-    // ,
-    // nume_furnizor:{ //fiecare ingredient e luat de la un furnizor si are un pret
-    //     type:Sequelize.STRING,
-    // }
+})
+
+const Stoc_ingrediente = sequelize.define('stoc_ingrediente',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    cantitate_ingrediente_stoc:{
+        type:Sequelize.FLOAT(5.2),
+    }
 })
 
 const Furnizori = sequelize.define('furnizori',{
@@ -70,6 +78,9 @@ const Ingrediente_furnizori = sequelize.define('ingrediente_furnizori',{
     },
     pret_ingredient:{
         type:Sequelize.STRING,
+    },
+    timp_livrare:{
+        type:Sequelize.STRING,
     }
 })
 
@@ -91,8 +102,34 @@ const Achizitii = sequelize.define('achizitii',{
     data_achizite:{
         type:Sequelize.DATE,
         allowNull:false
+    },
+    lot:{
+        type:Sequelize.INTEGER
+    },
+    data_expirare:{
+        type:Sequelize.DATE
+    }
+    ,
+    termen_expirare:{
+        type:Sequelize.DATE
     }
 })
+
+const Casare = sequelize.define('casare',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    data_casare:{
+        type:Sequelize.DATE,
+    },
+    cantitate_casata:{
+        type:Sequelize.FLOAT(5,2),
+    }
+})
+
 
 const Retetar = sequelize.define('retetar',{
     id:{
@@ -207,6 +244,22 @@ const Produse = sequelize.define('produse',{
     }
 })
 
+
+const Stoc_produse = sequelize.define('stoc_produse',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    data_productie:{
+        type:Sequelize.DATE,
+    },
+    cantitate_produse_stoc:{
+        type:Sequelize.FLOAT(5.2),
+    }
+})
+
 const Comenzi = sequelize.define('comenzi',{
     id:{
         type:Sequelize.UUID,
@@ -314,11 +367,20 @@ Ingrediente_In_Retete.belongsTo(Retetar,{foreignKey:'retetarId'});
 Ingrediente.hasMany(Ingrediente_furnizori,{foreignKey:'ingredienteId'}); 
 Ingrediente_furnizori.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 
-Retetar.hasMany(Ingrediente_furnizori,{foreignKey:'furnizorId'});
-Ingrediente_furnizori.belongsTo(Retetar,{foreignKey:'furnizorId'});
+Furnizori.hasMany(Ingrediente_furnizori,{foreignKey:'furnizorId'});
+Ingrediente_furnizori.belongsTo(Furnizori,{foreignKey:'furnizorId'});
+
+Ingrediente.hasMany(Casare,{foreignKey:'ingredienteId'}); 
+Casare.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
+
+Ingrediente.hasMany(Stoc_ingrediente,{foreignKey:'ingredienteId'}); 
+Stoc_ingrediente.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 
 Produse.hasMany(Vanzari,{foreignKey:'produseId'});
 Vanzari.belongsTo(Produse,{foreignKey:'produseId'});
+
+Produse.hasMany(Stoc_produse,{foreignKey:'produseId'});
+Stoc_produse.belongsTo(Produse,{foreignKey:'produseId'});
 
 Produse.hasMany(Comenzi,{foreignKey:'produseId'});
 Comenzi.belongsTo(Produse,{foreignKey:'produseId'});
@@ -337,5 +399,6 @@ async function initialize(){
 export {
     initialize,
     Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi
+    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Stoc_ingrediente, Stoc_produse, Casare, Program_aparatura, Produse,
+     Comenzi, Angajati, Utilizatori, Drepturi
 }
