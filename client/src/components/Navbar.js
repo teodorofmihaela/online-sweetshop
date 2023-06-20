@@ -52,8 +52,18 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
+            <Link to='/' className='nav-links'  onClick={closeMobieMenu}>
+            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-cubes-stacked" />Achizitii
+            </Link>
+          </li>
+          <li className='nav-item'>
             <Link to='/produse' className='nav-links'  onClick={closeMobieMenu}>
             <CakeIcon/>Produse
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/' className='nav-links'  onClick={closeMobieMenu}>
+            <CakeIcon/>Stoc produse
             </Link>
           </li>
           <li className='nav-item'>
@@ -72,20 +82,16 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobieMenu}>
-            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-users-gear"/>Personal
+            <Link to='/furnizori' className='nav-links' onClick={closeMobieMenu}>
+            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-users-gear"/>Furnizori
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobieMenu}>
-            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-gear" />Settings
+            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-users-gear" />Personal
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobieMenu}>
-            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-user-gear" />Administrare
-            </Link>
-          </li>
+          
           {/* <li className='support'>
             Support: 
             </li> 

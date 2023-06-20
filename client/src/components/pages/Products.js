@@ -51,7 +51,7 @@ function Products() {
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
             <Avatar alt={product.denumire} src="`url(${image.url})`" />
-            {product.denumire}
+            {product.denumire} 
             </Typography>
         </CardContent>
           <CardActions>

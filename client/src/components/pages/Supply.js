@@ -23,7 +23,7 @@ function Supply() {
     const [ingrediente, setIngrediente] = useState([]);
     const [furnizori, setFurnizori] = useState();
     const [ingredienteFurnizori, setIngredienteFurnizori] = useState();
-    const [ingrediente1, setIngrediente1] = useState();
+    const [ingrediente1, setIngrediente1] = useState([]);
     const [open, setOpen] = React.useState(false);
 
     const baseURL = "http://localhost:8080";
@@ -56,12 +56,12 @@ dataFetch();
 },[]);
 
     
-function nonDuplicateIngredients(ing){
+// function nonDuplicateIngredients(ing){
 
-  let rezultat = _.keys(_.countBy(ing, function(ing) {  return   ing.nume; }));
-  setIngrediente(rezultat);
-   console.log(ingrediente)
-}
+//   let rezultat = _.keys(_.countBy(ing, function(ing) {  return   ing.nume; }));
+//   setIngrediente(rezultat);
+//    console.log(ingrediente)
+// }
 
 function SupplyIngredients(ingrediente, furnizori, ingFurniz){
   let ingrMap = [];
@@ -75,18 +75,20 @@ function SupplyIngredients(ingrediente, furnizori, ingFurniz){
           });
       });
   
-      ingFurniz.map((j1) => {
-        furnizori.map((j2) => {
-      if (j1.furnizorId == j2.id) {
+      ingrMap.forEach((j1) => {
+        furnizori.forEach((j2) => {
+      if (j1.furnizoriId == j2.id) {
         furnizMap.push({ ...j1,...j2 });
           }
           });
       });
-// furnizMap.sort(custom_sort);
       console.log(furnizMap); 
-      console.log(ingrMap);
 
-FinalArray(ingrMap, furnizMap)
+      setIngrediente1(furnizMap);
+      console.log(ingrediente1);
+
+
+// FinalArray(ingrMap, furnizMap)
       // ingrMap.map((j1) => {
       //   furnizMap.map((j2) => {
       // if (j1.id == j2.id) {
@@ -101,22 +103,21 @@ FinalArray(ingrMap, furnizMap)
 //   return a.id - b.id;
 // }
 
-function FinalArray(ingrMap, furnizMap){
-  let ingrFinalMap = [];
-  for(let i=0; i<furnizMap.length; i++) {
-    ingrMap.push(furnizMap[i]);
-  }
+// function FinalArray(ingrMap, furnizMap){
+//   let ingrFinalMap = [];
+//   for(let i=0; i<furnizMap.length; i++) {
+//     ingrMap.push(furnizMap[i]);
+//   }
 
-  for(let i=0; i<ingrMap.length; i++) {
-    ingrFinalMap.push({
-     ...ingrMap[i], 
-     ...(furnizMap.find((itmInner) => itmInner.furnizorId === ingrMap[i].furnizorId))}
-    );
-  }
+  // for(let i=0; i<ingrMap.length; i++) {
+  //   ingrFinalMap.push({
+  //    ...ingrMap[i], 
+  //    ...(furnizMap.find((itmInner) => itmInner.furnizorId === ingrMap[i].furnizorId))}
+  //   );
+  // }
 
-setIngrediente1(ingrFinalMap);
-console.log(ingrediente1);
-}
+
+// }
 
 async function deleteRecipe(id) {
   if (id) {
@@ -189,7 +190,7 @@ return (
               <TableCell align="center">{Moment(`${ingredient.data_expirare}`).format('DD/MM/YYYY HH:mm')}</TableCell>
               <TableCell align="center">{ingredient.unitate_masura}</TableCell>
               <TableCell align="center">{ingredient.pret_total}</TableCell> 
-              <TableCell align="center">{ingredient.furnizor}</TableCell> 
+              <TableCell align="center">{ingredient.nume_furnizor}</TableCell> 
               <TableCell align="center">
                 <Button 
                 // onClick={openDialog(ingredient)} 

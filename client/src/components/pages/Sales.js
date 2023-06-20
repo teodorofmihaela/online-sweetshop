@@ -73,8 +73,6 @@ function SalesCategory(sales, products){
         <Button  variant="contained" color="success" href = {`/vanzari/adaugare`}  startIcon={<AddIcon />}>
         Inregistreaza vanzare 
       </Button >
-      <Button variant="contained"  href = {`/furnizori`} startIcon={<ShoppingCartIcon />}>Achizitii</Button>
-      <Button variant="contained"  href = {`/statiustici`} startIcon={<PieChartIcon />}>Vezi Statistici</Button>
 
       </Box>
       <TableContainer component={Paper} sx={{width: '97%'}}>
