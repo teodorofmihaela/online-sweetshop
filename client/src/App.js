@@ -69,23 +69,23 @@ function App() {
               </LoginContext.Provider>} />
 
             <Route exact path='/vanzari' element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator  }} >
                 {displayVanzator ? <Sales /> : <Login />}
               </LoginContext.Provider>} />
               
             <Route exact path='/vanzari/adaugare' element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator  }} >
                 {displayVanzator ? <AddSale /> : <Login />}
               </LoginContext.Provider>} />
 
               <Route exact path='/comenzi' element={
-                <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator  }} >
                 {(displayVanzator) ? <Orders /> : <Login />}
               </LoginContext.Provider>} />
 
             <Route exact path='/comenzi/adaugare' element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
-                {(displayVanzator||displayClient) ? <AddOrders /> : <Login />}
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator, setDisplayClient }} >
+                {(displayVanzator || displayClient) ? <AddOrders /> : <Login />}
               </LoginContext.Provider>} />
 
               <Route exact path='/aprovizionare' element={
