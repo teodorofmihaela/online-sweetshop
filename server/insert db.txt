@@ -1,18 +1,18 @@
 //produse
 [
     {
-        "id": "eadb1b5e-347a-4c84-89df-cd009e74ef4a",
-        "denumire": "Ecler cu ciocolata belgiana",
-        "categorie": "cofetarie",
-        "pret_vanzare": 15,
-        "profit": 6
-    },
-    {
         "id": "b45e3a7f-1642-485c-a4fa-a16244462257",
         "denumire": "Ecler cu ciocolata cu alune",
         "categorie": "cofetarie",
         "pret_vanzare": 15,
         "profit": 5
+    },
+    {
+        "id": "eadb1b5e-347a-4c84-89df-cd009e74ef4a",
+        "denumire": "Ecler cu ciocolata belgiana",
+        "categorie": "cofetarie",
+        "pret_vanzare": 15,
+        "profit": 6
     },
     {
         "id": "290e842f-de47-4132-b6a3-43d09d08430e",
@@ -41,13 +41,6 @@
         "categorie": "cofetarie",
         "pret_vanzare": 15,
         "profit": 3
-    },
-    {
-        "id": "3628d46f-5d89-4aaf-a641-d0a506c393a2",
-        "denumire": "Ecler cu tiramisu",
-        "categorie": "cofetarie",
-        "pret_vanzare": 15,
-        "profit": 7
     },
     {
         "id": "35e22ea1-b625-45b2-81d2-40c095fff0a1",
@@ -85,20 +78,6 @@
         "profit": 3
     },
     {
-        "id": "944246bf-e6d9-4bad-8bca-e5d424e50baf",
-        "denumire": "Tort cu ciocolata",
-        "categorie": "tort",
-        "pret_vanzare": 130,
-        "profit": 50
-    },
-    {
-        "id": "49de2c74-e281-4386-a14d-562ec79c979e",
-        "denumire": "Pralina cu ciocolata alba",
-        "categorie": "ciocolata",
-        "pret_vanzare": 7,
-        "profit": 3
-    },
-    {
         "id": "9d59d88f-f0a8-4ff1-92f0-6066678db0c6",
         "denumire": "Pralina cu lavanda",
         "categorie": "ciocolata",
@@ -109,7 +88,7 @@
         "id": "11d9ae23-6635-49f0-bdea-75e95bdedf16",
         "denumire": "Pralina simpla",
         "categorie": "ciocolata",
-        "pret_vanzare": 66,
+        "pret_vanzare": 6,
         "profit": 2.5
     },
     {
@@ -118,6 +97,13 @@
         "categorie": "ciocolata",
         "pret_vanzare": 8,
         "profit": 3
+    },
+    {
+        "id": "944246bf-e6d9-4bad-8bca-e5d424e50baf",
+        "denumire": "Tort cu ciocolata",
+        "categorie": "tort",
+        "pret_vanzare": 130,
+        "profit": 50
     }
 ]
 
@@ -188,80 +174,80 @@
 
 [
     {
-        "id": "2dd130fd-320c-4ec9-be2c-679bb21457b7",
-        "nume": "oua",
-        "unitate_masura": "buc",
-        "pret": 0.2,
-        "perisabil": true
-    },
-    {
-        "id": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b",
-        "nume": "ciocolata decor",
-        "unitate_masura": "buc",
-        "pret": 0.1,
-        "perisabil": true
-    },
-    {
-        "id": "761d7090-795c-403b-a3fb-2d1573561052",
-        "nume": "unt",
-        "unitate_masura": "gram(e)",
-        "pret": 5,
-        "perisabil": true
-    },
-    {
-        "id": "fa937ff1-6ef4-4b58-a8fb-69dea450bb9e",
-        "nume": "lapte",
-        "unitate_masura": "litri",
-        "pret": 4.5,
-        "perisabil": true
-    },
-    {
-        "id": "b7146021-f254-41ef-9944-1a715abe3f6a",
-        "nume": "smantana",
-        "unitate_masura": "gram(e)",
-        "pret": 3,
-        "perisabil": true
-    },
-    {
-        "id": "c0755b55-94ee-4aef-be65-c8def68b2c5e",
-        "nume": "cacao",
-        "unitate_masura": "gram(e)",
-        "pret": 0.7,
-        "perisabil": true
-    },
-    {
-        "id": "47316f1e-934b-40c8-bea6-2b29826c5cec",
-        "nume": "zahar",
-        "unitate_masura": "gram(e)",
-        "pret": 1,
-        "perisabil": true
-    },
-    {
-        "id": "ff98bdf3-2c61-4e70-b5d0-e9873675ca58",
-        "nume": "esenta vanilie",
+        "id": "360cf38b-d3e9-4e51-a324-ccbba7b11b83",
+        "nume": "frisca",
         "unitate_masura": "ml",
-        "pret": 0.2,
+        "pret": 2,
         "perisabil": true
     },
     {
-        "id": "61b02825-80d0-40dc-8c81-15fe24fe96a4",
-        "nume": "praf de copt",
-        "unitate_masura": "gram(e)",
-        "pret": 0.1,
-        "perisabil": true
-    },
-    {
-        "id": "847a64eb-092e-4e14-ac98-b2ea02363e2c",
+        "id": "b5eb9a5a-c35d-4ecb-b077-43a2f60fa4c3",
         "nume": "sare",
         "unitate_masura": "gram(e)",
         "pret": 0.3,
         "perisabil": true
     },
     {
-        "id": "7b29ac16-11ff-4b4c-ab44-5b810f7a1054",
-        "nume": "frisca",
+        "id": "39efcaf9-483c-4b5e-9191-580e66821417",
+        "nume": "praf de copt",
+        "unitate_masura": "gram(e)",
+        "pret": 0.1,
+        "perisabil": true
+    },
+    {
+        "id": "a4d8a2ff-6ead-4138-8dbd-26fe7004f230",
+        "nume": "esenta vanilie",
         "unitate_masura": "ml",
-        "pret": 2,
+        "pret": 0.2,
+        "perisabil": true
+    },
+    {
+        "id": "8b65f553-fa5a-4c1c-8479-008bb11fdf86",
+        "nume": "zahar",
+        "unitate_masura": "gram(e)",
+        "pret": 1,
+        "perisabil": true
+    },
+    {
+        "id": "a4ebbaa1-b7f7-43dc-b176-9481c046142d",
+        "nume": "cacao",
+        "unitate_masura": "gram(e)",
+        "pret": 0.7,
+        "perisabil": true
+    },
+    {
+        "id": "808387aa-2171-40e1-9669-e8876730c281",
+        "nume": "smantana",
+        "unitate_masura": "gram(e)",
+        "pret": 3,
+        "perisabil": true
+    },
+    {
+        "id": "fd052dca-670a-4a0c-ad53-b0e1c57e95ef",
+        "nume": "lapte",
+        "unitate_masura": "litri",
+        "pret": 4.5,
+        "perisabil": true
+    },
+    {
+        "id": "a3853e4a-a8a9-4bdc-ac3b-dc7c8113e7bc",
+        "nume": "unt",
+        "unitate_masura": "gram(e)",
+        "pret": 5,
+        "perisabil": true
+    },
+    {
+        "id": "09255ae5-fc08-49be-824e-6cbea82de851",
+        "nume": "ciocolata decor",
+        "unitate_masura": "buc",
+        "pret": 0.1,
+        "perisabil": true
+    },
+    {
+        "id": "b71e2967-f3fe-4cb6-9166-bc3d66a93f6f",
+        "nume": "oua",
+        "unitate_masura": "buc",
+        "pret": 0.2,
         "perisabil": true
     }
 ]
@@ -636,42 +622,101 @@
         "id": "7add5c52-ce51-4ea5-ad35-6deec6bc800f",
         "pret_ingredient": "0.2",
         "timp_livrare": "2",
-        "ingredienteId": "121aab2f-bf34-47b5-8f6f-06a0a777bb0b",
-        "furnizorId": "2b5c1088-893a-4eaa-b770-8cc25d9c46d1"
+        "ingredienteId": "39efcaf9-483c-4b5e-9191-580e66821417",
+        "furnizorId": "10606752-9a01-40b2-9adc-e7e5462bc769"
     },
     {
         "id": "cb3cc409-bfe8-4e89-80f5-5dbae8f7a8e0",
         "pret_ingredient": "0.5",
         "timp_livrare": "4",
-        "ingredienteId": "2dd130fd-320c-4ec9-be2c-679bb21457b7",
-        "furnizorId": "64807441-169b-4313-8149-c2cc38693919"
+        "ingredienteId": "39efcaf9-483c-4b5e-9191-580e66821417",
+        "furnizorId": "1fed2ca9-79b8-4aba-a8da-aa5339693065"
     },
     {
         "id": "d75aea1d-1dcf-4ce1-8e3d-6d1e4a4a01df",
         "pret_ingredient": "1",
         "timp_livrare": "2",
-        "ingredienteId": "47316f1e-934b-40c8-bea6-2b29826c5cec",
-        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
+        "ingredienteId": "09255ae5-fc08-49be-824e-6cbea82de851",
+        "furnizorId": "10606752-9a01-40b2-9adc-e7e5462bc769"
     },
     {
         "id": "4c3e2b73-394d-493b-9ee6-7cca736fe438",
         "pret_ingredient": "0.1",
         "timp_livrare": "3",
-        "ingredienteId": "61b02825-80d0-40dc-8c81-15fe24fe96a4",
-        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
+        "ingredienteId": "a4ebbaa1-b7f7-43dc-b176-9481c046142d",
+        "furnizorId": "6b8dcf13-b663-4640-9d48-9e611fbdb915"
     },
     {
         "id": "c206edb1-d923-46c1-a054-4a78db8fef82",
         "pret_ingredient": "5",
         "timp_livrare": "4",
-        "ingredienteId": "761d7090-795c-403b-a3fb-2d1573561052",
-        "furnizorId": "64807441-169b-4313-8149-c2cc38693919"
+        "ingredienteId": "b71e2967-f3fe-4cb6-9166-bc3d66a93f6f",
+        "furnizorId": "ca33085a-58f2-442a-b9c2-d3e817f8b230"
     },
     {
         "id": "a4ca9f7a-6786-4ffe-b0fb-f2f998b2596f",
         "pret_ingredient": "7",
         "timp_livrare": "2",
-        "ingredienteId": "761d7090-795c-403b-a3fb-2d1573561052",
-        "furnizorId": "07c00de0-e83a-45df-abde-8ce1e9d13c56"
+        "ingredienteId": "fd052dca-670a-4a0c-ad53-b0e1c57e95ef",
+        "furnizorId": "fa7f5c8f-b976-4570-9f7b-7625dc945a85"
+    }
+]
+
+//utilizatori
+
+[
+    {
+        "id": "6af12bd1-369b-40f4-aebc-dbae8b94aac8",
+        "username": "admin",
+        "parola": "admin",
+        "nume": "Teodorof",
+        "prenume": "Mihaela",
+        "cod_drept": "1",
+        "denumire_drept": "Administrare, achizitii si gestiune stocuri"
+    },
+    {
+        "id": "9bd126bd-149f-4188-8457-4e538657d60c",
+        "username": "bucatar",
+        "parola": "bucatar",
+        "nume": "Serban",
+        "prenume": "Teodora",
+        "cod_drept": "2",
+        "denumire_drept": "Bucatar si gestiune retete"
+    },
+    {
+        "id": "bed4a8fe-8f8f-42b2-a20b-1a67505d658d",
+        "username": "vanzator",
+        "parola": "vanzator",
+        "nume": "Rusu",
+        "prenume": "Adrian",
+        "cod_drept": "3",
+        "denumire_drept": "Vanzare"
+    },
+    {
+        "id": "09f767bc-7609-42e6-b8bb-e3a52736eb18",
+        "username": "vanzator2",
+        "parola": "vanzator2",
+        "nume": "Stan",
+        "prenume": "Valentin",
+        "cod_drept": "3",
+        "denumire_drept": "Vanzare"
+    },
+    {
+        "id": "3ca6f55b-69fc-47a3-896e-3f05e78ccfbb",
+        "username": "client1",
+        "parola": "client1",
+        "nume": "Pascanu",
+        "prenume": "Stefan",
+        "cod_drept": "4",
+        "denumire_drept": "Client"
+    },
+    {
+        "id": "6c67c254-ee40-401f-bcd3-ef0d9fd28332",
+        "username": "client2",
+        "parola": "client2",
+        "nume": "Varlam",
+        "prenume": "Miruna",
+        "cod_drept": "4",
+        "denumire_drept": "Client"
     }
 ]

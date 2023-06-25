@@ -7,9 +7,9 @@ import CakeIcon from '@mui/icons-material/Cake';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
-
-
-
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Navbar() {
   const[click, setClick]=useState(false);
@@ -63,7 +63,7 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <Link to='/' className='nav-links'  onClick={closeMobieMenu}>
-            <CakeIcon/>Stoc produse
+            <InventoryIcon/>Stoc produse
             </Link>
           </li>
           <li className='nav-item'>
@@ -83,7 +83,7 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <Link to='/furnizori' className='nav-links' onClick={closeMobieMenu}>
-            <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-users-gear"/>Furnizori
+            <FontAwesomeIcon className="icon-menu" /><StorefrontIcon/>Furnizori
             </Link>
           </li>
           <li className='nav-item'>
@@ -91,7 +91,11 @@ function Navbar() {
             <FontAwesomeIcon className="icon-menu" icon="fa-solid fa-users-gear" />Personal
             </Link>
           </li>
-          
+          <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobieMenu}>
+            <FontAwesomeIcon className="icon-menu"/><LogoutIcon/>Log out
+            </Link>
+          </li>
           {/* <li className='support'>
             Support: 
             </li> 

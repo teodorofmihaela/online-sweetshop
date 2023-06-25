@@ -186,17 +186,17 @@ async function deleteRecord(Model, req, res) {
 
 async function login(Model, req, res) {
     try {
-        let utilizator = await Model.findAll({
+        let utilizator = await Model.findOne({
             where: {
-                username: req.query.username,
-                parola: req.query.parola
+                username: req.body.username,
+                parola: req.body.parola
             }
         });
-        if (utilizator.length > 0) {
-            console.log(utilizator);
-            res.status(200).send(utilizator);
+        if (!utilizator) {
+            res.status(204).send(utilizator);
         } else {
-            res.status(404).send();
+            console.log(utilizator);
+            res.status(200).send();
         }
     } catch (err) {
         res.status(500).json(err);

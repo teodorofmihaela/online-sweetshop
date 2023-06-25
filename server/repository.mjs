@@ -165,39 +165,6 @@ const Ingrediente_In_Retete = sequelize.define('ingrediente_in_retete',{
     }
 })
 
-const Aparatura = sequelize.define('aparatura',{
-    id:{
-        type:Sequelize.UUID,
-        defaulValue:Sequelize.UUIDV4,
-        allowNUll:false,
-        primaryKey:true
-    },
-    denumire_aparat:{
-        type:Sequelize.STRING,
-        allowNull:false
-    }
-})
-
-const Program_aparatura = sequelize.define('program_aparatura',{
-    id:{
-        type:Sequelize.UUID,
-        defaulValue:Sequelize.UUIDV4,
-        allowNUll:false,
-        primaryKey:true
-    },
-    Start:{
-        type:Sequelize.DATE,
-        allowNull:false
-    },
-    Durata:{
-        type:Sequelize.DATE,
-        allowNull:false
-    },
-    Sfarsit:{
-        type:Sequelize.DATE,
-        allowNull:false
-    }
-})
 
 const Vanzari = sequelize.define('vanzari',{
     id:{
@@ -208,15 +175,12 @@ const Vanzari = sequelize.define('vanzari',{
     },
     cantitate_vanduta:{
         type:Sequelize.INTEGER,
-        allowNull:false
     },
     data:{
         type:Sequelize.DATE,
-        allowNull:false
     },
     valoare_totala:{
         type:Sequelize.FLOAT(5.2),
-        allowNull:false
     }
 })
 
@@ -229,18 +193,15 @@ const Produse = sequelize.define('produse',{
     },
     denumire:{
         type:Sequelize.STRING,
-        allowNull:false
     },
     categorie:{
         type:Sequelize.STRING,
     },
     pret_vanzare:{
         type:Sequelize.FLOAT(5.2),
-        allowNull:false
     },
     profit:{
         type:Sequelize.FLOAT(5.2),
-        allowNull:false
     }
 })
 
@@ -284,30 +245,27 @@ const Comenzi = sequelize.define('comenzi',{
     }
 })
 
-const Angajati = sequelize.define('angajati',{
+const Vanzari_online = sequelize.define('vanzari_online',{
     id:{
         type:Sequelize.UUID,
         defaulValue:Sequelize.UUIDV4,
         allowNUll:false,
         primaryKey:true
+    }, 
+    cantitate:{
+        type:Sequelize.INTEGER,
     },
-    nume:{
-        type:Sequelize.STRING,
-        allowNull:false
+    dataVaznare:{
+        type:Sequelize.DATE,
     },
-    prenume:{
-        type:Sequelize.STRING,
-        allowNull:false
-    },
-    departament:{
-        type:Sequelize.STRING,
-        allowNull:false
-    },
-    salariu:{
+    valoare_totala:{
         type:Sequelize.FLOAT(5.2),
-        allowNull:false
+    },
+    status_comanda:{
+        type:Sequelize.STRING,
     }
 })
+
 
 const Utilizatori = sequelize.define('utilizatori',{
     id:{
@@ -323,37 +281,27 @@ const Utilizatori = sequelize.define('utilizatori',{
     parola:{
         type:Sequelize.STRING,
         allowNull:false
-    }
-})
-
-const Drepturi = sequelize.define('drepturi',{
-    id:{
-        type:Sequelize.UUID,
-        defaulValue:Sequelize.UUIDV4,
-        allowNUll:false,
-        primaryKey:true
+    },
+    nume:{
+        type:Sequelize.STRING,
+    },
+    prenume:{
+        type:Sequelize.STRING,
+    },
+    cod_drept:{
+        type:Sequelize.STRING,
     },
     denumire_drept:{
         type:Sequelize.STRING,
-        allowNull:false
-    },
-    descriere_drept:{
-        type:Sequelize.STRING,
-        allowNull:false
     }
 })
+
 
 Furnizori.hasMany(Achizitii,{foreignKey:'furnizoriId'});
 Achizitii.belongsTo(Furnizori,{foreignKey:'furnizoriId'});
 
 Ingrediente.hasMany(Achizitii,{foreignKey:'ingredienteId'});
 Achizitii.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
-
-Aparatura.hasMany(Program_aparatura,{foreignKey:'aparaturaId'});
-Program_aparatura.belongsTo(Aparatura,{foreignKey:'aparaturaId'});
-
-Retetar.hasMany(Aparatura,{foreignKey:'retetarId'});
-Aparatura.belongsTo(Retetar,{foreignKey:'retetarId'});
 
 Produse.hasOne(Retetar,{foreignKey:'produseId'});
 Retetar.belongsTo(Produse,{foreignKey:'produseId'});
@@ -385,11 +333,14 @@ Stoc_produse.belongsTo(Produse,{foreignKey:'produseId'});
 Produse.hasMany(Comenzi,{foreignKey:'produseId'});
 Comenzi.belongsTo(Produse,{foreignKey:'produseId'});
 
-Angajati.hasOne(Utilizatori,{foreignKey:'angajatiId'});
-Utilizatori.belongsTo(Angajati,{foreignKey:'angajatiId'});
+Produse.hasMany(Vanzari_online,{foreignKey:'produseId'});
+Vanzari_online.belongsTo(Produse,{foreignKey:'produseId'});
 
-Drepturi.hasOne(Utilizatori,{foreignKey:'drepturiId'});
-Utilizatori.belongsTo(Drepturi,{foreignKey:'drepturiId'});
+Utilizatori.hasOne(Vanzari_online,{foreignKey:'utilizatoriId'});//clientii cumpara in tabela vanzari online
+Vanzari_online.belongsTo(Utilizatori,{foreignKey:'utilizatoriId'});
+
+Utilizatori.hasOne(Vanzari,{foreignKey:'utilizatoriId'});//vanzatorii vand produsele
+Vanzari.belongsTo(Utilizatori,{foreignKey:'utilizatoriId'});
 
 async function initialize(){
     await sequelize.authenticate(); //conectare la sqlite
@@ -398,7 +349,7 @@ async function initialize(){
 
 export {
     initialize,
-    Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Ingrediente_furnizori, Stoc_ingrediente, Stoc_produse, Casare, Program_aparatura, Produse,
-     Comenzi, Angajati, Utilizatori, Drepturi
+    Ingrediente, Furnizori, Achizitii, Retetar, Vanzari, Ingrediente_In_Retete, 
+    Ingrediente_furnizori, Stoc_ingrediente, Stoc_produse, Casare, Produse,
+     Comenzi, Utilizatori, Vanzari_online
 }

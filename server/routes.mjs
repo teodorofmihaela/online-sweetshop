@@ -1,6 +1,6 @@
 import express from 'express';
-import { Ingrediente, Furnizori, Achizitii, Retetar, Aparatura,
-    Vanzari, Ingrediente_In_Retete, Casare,Stoc_ingrediente, Stoc_produse, Ingrediente_furnizori, Program_aparatura, Produse, Comenzi, Angajati, Utilizatori, Drepturi} from './repository.mjs';
+import { Ingrediente, Furnizori, Achizitii, Retetar, Vanzari_online,
+    Vanzari, Ingrediente_In_Retete, Casare,Stoc_ingrediente, Stoc_produse, Ingrediente_furnizori, Produse, Comenzi, Utilizatori} from './repository.mjs';
 import { getRecord, getRecords, headRecord, postRecord, putRecord, patchRecord, deleteRecord, deleteRecords,
     getAttributes, getFilteredRecords,getFilteredRecipe, login} from './service.mjs';
 
@@ -9,8 +9,8 @@ const router=express.Router();
 
 //formularul de login va fi la calea /
 
-router.route('/') 
-    .get((req,res)=>login(Utilizatori,req,res));
+router.route('/login') 
+    .post((req,res)=>login(Utilizatori,req,res));
 
 //ruta pt toate ingredientele
 router.route('/ingrediente')
@@ -135,20 +135,22 @@ router.route('/stoc_produse')
 router.route('/stoc_produse/:id')
     .put((req,res)=>putRecord(Stoc_produse,req,res));
 
-//ruta pt Angajati
-router.route('/angajati')
-    .post((req,res)=>postRecord(Angajati,req,res))
-    .delete((req,res) => deleteRecords(Angajati,req,res))
-    .get((req,res)=>getRecords(Angajati,req,res))
-    .put((req,res)=>putRecord(Angajati,req,res));
+
+//ruta pt Achizitii_online
+router.route('/vanzari_online')
+    .post((req,res)=>postRecord(Vanzari_online,req,res))
+    .delete((req,res) => deleteRecords(Vanzari_online,req,res))
+    .get((req,res)=>getRecords(Vanzari_online,req,res))
+    .put((req,res)=>putRecord(Vanzari_online,req,res));
 
 
-//ruta pt Drepturi
-router.route('/drepturi')
-    .post((req,res)=>postRecord(Drepturi,req,res))
-    .delete((req,res) => deleteRecords(Drepturi,req,res))
-    .get((req,res)=>getRecords(Drepturi,req,res))
-    .put((req,res)=>putRecord(Drepturi,req,res));
+//ruta pt Utilizatori
+router.route('/utilizatori')
+    .post((req,res)=>postRecord(Utilizatori,req,res))
+    .delete((req,res) => deleteRecords(Utilizatori,req,res))
+    .get((req,res)=>getRecords(Utilizatori,req,res))
+    .put((req,res)=>putRecord(Utilizatori,req,res));
+
 
 
 

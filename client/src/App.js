@@ -15,8 +15,11 @@ import AddSale from './components/pages/AddSale';
 import Orders from './components/pages/Orders';
 import AddOrders from './components/pages/AddOrders';
 import Statistics from './components/pages/Statistics';
+import Login from './components/pages/Login';
 import {BrowserRouter as  Router, Routes , Route} from 'react-router-dom';
 import { Component } from 'react';
+import { Navigate } from "react-router-dom";
+import { LoginContext } from './context/LoginContext'
 
 
 // import the library
@@ -26,38 +29,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
- //class App extends Component {
-//   state = {
-//     clients: []
-//   };
-
-//   async componentDidMount() {
-//     const response = await fetch('/utilizatori');
-//     const body = await response.json();
-//     this.setState({clients: body});
-//   }
-
-//   render() {
-//     const {clients} = this.state;
-//     return (
-//         <div className="App">
-//           <header className="App-header">
-//             <div className="App-intro">
-//               <h2>Clients</h2>
-//               {clients.map(client =>
-//                   <div key={client.id}>
-//                     {client.nume} ({client.email})
-//                   </div>
-//               )}
-//             </div>
-//           </header>
-//         </div>
-//     );
-//   }
-// }
-
+ 
 
 function App() {
+
+  const [userName, setUserName] = React.useState(false)
+  const [displayAdmin, setDisplayAdmin] = React.useState(false)
+  const [displayBucatar, setDisplayBucatar] = React.useState(false)
+  const [displayVanzator, setDisplayVanzator] = React.useState(false)
+  const [displayClient, setDisplayClient] = React.useState(false)
+
   return (
     <div className="App">
       <Router>
@@ -65,21 +46,66 @@ function App() {
         <div className="container">
           <Routes>
              {/* swich is replaced  by routes */}
-            <Route  path='/' element={<Retetar/>} />            
-            <Route path='/retetar' element={<Retetar/>} />
-            <Route exact path='/retetar/:denumire' element={<Recipe/>} />
-            <Route exact path='/retetar/add' element={<AddRecipe/>} />
-            <Route exact path='/aprovizionare' element={<Supply/>} />
-            <Route exact path='/furnizori' element={<Provider/>} />
+              {/* public route login*/}
+            <Route  path='/login' element={<Login/>} /> 
+            {/* anyone can see the products */}
             <Route exact path='/produse' element={<Products/>} />
-            <Route exact path='/vanzari' element={<Sales/>} />
-            <Route exact path='/vanzari/adaugare' element={<AddSale/>} />
-            <Route exact path='/comenzi' element={<Orders/>} />
-            <Route exact path='/comenzi/adaugare' element={<AddOrders/>} />
-            <Route exact path='/statistici' element={<Statistics/>} />
-            <Route path='/home' element={<Retetar/>} />
-            <Route path='/sign-in' element={<SignIn/>} />
-            <Route path='/sign-up' element={<SignUp/>} />       
+
+            {/*  routes with authorization needed*/}
+
+            <Route exact path='/retetar'  element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                  {displayBucatar ? <Retetar /> : <Login />}
+              </LoginContext.Provider>} />
+
+            <Route exact path='/retetar/:denumire' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {displayBucatar ? <Recipe /> : <Login />}
+              </LoginContext.Provider>} />
+
+            <Route exact path='/retetar/add' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {displayBucatar ? <AddRecipe /> : <Login />}
+              </LoginContext.Provider>} />
+
+            <Route exact path='/vanzari' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {displayVanzator ? <Sales /> : <Login />}
+              </LoginContext.Provider>} />
+              
+            <Route exact path='/vanzari/adaugare' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {displayVanzator ? <AddSale /> : <Login />}
+              </LoginContext.Provider>} />
+
+              <Route exact path='/comenzi' element={
+                <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {(displayVanzator) ? <Orders /> : <Login />}
+              </LoginContext.Provider>} />
+
+            <Route exact path='/comenzi/adaugare' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {(displayVanzator||displayClient) ? <AddOrders /> : <Login />}
+              </LoginContext.Provider>} />
+
+              <Route exact path='/aprovizionare' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayAdmin }} >
+                {displayAdmin ? <Supply /> : <Login />}
+              </LoginContext.Provider>} />
+
+            <Route exact path='/furnizori' element={
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayAdmin }} >
+              {displayAdmin ? <Provider /> : <Login />}
+            </LoginContext.Provider>} />
+
+            <Route exact path='/statistici'  element={
+            <LoginContext.Provider  value={{ userName, setUserName, setDisplayAdmin }} >
+                {displayAdmin ? <Statistics /> : <Login />}
+            </LoginContext.Provider>} />
+
+            {/* <Route path='/home' element={<Retetar/>} /> */}
+            {/* <Route path='/sign-in' element={<SignIn/>} />
+            <Route path='/sign-up' element={<SignUp/>} />        */}
        
           </Routes >
             </div>
@@ -87,6 +113,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 library.add( fas, far)
