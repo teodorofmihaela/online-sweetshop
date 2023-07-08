@@ -212,7 +212,7 @@ return (
               <TableCell align="center">{s.cantitate_produse_stoc}</TableCell>
               <TableCell align="center">{Moment(`${s.data_productie}`).format('DD/MM/YYYY HH:mm')}</TableCell>
               <TableCell align="center">{Moment(`${s.data_productie}`).add(7, 'd').format('DD/MM/YYYY HH:mm')}</TableCell>
-              <TableCell align="center">50</TableCell>
+              <TableCell align="center">{s.cantitate_minima_necesara}</TableCell>
               <TableCell align="center">{s.categorie}</TableCell> 
               <TableCell align="center">
                 <Button 

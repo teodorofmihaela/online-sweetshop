@@ -16,22 +16,13 @@ const Ingrediente = sequelize.define('ingrediente',{
         primaryKey:true
     },
     nume:{
-        type:Sequelize.STRING,
-        allowNull:false,
-        validate:{
-            len: [3,25]
-        }
+        type:Sequelize.STRING
     },
     unitate_masura:{
-        type:Sequelize.STRING,
-        allowNull:true,
+        type:Sequelize.STRING
     },
     pret:{
-        type:Sequelize.FLOAT(5,2),
-        allowNull:false
-    },
-    perisabil:{
-        type:Sequelize.BOOLEAN
+        type:Sequelize.FLOAT(5,2)
     }
 })
 
@@ -107,10 +98,6 @@ const Achizitii = sequelize.define('achizitii',{
         type:Sequelize.INTEGER
     },
     data_expirare:{
-        type:Sequelize.DATE
-    }
-    ,
-    termen_expirare:{
         type:Sequelize.DATE
     }
 })
@@ -202,6 +189,9 @@ const Produse = sequelize.define('produse',{
     },
     profit:{
         type:Sequelize.FLOAT(5.2),
+    },
+    alergeni:{
+        type:Sequelize.STRING,//gluten etc
     }
 })
 
@@ -217,6 +207,30 @@ const Stoc_produse = sequelize.define('stoc_produse',{
         type:Sequelize.DATE,
     },
     cantitate_produse_stoc:{
+        type:Sequelize.FLOAT(5.2),
+    },
+    data_expirare:{
+        type:Sequelize.DATE,
+    },
+    zile_valabilitate:{
+        type:Sequelize.DATE,
+    },
+    cantitate_minima_necesara:{
+        type:Sequelize.FLOAT(5.2),
+    }
+})
+
+const Produse_comanda = sequelize.define('produse_comanda',{
+    id:{
+        type:Sequelize.UUID,
+        defaulValue:Sequelize.UUIDV4,
+        allowNUll:false,
+        primaryKey:true
+    },
+    cantitate_produse:{
+        type:Sequelize.NUMBER,
+    },
+    valoare:{
         type:Sequelize.FLOAT(5.2),
     }
 })
@@ -251,17 +265,23 @@ const Vanzari_online = sequelize.define('vanzari_online',{
         defaulValue:Sequelize.UUIDV4,
         allowNUll:false,
         primaryKey:true
-    }, 
-    cantitate:{
-        type:Sequelize.INTEGER,
     },
-    dataVaznare:{
+    data_vaznare:{
         type:Sequelize.DATE,
     },
     valoare_totala:{
         type:Sequelize.FLOAT(5.2),
     },
     status_comanda:{
+        type:Sequelize.STRING,
+    },
+    adresa_livrare:{
+        type:Sequelize.STRING,
+    },
+    nume:{
+        type:Sequelize.STRING,
+    },
+    telefon:{
         type:Sequelize.STRING,
     }
 })
@@ -312,6 +332,9 @@ Ingrediente_In_Retete.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 Retetar.hasMany(Ingrediente_In_Retete,{foreignKey:'retetarId'});//todo has one
 Ingrediente_In_Retete.belongsTo(Retetar,{foreignKey:'retetarId'});
 
+Produse.hasMany(Ingrediente_In_Retete,{foreignKey:'produseId'});//todo has one
+Ingrediente_In_Retete.belongsTo(Produse,{foreignKey:'produseId'});
+
 Ingrediente.hasMany(Ingrediente_furnizori,{foreignKey:'ingredienteId'}); 
 Ingrediente_furnizori.belongsTo(Ingrediente,{foreignKey:'ingredienteId'});
 
@@ -333,11 +356,14 @@ Stoc_produse.belongsTo(Produse,{foreignKey:'produseId'});
 Produse.hasMany(Comenzi,{foreignKey:'produseId'});
 Comenzi.belongsTo(Produse,{foreignKey:'produseId'});
 
-Produse.hasMany(Vanzari_online,{foreignKey:'produseId'});
-Vanzari_online.belongsTo(Produse,{foreignKey:'produseId'});
+Produse.hasMany(Produse_comanda,{foreignKey:'produseId'});
+Produse_comanda.belongsTo(Produse,{foreignKey:'produseId'});
 
 Utilizatori.hasOne(Vanzari_online,{foreignKey:'utilizatoriId'});//clientii cumpara in tabela vanzari online
 Vanzari_online.belongsTo(Utilizatori,{foreignKey:'utilizatoriId'});
+
+Produse_comanda.hasOne(Vanzari_online,{foreignKey:'produse_comandaId'});//clientii cumpara in tabela vanzari online
+Vanzari_online.belongsTo(Produse_comanda,{foreignKey:'produse_comandaId'});
 
 Utilizatori.hasOne(Vanzari,{foreignKey:'utilizatoriId'});//vanzatorii vand produsele
 Vanzari.belongsTo(Utilizatori,{foreignKey:'utilizatoriId'});
@@ -351,5 +377,5 @@ export {
     initialize,
     Ingrediente, Furnizori, Achizitii, Retetar, Vanzari, Ingrediente_In_Retete, 
     Ingrediente_furnizori, Stoc_ingrediente, Stoc_produse, Casare, Produse,
-     Comenzi, Utilizatori, Vanzari_online
+     Comenzi, Utilizatori, Vanzari_online, Produse_comanda
 }
