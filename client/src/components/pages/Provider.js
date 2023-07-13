@@ -29,7 +29,7 @@ const baseURL = "http://localhost:8080";
 let nr=1;
 let nrSelect=1;
 const notifySuccess = () => toast.success("Furnizor sters cu succes!");
-const notifyError = () => toast.success("Furnizorul nu a fost sters!");
+const notifyError = () => toast.error("Furnizorul nu a fost sters!");
 
 
     useEffect(() =>{
