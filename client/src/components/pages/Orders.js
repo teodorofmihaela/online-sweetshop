@@ -102,7 +102,7 @@ const handleClickOpen = (id, n) => {
 
     return ( 
         <>
-        <div className='provider-content'>
+        <div className='provider-content' style={{paddingLeft:20, paddingBottom:20}}>
         
         <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '98%' }}>
         <Button  variant="contained" color="success" href = {`/comenzi/adaugare`}  startIcon={<AddIcon />}>
