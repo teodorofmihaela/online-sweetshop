@@ -162,7 +162,7 @@ const handleClickOpen = (id, n) => {
             keepMounted
             onClose={handleCloseNo}
             aria-describedby="alert-dialog" >
-            <DialogTitle>{"Doriti stergerea acestui utilizator?"}</DialogTitle>
+            <DialogTitle>{"Doriti stergerea acestei comenzi?"}</DialogTitle>
             <DialogContent>
             <DialogContentText id="alert-dialog">
                 Aceasta actiune nu poate fi revocata! Doriti stergerea comenzii clientului {nume}?

@@ -163,7 +163,7 @@ createSales();
         keepMounted
         onClose={handleCloseNo}
         aria-describedby="alert-dialog" >
-        <DialogTitle>{"Doriti stergerea acestui utilizator?"}</DialogTitle>
+        <DialogTitle>{"Doriti stergerea acestei vanzari?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog">
             Aceasta actiune nu poate fi revocata! Doriti stergerea vanzarii din data: {Moment(`${date}`).format(' DD/MM/YYYY HH:mm')}?

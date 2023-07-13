@@ -143,7 +143,7 @@ createProviders();
         keepMounted
         onClose={handleCloseNo}
         aria-describedby="alert-dialog" >
-        <DialogTitle>{"Doriti stergerea acestui utilizator?"}</DialogTitle>
+        <DialogTitle>{"Doriti stergerea acestui furnizor?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog">
             Aceasta actiune nu poate fi revocata! Doriti stergerea furnizorului {nume}?

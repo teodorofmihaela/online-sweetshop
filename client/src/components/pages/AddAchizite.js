@@ -106,7 +106,7 @@ function createValoareTotala(pret, cantitate) {
 async function adauga() {
     try{
         let id = uuidv4();
-        let data=Moment(new Date()).format('DD/MM/YYYY HH:mm')
+        let data=new Date();
         const res = await fetch(`${baseURL}/achizitii`, {
             method: "POST",
             headers: {
