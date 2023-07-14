@@ -85,6 +85,7 @@ function SupplyIngredients(ingrediente, furnizori, ingFurniz){
       console.log(ingrediente1);
 }
 
+
   
 const handleClickOpen = (id, ing, furnizor) => {
   setIdSelected(id);

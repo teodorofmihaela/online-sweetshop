@@ -4,10 +4,6 @@ import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
 import { FormControl ,Select , MenuItem , InputLabel}  from '@mui/material';
 import {   Dialog,DialogActions, DialogTitle, DialogContent, DialogContentText}  from '@mui/material';
 import './Supply.css';
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
@@ -16,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Moment from 'moment';
 import _, { map } from 'underscore';
 import ClearIcon from '@mui/icons-material/Clear';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -29,12 +26,17 @@ function Supply() {
     const [id, setId] = React.useState();
     const [ingredient, setIngredient] = useState();
     const [lot, setLot] = useState();
+    const [openCasare, setOpenCasare] = React.useState(false);
+    const [ingredientId, setIngredientId] = useState();
+    const [cantitate, setCantitate] = useState();
 
     const baseURL = "http://localhost:8080";
     let nr=1;
     let nrSelect=1;
     const notifySuccess = () => toast.success("Stocul ingredientului a fost sters cu succes!");
     const notifyError = () => toast.error("Stocul ingredientului nu a fost sters!");
+    const notifySuccessCasare = () => toast.success("Stocul ingredientului a fost casat cu succes!");
+    const notifyErrorCasare = () => toast.error("Stocul ingredientului nu a fost casat!");
     
     
 useEffect(() =>{
@@ -100,7 +102,7 @@ const handleClickOpen = (id, lot, ingr) => {
 };
 
 const handleCloseYes = () => {
-  deleteSale(id);
+  deleteSupply(id);
   setOpen(false);
 };
 
@@ -108,20 +110,67 @@ const handleCloseNo = () => {
   setOpen(false);
 };
 
-async function deleteSale(id){
+async function deleteSupply(id){
   if (id) {
     console.log(id);
     const response = await fetch(`http://localhost:3000/achizitii/${id}`, {
           method: 'DELETE'
         });
-        if (response.status === 204) {
+        if (response.status === 204 && open) {
             notifySuccess();
         }
-        else{
+        else if(open){
           notifyError();
         }
   createSupply();
   }
+}
+
+ 
+const handleClickCasareOpen = (id, lot, ingr, ingrId) => {
+  setLot(lot);
+  setIngredient(ingr);
+  setId(id);
+  setIngredientId(ingrId);
+  setOpenCasare(true);
+};
+
+const handleCloseYesCasare = () => {
+  deleteSupply(id);
+  casareSupply(id);
+  setOpenCasare(false);
+};
+
+const handleCloseNoCasare = () => {
+  setOpenCasare(false);
+};
+
+
+async function casareSupply(id){
+  try{
+    let iduuid = uuidv4();
+    const res = await fetch(`${baseURL}/casare`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "id": iduuid,
+            "data_casare": new Date(),
+            "cantitate_casata": cantitate,
+            "ingredienteId": ingredientId
+        })
+    });
+        if(res.status==201){
+            notifySuccessCasare();
+        }
+        else if(res.status!=201 || res==null){
+            notifyErrorCasare();
+        }
+  }catch (err) {
+      console.log(err);
+  }
+createSupply();
 }
 
 
@@ -176,21 +225,24 @@ return (
               <TableCell align="center">{ingredient.cantitate}</TableCell>
               <TableCell align="center">{ingredient.cantitate}</TableCell>
               <TableCell align="center">{ingredient.lot}</TableCell>
-              <TableCell align="center">{Moment(`${ingredient.data_achizite}`).format('DD/MM/YYYY HH:mm')}</TableCell>
-              <TableCell align="center">{Moment(`${ingredient.data_expirare}`).format('DD/MM/YYYY HH:mm')}</TableCell>
+              <TableCell align="center">{Moment(`${ingredient.data_achizite}`).format('DD/MM/YYYY')}</TableCell>
+              <TableCell align="center">{Moment(`${ingredient.data_expirare}`).format('DD/MM/YYYY')}</TableCell>
               <TableCell align="center">{ingredient.unitate_masura}</TableCell>
               <TableCell align="center">{ingredient.pret_total}</TableCell> 
               <TableCell align="center">{ingredient.nume_furnizor}</TableCell> 
               <TableCell align="center">
                 <Button 
-                    onClick={() => {handleClickOpen(ingredient.achizitieId, ingredient.lot, ingredient.nume )}} color="error">
+                    onClick={() => { handleClickOpen(ingredient.achizitieId, ingredient.lot, ingredient.nume)}} color="error">
                     <Tooltip title="Sterge">
                   <DeleteIcon /></Tooltip>
                 </Button>
                 <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
                 </Button>
-                <Button><Tooltip title="Caseaza lotul">
+                <Button    onClick={() => {
+                  setCantitate(ingredient.cantitate)
+                  handleClickCasareOpen(ingredient.achizitieId, ingredient.lot, ingredient.nume , ingredient.ingredienteId  )}}>
+                <Tooltip title="Caseaza lotul">
                   <ClearIcon /></Tooltip>
                 </Button>
               </TableCell>
@@ -201,6 +253,27 @@ return (
     </TableContainer>
 
 <ToastContainer/>
+
+
+<Dialog
+    open={openCasare}
+    keepMounted
+    onClose={handleCloseNoCasare}
+    aria-describedby="alert-dialog-casare" >
+    <DialogTitle>{"Doriti casarea acestui lot?"}</DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-casare">
+        Aceasta actiune nu poate fi revocata! Doriti casarea lotului {lot} pentru  {ingredient}?
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button color="error" variant="contained" onClick={handleCloseYesCasare}>Casati lotul</Button>
+      <Button variant="contained" onClick={handleCloseNoCasare}>Anulare</Button>
+    </DialogActions>
+  </Dialog>
+
+
+
 <Dialog
     open={open}
     keepMounted
