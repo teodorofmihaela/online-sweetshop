@@ -5,73 +5,58 @@ import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import './Products.css';
-
-
+import ButtonsRetetar from '../ButtonsRetetar';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
 function Products() {
     const [products, setProducts] = useState();
     const baseURL = "http://localhost:8080";
 
-    useEffect(() =>{
-        const dataFetch = async () => {
-            try {
-            const res = await fetch(`${baseURL}/produse`);
-                if (res.status === 200) {
-                const data = await res.json();
-                setProducts(data);
-                
-                }
-    
-            }catch(err){
-                console.log(err);
-            }};
-        dataFetch();
-    },[]);
-    
-    
-    
+async function handleClick(category) {
+    try {
+      
+      let categ=category.toLowerCase();
+      const res = await fetch(`${baseURL}/produse/categorie/${categ}`);
+      if (res.status === 200) {
+        const data = await res.json();
+        setProducts(data);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+};    
 
 
 
     return ( 
         <>
         <div className='products-content' >
-        <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '90%' }}>
-        <Button  variant="contained" color="success" href = {`/`}  startIcon={<AddIcon />}>
-        Adauga produs 
-      </Button >
-       
-      </Box>
-      <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, width: '80%' }}>
+        <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
 
+      <Box className = 'lista-retete' sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, minWidth: 300, paddingBottom: 4, width: '80%' }}>
         {products && products.map((product) => (
-            <div key={product.id}>
-                <Card sx={{ minWidth: 345 }} className='products' >
+          <div key={product.id}>
+          <Card sx={{ minWidth: 345 }} className='products' >
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-            <Avatar alt={product.denumire} src="`url(${image.url})`" />
             {product.denumire} 
             </Typography>
+            <div>
+                <Typography>
+                    {product.pret_vanzare} lei
+                </Typography>
+            </div>
         </CardContent>
           <CardActions>
             <Button variant="contained" color="primary"
-             href = {`retetar/${product.denumire}`}  startIcon={<VisibilityIcon />}
-              //  onClick={event => veziRetetaClick(product.denumire)} 
+             href = {`produse/${product.id}`}  startIcon={<VisibilityIcon />}
                size="small">
-                
-              Vezi reteta 
-            </Button>
-            <Button 
-                // onClick={openDialog(ingredient)} 
-                color="error"><Tooltip title="Sterge acest produs">
-                  <DeleteIcon /></Tooltip> </Button>
-                  <Button><Tooltip title="Editeaza acest produs">
-                  <EditIcon /></Tooltip>
-                </Button>
+              Vezi detalii 
+            </Button>                  
           </CardActions>
-      </Card>
-            </div>
+        </Card>
+        </div>
         ))}
         </Box>
         </div>
