@@ -180,7 +180,7 @@ return (
     <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:4 , paddingTop:2, paddingBottom:5, minWidth: 300, width: '97%' }}>
         {/* <Button variant="contained" href = {`/produse`} startIcon={<ShoppingBasketIcon />}>Produse</Button> */}
         <Button variant="contained" color="success"href = {`/aprovizionare/add`} startIcon={<AddIcon />}>Adauga ingredient</Button>
-        <Button variant="contained" color="success"href = {`/aprovizionare/add`} startIcon={<AddIcon />}>Receptie marfa</Button>
+        <Button variant="contained" color="success"href = {`/achizitii/receptie_marfa`} startIcon={<AddIcon />}>Receptie marfa</Button>
 
     </Box>
     <div style={{paddingBottom:20}}>
