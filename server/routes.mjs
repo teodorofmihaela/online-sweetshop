@@ -123,6 +123,11 @@ router.route('/ingrediente_in_retete')
     .get((req,res)=>getRecords(Ingrediente_In_Retete,req,res))
     .put((req,res)=>putRecord(Ingrediente_In_Retete,req,res));
 
+//ruta pentru ingredient dintr-o reteta
+router.route('/ingrediente_in_retete/:id')
+    .put((req,res)=>putRecord(Ingrediente_In_Retete,req,res))
+    .delete((req,res) => deleteRecord(Ingrediente_In_Retete,req,res));
+
 //ruta pt Ingrediente_furnizori
 router.route('/ingrediente_furnizori')
     .post((req,res)=>postRecord(Ingrediente_furnizori,req,res))

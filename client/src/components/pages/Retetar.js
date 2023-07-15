@@ -84,7 +84,7 @@ function Retetar() {
       <Button  variant="contained" color="primary" href = {`retetar/add`} startIcon={<AddIcon />}>
         Adauga reteta  
       </Button >
-      <Button  variant="contained" color='secondary' href = {`/`}  startIcon={<AddIcon />}>
+      <Button  variant="contained" color='secondary' href = {`/produs/adaugare`}  startIcon={<AddIcon />}>
         Adauga produs 
       </Button >
       </Box>

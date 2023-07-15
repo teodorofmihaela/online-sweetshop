@@ -132,7 +132,7 @@ function onReset() {
 
             <FormGroup id="page" >
             <Grid id="form">
-                <Stack spacing={5}>
+                <Stack spacing={5} stle={{paddingLeft:'500'}}>
                         <Typography variant="h4" color="primary">Adaugă o nouă comandă</Typography>
                         <Stack spacing={3}>
                             <div>
@@ -246,10 +246,10 @@ function onReset() {
                             <ToastContainer />
                             </div>
                         </Stack>
-                </Stack>
-                <div>
-                <img src="/images/cooking.svg" height="500em"></img>
-                </div>
+                </Stack> 
+                {/* <div>
+                <img src="/images/AddCard.svg" height="500em" style={{ maxWidth:'90%', paddingTop:'15%', paddingRight:'5%'}}></img>
+                </div> */}
             </Grid>
         </FormGroup>
 
