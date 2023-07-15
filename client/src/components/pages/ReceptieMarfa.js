@@ -84,6 +84,7 @@ function SupplyIngredients(ingrediente, furnizori, ingFurniz){
         setIngrediente1(furnizMap);
     
   }
+  
   function createFurniz(id) {
 
     let finalArr=[];
@@ -120,7 +121,7 @@ async function adauga() {
                 "data_achizite": data,
                 "lot" : lot,
                 "ingredienteId" : ingredientId,
-                "furnizoriId": furnizorId
+                "furnizoriId": furnizorId 
             })
         });
             if(res.status==201){

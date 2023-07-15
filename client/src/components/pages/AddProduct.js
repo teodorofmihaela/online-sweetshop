@@ -2,15 +2,9 @@ import React, {useEffect, useState} from 'react';
 import './AddRecipe.css';
 import {Typography,FormGroup, Grid, Button, Card,
      TextField, InputLabel, MenuItem, Select, FormControl, Box} from '@material-ui/core';
-import {  LocalizationProvider,DateTimePicker} from '@mui/x-date-pickers';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import FactCheckIcon from '@mui/icons-material/FactCheck';
 import { Stack } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import MoneyIcon from '@mui/icons-material/Money';
+import FmdBadIcon from '@mui/icons-material/FmdBad';
 import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import IcecreamIcon from '@mui/icons-material/Icecream';
@@ -19,8 +13,6 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Moment from 'moment';
-import { DatasetRounded } from '@mui/icons-material';
 
 
 
@@ -32,6 +24,7 @@ const [nameInput, setNameInput] = useState();
 const [category, setCategory] = useState();
 const [profit, setProfit] = useState();
 const [price, setPrice] = useState();
+const [alergen, setAlergen] = useState();
 const [products, setProducts] = useState();
 const [open, setOpen] = React.useState(false);
 let nr=1;
@@ -66,7 +59,8 @@ async function adauga() {
                 "denumire": nameInput,
                 "categorie": category,
                 "pret_vanzare": price,
-                "profit" : profit
+                "profit" : profit,
+                "alergeni" : alergen
             })
         });
             if(res.status==201){
@@ -88,6 +82,8 @@ function onReset() {
     setCategory("");
     setPrice("");
     setProfit("");
+    setAlergen("");
+
 }
 
 
@@ -139,6 +135,16 @@ function onReset() {
                                     value={profit}  label="Profit" variant="outlined" 
                                     onChange={ event =>
                                         {setProfit(event.target.value);
+                                        }}
+                                        >
+                                </TextField>
+                            </div>  
+                            <div>
+                                <FmdBadIcon className='form-icon' fontSize='large' />
+                                <TextField  className="input" size="small" style={{ width: "285px" }} InputProps={{ inputProps: { min: 0 } }}
+                                    value={alergen}  label="Alergen" variant="outlined" 
+                                    onChange={ event =>
+                                        {setAlergen(event.target.value);
                                         }}
                                         >
                                 </TextField>
