@@ -1,8 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {Card, Button, CardContent,CardActions,Typography, Tooltip, Stack, Avatar, Box} from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useParams  } from 'react-router-dom';
 import ClientNavbar from './ClientNavbar.js';
+import { CartContext } from '../../context/CartContext.js'
+import Cart from '../pages/Cart.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Products() {
     const [product, setProduct] = useState([]);
@@ -10,6 +15,7 @@ function Products() {
     const [ingrediente, setIngrediente] = useState([]);
     const [prodIngrediente, setProdIngrediente] = useState([]);
     const [ingredientsList, setIngredientsList] = useState([]);
+    const { cartItems, addToCart , removeFromCart} = useContext(CartContext)
 
     const { id } = useParams();
     const [urlImg, setUrlImg] = useState();
@@ -122,6 +128,22 @@ function imgSrc(denum){
     
 }
 
+
+const notifyAddedToCart = (item) => toast.success(`${item.denumire} adaugat in cos!`, {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    theme: 'colored',
+    style: {
+      backgroundColor: '#fff',
+      color: '#000',
+    }
+    });
+  
+
     return ( 
         <>
         <div className='products-content' >
@@ -162,7 +184,10 @@ function imgSrc(denum){
                 </Typography>
             </div>            
            
-            <Button  variant="contained" color="success" startIcon={<AddShoppingCartIcon />}>
+            <Button  variant="contained" color="success" startIcon={<AddShoppingCartIcon />}
+            onClick={() => {
+                addToCart(product)
+                notifyAddedToCart(product)}}>
             Adauga in cos 
             </Button >
       </div>     

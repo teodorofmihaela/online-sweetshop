@@ -19,7 +19,7 @@ function ClientNavbar() {
             <FontAwesomeIcon className="icon" icon="fa-solid fa-ice-cream" />
           </Link>
                         <Button color='inherit' href='/cos'>Vezi cosul<ShoppingCartIcon/></Button>
-                        <Button color='inherit' href='/comenzi/adaugare'> Adauga comanda</Button>
+                        <Button color='inherit' href='/comenzi/client/adaugare'> Adauga comanda</Button>
                         <Button color='inherit' href='/login'> Login<LoginIcon/></Button>
 
                     </Stack>
