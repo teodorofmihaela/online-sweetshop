@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './AddRecipe.css';
 import {Typography,FormGroup, Grid, Button, IconButton, InputAdornment,
-     TextField, TextareaAutosize, Snackbar  , Checkbox, RadioGroup , Radio, FormControlLabel, AlertTitle, Card, Fade  } from '@material-ui/core';
+     TextField, TextareaAutosize, Snackbar  , Checkbox, RadioGroup , Radio, FormControlLabel, InputLabel, MenuItem, Select, FormControl, Card, Fade  } from '@material-ui/core';
 import MuiAlert from '@mui/material/Alert';
 import { Stack } from '@mui/material';
 // import {Item} from '@material-ui/core';
@@ -15,6 +15,9 @@ import EggIcon from '@mui/icons-material/Egg';
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AddIcon from '@mui/icons-material/Add';
+import { useNavigate } from "react-router-dom";
+import { Navigate } from 'react-router'
 
 
 
@@ -30,12 +33,14 @@ const [instructionsInput, setInstructionsInput] = useState();
 const [ingredients, setIngredients] = useState();
 const [products, setProducts] = useState();
 const [productId, setProductId] = useState();
-const [open, setOpen] = React.useState(false);
+const [data,setData]=useState([{ingredientId:"",cantitate:""}])
+const [ingredientId, setIngredientId] = useState();
+const [isNavigate, setIsNavigate] = React.useState(false);
+let nrSelect=1;
 
-
-
-  const notifySucces = () => toast.success("Reteta a fost adaugata cu succes!");
-  const notifyError = () => toast.error("Reteta nu a fost adaugata, datele introduse sunt incorecte sau acest produs are deja o reteta!");
+const navigate = useNavigate();
+const notifySucces = () => toast.success("Reteta a fost adaugata cu succes!");
+const notifyError = () => toast.error("Reteta nu a fost adaugata, datele introduse sunt incorecte sau acest produs are deja o reteta!");
 
 
 const baseURL = "http://localhost:8080";
@@ -52,18 +57,61 @@ useEffect(() =>{
     dataFetch();
 },[]);
 
+const handleClickAddIngredients=()=>{
+    setData([...data,{ingredientId:"",cantitate:""}])
+}
 
+const handleChange=(e,i)=>{
+    const {name,value}=e
+    const onchangeVal = [...data]
+    onchangeVal[i][name]=value
+    setData(onchangeVal)
+    console.log(data);
+}
+
+async function adaugaIngrediente(idRecipe) {
+    try{
+        await Promise.all(data.map(async (ingr) => {
+            let id2 = uuidv4()
+            const responseIngredientsInRecipe = await fetch(`http://localhost:3000/ingrediente_in_retete`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "id": id2,
+                "cantitate_ingredient": ingr.cantitate,
+                "ingredienteId": ingr.ingredientId,
+                "retetarId": idRecipe,
+                "produseId":productId,
+            })
+        })
+        if(responseIngredientsInRecipe.status==201){
+            notifySucces();
+            onReset();
+            setIsNavigate(true);
+            // navigate("/");
+        }
+        else if(responseIngredientsInRecipe.status!=201 || responseIngredientsInRecipe==null){
+            notifyError();
+        }
+    }));
+            
+    }catch (err) {
+        console.log(err);
+    }
+}
 
 async function adauga() {
     try{
-        let id = uuidv4()
+        let idRecipe = uuidv4()
         const res = await fetch(`${baseURL}/retetar`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "id": id,
+                "id": idRecipe,
                 "denumire": recipeNameInput,
                 "numar_produse": productsNumberInput,
                 "mod_preparare": instructionsInput,
@@ -71,13 +119,13 @@ async function adauga() {
                 "produseId":productId,
             })
         });
+       
+
             if(res.status==201){
-                notifySucces();
-                onReset();
+                adaugaIngrediente(idRecipe);
             }
             else if(res.status!=201 || res==null){
                 notifyError();
-                //TODO: validare sa nu poti introduce mai multe retete pentru acelasi produs
             }
     }catch (err) {
         console.log(err);
@@ -93,6 +141,7 @@ function onReset() {
     setInstructionsInput("");
     setProductId("");
     setProducts("");
+    setData([{ingredientId:"",cantitate:""}]);
 }
 
 
@@ -102,9 +151,9 @@ function onReset() {
 
             <FormGroup id="page" >
             <Grid id="form">
-                <Stack spacing={5}>
+                <Stack spacing={5} >
                         <Typography variant="h4" color="primary">Adauga o reteta noua</Typography>
-                        <Stack spacing={3}>
+                        <Stack spacing={3} width='100%'>
                             <div>
                                 <MenuBookIcon className='form-icon' fontSize='large' />
                                 <TextField className="input" value={recipeNameInput} size="small" style={{ width: " 285px" }}
@@ -131,39 +180,58 @@ function onReset() {
                                     InputProps={{ inputProps: { min: 0 }, startAdornment: <InputAdornment position="start">kcal</InputAdornment>}}>
                                 </TextField>
                             </div>
+
                             <div>
                             <Typography>Selecteaza ingredientele si cantitatile necesare:</Typography>
                             </div>
-                            <div>
-                                {ingredients && ingredients.map((ingredient) => (
-                            <FormGroup>
-                                <FormControlLabel className="checkbox-input" value={`${ingredient.nume}`} control={<Checkbox  />} label={`${ingredient.nume} (${ingredient.unitate_masura})`}/>
-                                <span>
-                                <EggIcon className='checkbox-icon' fontSize='large' />
-
-                                 <FormControlLabel  control={<TextField  type="number" value={ingredientsInput} size="small" style={{ width: "279px" }}
-                                    onChange={event => setIngredientsInput(event.target.value)} InputProps={{ inputProps: { min: 0 } }}
-                                    label="Cantitate ingredient" variant="outlined"/>}/>
-                                 </span>
-                            </FormGroup> 
-                                ))}
-                                
+                            <Button  variant="contained" color="primary" onClick={handleClickAddIngredients}startIcon={<AddIcon />}>
+                            Adaugă un nou ingredient 
+                            </Button >
+                            { data && data.map((val,i)=>
+                <div>
+                    <EggIcon className='form-icon' fontSize='large'/>
+                    <FormControl style={{minWidth: 220}}>
+                                <InputLabel >Ingredient</InputLabel>
+                    <Select defaultValue="" label="Categorie produs" name="ingredientId"
+                    onChange={(e)=>handleChange(e.target,i)} > 
+                            {ingredients && ingredients.map((ingredient) => (
+                                <MenuItem  name="ingredientId"
+                                 onClick={() =>
+                                    {
+                                        setIngredientId(ingredient.id);
+                                        // handleChange(e.target,i)
+                                    }} 
+                                    value={ingredient.id}>{`${ingredient.nume} (${ingredient.unitate_masura})`}</MenuItem>
+                             ))}
+                             </Select>
+                             <div style={{ paddingTop:20}}>
+                             <TextField  type="number" name="cantitate" value={val.cantitate} size="small" style={{ width: "279px"}}
+                                    onChange={(e)=>handleChange(e.target,i)} InputProps={{ inputProps: { min: 0 } }}
+                                    label="Cantitate ingredient" variant="outlined"/>
                             </div>
+                            </FormControl>
+                </div>
+                )
+            }
+
                             <div>
-                            <span>
                             <KitchenIcon className='checkbox-icon' fontSize='large'/>
                             <Typography>Selecteaza produsul rezultat din aceasta reteta:</Typography>
-                            </span>
                             </div>
                             <div>
-                                <RadioGroup aria-labelledby="demo-radio-buttons-group-label" name="radio-buttons-group">
-                                
+                            <FormControl style={{minWidth: 220}}>
+                            <InputLabel >Produs rezultat</InputLabel>
+                            <Select defaultValue="" label="Produs rezultat"  >
                                 {products && products.map((product) => (
-                                    <FormControlLabel className="radio-input" value={`${product.denumire}`} control={<Radio/>} label={product.denumire}
-                                    onChange={event => setProductId(product.id)}/>
-                                ))}
-                                
-                                </RadioGroup>
+                                <MenuItem  
+                                 onClick={() =>
+                                    {
+                                        setProductId(product.id)
+                                    }} 
+                                 value={product.denumire} >{product.denumire}</MenuItem>
+                             ))}
+                             </Select>
+                             </FormControl>
                             </div>
                                 <div className='button-add'>
                                     <Button  variant="contained" color="primary" onClick={adauga}>Adauga <AddCircleOutlineIcon style={{ paddingLeft: "7px" }} /></Button>
@@ -171,6 +239,10 @@ function onReset() {
                                 </div>
                             
                             <div>
+                            { (isNavigate) ?(
+                             <Navigate  to="/retetar/add" push={true} />
+                                        ):
+                                        <div></div>}
                             <ToastContainer />
                             </div>
                         </Stack>

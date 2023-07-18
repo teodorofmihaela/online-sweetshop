@@ -1,3 +1,9 @@
 Generare raportul Z?
 Generare pe zi rapoarte cu produsele vandute pret si cantitati
 introducere de comenzi
+
+maybe?
+Notificari cand stocurile sunt aproape de terminare
+API pentru livrare care sa estimeze timpul de livrare?
+Image recognition ca sa introduc date despre produs
+Previziuni pe stoc sau vanzari

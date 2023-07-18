@@ -4,6 +4,7 @@ import {Button} from '@material-ui/core';
 import {Card, CardContent,CardActions,Typography, Stack, Avatar, Box} from '@mui/material';
 import ButtonsRetetar from "../ButtonsRetetar";
 import AddIcon from '@mui/icons-material/Add';
+import Navbar from '../Navbar';
 
 //poate sa dispara-> pt avatar?????????????????????????????????????
 const images = [{
@@ -76,7 +77,7 @@ function Retetar() {
 
   return ( 
     <>
-
+{/* <Navbar/> */}
     <div className = 'container-retetar' >
       <ButtonsRetetar className = "buttons" handleClick = { handleClick}/> 
     {/* <div className='add-button'> */}
