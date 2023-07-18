@@ -110,7 +110,6 @@ function imgSrc(denum){
     return ( 
         <>
         <div className='products-content' >
-        <ClientNavbar/>
       <Box className = 'lista-retete' sx={{ display: 'flex',flexDirection:'row',  flexWrap: 'wrap', gap: 5, minWidth: 300, paddingBottom: 4, width: '80%' }}>
             
       
@@ -129,7 +128,7 @@ function imgSrc(denum){
                 <Typography variant="h5">
                     Ingrediente: 
                     {prodIngrediente && prodIngrediente.map((ingredient) => (
-                    <span>{ingredient.nume},</span>
+                    <span>{ingredient.nume}, </span>
                     ))}
                 </Typography>
             </div>

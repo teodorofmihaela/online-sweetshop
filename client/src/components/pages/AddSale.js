@@ -60,7 +60,7 @@ useEffect(() =>{
             let [requestRecipe, requestProducts, requestStocProduse ]= await Promise.all([
                 fetch(`${baseURL}/retetar`),
                 fetch(`${baseURL}/produse`),
-                fetch(`${baseURL}/stoc_produse`)
+                fetch(`${baseURL}/stoc_produs`)
                 ]);
                    if (requestRecipe.status === 200 && requestProducts.status ===200 && requestStocProduse.status ===200) {
                    const responseRecipe = await requestRecipe.json();
@@ -138,7 +138,7 @@ async function adauga() {
             })
         });
 
-        const res2 = await fetch(`${baseURL}/stoc_produse/${idStoc}`, {
+        const res2 = await fetch(`${baseURL}/stoc_produs/${idStoc}`, {
             method: "PUT",
             headers: {
                 Accept: "application/json",

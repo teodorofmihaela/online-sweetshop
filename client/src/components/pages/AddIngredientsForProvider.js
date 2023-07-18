@@ -25,7 +25,7 @@ const [furnizorId, setFurnizorId] = useState();
 
 let nr=1;
 
-const notifySucces = () => toast.success("Furnizor pentru ingredient a fost adaugat cu succes!");
+const notifySucces = () => toast.success("Furnizorul pentru ingredientul selectat a fost adaugat cu succes!");
 const notifyError = () => toast.error("Actiunea nu a fost avut succes!");
 
 

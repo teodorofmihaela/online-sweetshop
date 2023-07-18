@@ -126,9 +126,9 @@ createProviders();
                   <DeleteIcon /></Tooltip>
                 </Button>
                 
-                <Button><Tooltip title="Editeaza">
+                {/* <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
-                </Button>
+                </Button> */}
               </TableCell>
             </TableRow>
           ))}

@@ -141,9 +141,7 @@ async function deleteRecipe(id) {
         <Button  variant="contained" color="error" onClick={openDialog} startIcon={<DeleteIcon />}>
         Sterge aceasta reteta!
       </Button >
-      <Button  variant="contained" color="primary" href = {`retetar/add`} startIcon={<EditIcon />}>
-        Editeaza aceasta reteta 
-      </Button >
+      
       </Box>
             <Box   sx={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap', gap: 4, minWidth: 300, width: '100%' }}>
             {recipe && recipe.map((rec) => (

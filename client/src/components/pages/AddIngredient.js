@@ -20,6 +20,9 @@ import EggIcon from '@mui/icons-material/Egg';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import ScaleIcon from '@mui/icons-material/Scale';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import { InputAdornment } from '@mui/material';
+
+
 
 function AddIngredient() {
 
@@ -154,8 +157,7 @@ function onReset() {
                             </div>
                             <div>
                                 <PaymentsIcon className='form-icon' fontSize='large' />
-                                <TextField type="number" className="input" size="small" style={{ width: "250px" }} InputProps={{ inputProps: { min: 0 } }}
-                                    value={price}  label="Pretul pentru furnizorul selectat" variant="outlined" 
+                                <TextField type="number" className="input" size="small" style={{ width: "250px" }} InputProps={{ inputProps: { min: 0 }, endAdornment: <InputAdornment position="end">lei</InputAdornment>}}                                    value={price}  label="Pretul pentru furnizorul selectat" variant="outlined" 
                                     onChange={ event =>
                                         {setPrice(event.target.value);
                                         }}

@@ -56,7 +56,7 @@ dataFetch();
 }
     
 function custom_sort(a, b) {
-    return new Date(a.data) - new Date(b.data);
+    return new Date(a.data) > new Date(b.data) ? -1:1;
 }
 
 function SalesCategory(sales, products){
@@ -147,9 +147,9 @@ createSales();
                 <Tooltip title="Sterge">
                   <DeleteIcon /></Tooltip>
                 </Button>
-                <Button><Tooltip title="Editeaza">
+                {/* <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
-                </Button>
+                </Button> */}
               </TableCell>
             </TableRow>
           ))}

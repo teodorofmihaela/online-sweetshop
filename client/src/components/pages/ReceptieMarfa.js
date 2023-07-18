@@ -14,6 +14,11 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Moment from 'moment';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import { DateField, LocalizationProvider,DateTimePicker, TimePicker} from '@mui/x-date-pickers';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 
 
 function ReceptieMarfa() {
@@ -31,6 +36,7 @@ const [ingredienteFurnizori, setIngredienteFurnizori] = useState();
 const [ingrediente1, setIngrediente1] = useState();
 const [ingredienteFinal, setIngredienteFinal] = useState();
 const [open, setOpen] = React.useState(false);
+const [dataExp, setDataExp] = useState(new Date());
 
 const notifySucces = () => toast.success("Achizite adaugata cu succes!");
 const notifyError = () => toast.error("Achizita nu a putut fi adaugata!");
@@ -84,7 +90,7 @@ function SupplyIngredients(ingrediente, furnizori, ingFurniz){
         setIngrediente1(furnizMap);
     
   }
-  
+
   function createFurniz(id) {
 
     let finalArr=[];
@@ -109,6 +115,11 @@ async function adauga() {
     try{
         let id = uuidv4();
         let data=new Date();
+        var currentdate = new Date(); 
+        var datetime = currentdate.getUTCFullYear() 
+        // + "-"
+                // + (currentdate.getUTCMonth()+1)  + "-" 
+                // + currentdate.getUTCDay() + "T00:00:00.000 +00:00" ;
         const res = await fetch(`${baseURL}/achizitii`, {
             method: "POST",
             headers: {
@@ -119,6 +130,7 @@ async function adauga() {
                 "cantitate": ingredientsNumberInput,
                 "pret_total": valoareTotala,
                 "data_achizite": data,
+                "data_expirare": Moment(data).add(dataExp, 'days'),
                 "lot" : lot,
                 "ingredienteId" : ingredientId,
                 "furnizoriId": furnizorId 
@@ -203,6 +215,29 @@ function onReset() {
                              ))}
                             </Box>
                             </div> 
+                            <div>
+                                <CalendarMonthIcon className='form-icon' fontSize='large' />
+                                <TextField type="number" className="input" size="small" style={{ width: "250px" }} InputProps={{ inputProps: { min: 0 } }}
+                                    value={ingredientsNumberInput}  label="Numar zile valabilitate" variant="outlined" 
+                                    onChange={ event =>
+                                        {setDataExp(event.target.value);
+                                        }}
+                                        >
+                                </TextField>
+                            </div>
+                            {/* <div>
+                                <CalendarMonthIcon className='form-icon' fontSize='large' />
+                                <LocalizationProvider className="input" dateAdapter={AdapterDayjs}>
+
+
+
+                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '70%' }}>
+                                    <DateTimePicker value={dataExp}  label="Data expirare" style={{paddingLeft: 20}}
+                                        onChange={(newValue) => {
+                                                     setDataExp(newValue);}} /> 
+                                </Box>
+                                </LocalizationProvider>
+                            </div>        */}
                             <div>
                                 <ShoppingCartIcon className='form-icon' fontSize='large' />
                                 <TextField type="number" className="input" size="small" style={{ width: "250px" }} InputProps={{ inputProps: { min: 0 } }}

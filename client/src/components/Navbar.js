@@ -71,7 +71,7 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/stoc_produse' className='nav-links'  onClick={closeMobieMenu}>
+            <Link to='/stoc_produs' className='nav-links'  onClick={closeMobieMenu}>
             <InventoryIcon/>Stoc produse
             </Link>
           </li>

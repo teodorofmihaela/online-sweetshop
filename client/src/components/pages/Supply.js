@@ -183,7 +183,7 @@ return (
         <Button variant="contained" color="success"href = {`/achizitii/receptie_marfa`} startIcon={<AddIcon />}>Receptie marfa</Button>
 
     </Box>
-    <div style={{paddingBottom:20}}>
+    {/* <div style={{paddingBottom:20}}>
       <FormControl style={{minWidth: 220}}>
       <InputLabel id="demo-simple-select-label">Ingredient</InputLabel>
       <Select id="demo-simple-select" label="Produsul comandat"
@@ -194,7 +194,7 @@ return (
                     ))}
       </Select>
       </FormControl>
-      </div>
+      </div> */}
      
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table">
@@ -236,9 +236,9 @@ return (
                     <Tooltip title="Sterge">
                   <DeleteIcon /></Tooltip>
                 </Button>
-                <Button><Tooltip title="Editeaza">
+                {/* <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
-                </Button>
+                </Button> */}
                 <Button    onClick={() => {
                   setCantitate(ingredient.cantitate)
                   handleClickCasareOpen(ingredient.achizitieId, ingredient.lot, ingredient.nume , ingredient.ingredienteId  )}}>

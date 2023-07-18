@@ -1,6 +1,6 @@
 import express from 'express';
 import { Ingrediente, Furnizori, Achizitii, Retetar, Vanzari_online,
-    Vanzari, Ingrediente_In_Retete, Produse_comanda, Casare,Stoc_ingrediente, Stoc_produse, Ingrediente_furnizori, Produse, Comenzi, Utilizatori} from './repository.mjs';
+    Vanzari, Ingrediente_In_Retete, Produse_comanda, Casare,Stoc_ingrediente, Stoc_prod, Ingrediente_furnizori, Produse, Comenzi, Utilizatori} from './repository.mjs';
 import { getRecord, getRecords, headRecord, postRecord, putRecord, patchRecord, deleteRecord, deleteRecords,
     getAttributes, getFilteredRecords,getFilteredRecipe, login} from './service.mjs';
 
@@ -154,16 +154,16 @@ router.route('/stoc_ingrediente/:id')
     .put((req,res)=>putRecord(Stoc_ingrediente,req,res))
     .delete((req,res) => deleteRecord(Stoc_ingrediente,req,res));
 
-//ruta pt Stoc_produse
-router.route('/stoc_produse')
-    .post((req,res)=>postRecord(Stoc_produse,req,res))
-    .delete((req,res) => deleteRecords(Stoc_produse,req,res))
-    .get((req,res)=>getRecords(Stoc_produse,req,res))
-    .put((req,res)=>putRecord(Stoc_produse,req,res));
+//ruta pt Stoc_prod
+router.route('/stoc_produs')
+    .post((req,res)=>postRecord(Stoc_prod,req,res))
+    .delete((req,res) => deleteRecords(Stoc_prod,req,res))
+    .get((req,res)=>getRecords(Stoc_prod,req,res))
+    .put((req,res)=>putRecord(Stoc_prod,req,res));
 
-router.route('/stoc_produse/:id')
-    .put((req,res)=>putRecord(Stoc_produse,req,res))
-    .delete((req,res) => deleteRecord(Stoc_produse,req,res));
+router.route('/stoc_produs/:id')
+    .put((req,res)=>putRecord(Stoc_prod,req,res))
+    .delete((req,res) => deleteRecord(Stoc_prod,req,res));
 
 
 //ruta pt Achizitii_online

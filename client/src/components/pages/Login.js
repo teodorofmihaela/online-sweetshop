@@ -61,6 +61,8 @@ function checkRight(){
         setDrept(u.cod_drept);
         setUserName(u.username);
         if(u.cod_drept==1){
+            // localStorage.setItem('displayAdmin', JSON.stringify(true));
+            // localStorage.setDisplayAdmin(true);
             setDisplayAdmin(true);
         }else if(u.cod_drept==2){
             setDisplayBucatar(true);

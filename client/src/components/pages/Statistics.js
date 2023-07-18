@@ -162,7 +162,7 @@ function setDataPieFromRequest(salesCat){
         <div className='products-content' style={{height: 400, paddingTop : 20}}>
         <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5,paddingLeft:2, paddingTop:2, paddingBottom:5, minWidth: 300, width: '98%' }}>
         <Button  variant="contained" color="primary" startIcon={<EmailIcon />}
-        href={`mailto:teodorofmihaela19@stud.ase.ro?subject=${`Cerere previzionare vanzari`}&body=${sales.data}`}> Cere previzionare vanzari
+        href={`mailto:teodorofmihaela19@stud.ase.ro?subject=${`Cerere previzionare vanzari`}&body=Data, Vanzari${data[0]}`}> Cere previzionare vanzari
       </Button >
       </Box>
 

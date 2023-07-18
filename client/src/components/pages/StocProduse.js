@@ -6,10 +6,11 @@ import './Supply.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
-import { toast } from 'react-toastify';
+import { ToastContainer ,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Moment from 'moment';
 import _, { map } from 'underscore';
+import {   DialogContent, DialogContentText}  from '@mui/material';
 
 
 
@@ -26,44 +27,44 @@ function StocProduse() {
     const [produsePatiserie, setProdusePatiserie] = useState([]);
     const [produseTort, setProduseTort] = useState([]);
     const [produseAllCateg, setProduseAllCateg] = useState([]);
+    const [nume, setNume] = useState([]);
+    const [id, setId] = useState([]);
 
     const [open, setOpen] = React.useState(false);
 
     let nr=1;
     let nrSelect=1;
-    const notifySuccess = () => toast.success("Stocul ingredientului a fost sters cu succes!");
-   
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
+    const notifySuccess = () => toast.success("Stocul produsului a fost sters cu succes!");
+    const notifyErr = () => toast.error("Stocul produsului a fost sters!");
 
-    const handleClose = () => {
-      setOpen(false);
-    };
     const baseURL = "http://localhost:8080";
 
 useEffect(() =>{
-const dataFetch = async () => {
-  try {
-      let [requestProduse, requestStocProduse, requestAchizitii ]= await Promise.all([
-          fetch(`${baseURL}/produse`),
-          fetch(`${baseURL}/stoc_produse`),
-          fetch(`${baseURL}/achizitii`)
-          ]);
-             if (requestProduse.status === 200 && requestStocProduse.status ===200 && requestAchizitii.status===200) {
-             const responseProduse = await requestProduse.json();
-             const responseStocProduse = await requestStocProduse.json();
-             const responseAchizitii = await requestAchizitii.json();
-             setProduse(responseProduse);
-             setStocProduse(responseStocProduse);
-             setAchizitii(responseAchizitii);
-             SupplyIngredients(responseProduse, responseStocProduse);
-             }
-  }catch(err){
-      console.log(err);
-  }};
-dataFetch();
+  createStoc();
 },[]);
+
+async function createStoc(){
+  const dataFetch = async () => {
+    try {
+        let [requestProduse, requestStocProduse, requestAchizitii ]= await Promise.all([
+            fetch(`${baseURL}/produse`),
+            fetch(`${baseURL}/stoc_produs`),
+            fetch(`${baseURL}/achizitii`)
+            ]);
+               if (requestProduse.status === 200 && requestStocProduse.status ===200 && requestAchizitii.status===200) {
+               const responseProduse = await requestProduse.json();
+               const responseStocProduse = await requestStocProduse.json();
+               const responseAchizitii = await requestAchizitii.json();
+               setProduse(responseProduse);
+               setStocProduse(responseStocProduse);
+               setAchizitii(responseAchizitii);
+               SupplyIngredients(responseProduse, responseStocProduse);
+               }
+    }catch(err){
+        console.log(err);
+    }};
+  dataFetch();
+}
 
 
 function SupplyIngredients(ingrediente, furnizori){
@@ -129,18 +130,34 @@ console.log('produse patiserie: ', produsePatiserie);
 }
 
 
+ 
+const handleClickOpen = (id,  nume) => {
+  setNume(nume);
+  setId(id);
+  setOpen(true);
+};
+
+const handleCloseYes = () => {
+  deleteStoc(id);
+  setOpen(false);
+};
+
+const handleCloseNo = () => {
+  setOpen(false);
+};
+
 async function deleteStoc(id) {
   if (id) {
-  const response = await fetch(`http://localhost:3000/stoc_produse/${id}`, {
+  const response = await fetch(`http://localhost:3000/stoc_produs/${id}`, {
           method: 'DELETE'
       });
       if (response.status === 204) {
           notifySuccess();
-          alert(`Stocul produsului a fost stears!`);
+          createStoc();
           console.log(id);
           setOpen(false);
-          console.log("Success!");
-
+      }else{
+        notifyErr();
       }
 }
 console.log('eroare; id:', id);
@@ -167,7 +184,7 @@ return (
     <>
     <div className='supply-content' style={{paddingLeft:20}}>
     <Box  sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, paddingLeft:4 , paddingTop:2, paddingBottom:5, minWidth: 300, width: '97%' }}>
-        <Button variant="contained" color="success"href = {`/stoc_produse/add`} startIcon={<AddIcon />}>Adauga stoc produs</Button>
+        <Button variant="contained" color="success"href = {`/laborator`} startIcon={<AddIcon />}>Adauga stoc produs</Button>
     </Box>
     <div style={{paddingBottom:20}}>
       <FormControl style={{minWidth: 220}}>
@@ -216,13 +233,12 @@ return (
               <TableCell align="center">{s.categorie}</TableCell> 
               <TableCell align="center">
                 <Button 
-                // onClick={handleClickOpen(s.id)} 
-                color="error"><Tooltip title="Sterge">
+onClick={() => { handleClickOpen(s.id, s.denumire)}} color="error"><Tooltip title="Sterge">
                   <DeleteIcon /></Tooltip>
                 </Button>
-                <Button><Tooltip title="Editeaza">
+                {/* <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
-                </Button>
+                </Button> */}
                
               </TableCell>
             </TableRow>
@@ -232,16 +248,23 @@ return (
     </TableContainer>
 
 
-
-    {/* <Dialog open={open} onClose={handleClose}  key={Math.random()}>
-                    <DialogTitle id="alert-dialog-title">
-                    {"Esti sigur ca vrei sa stergi acest stoc de produse? Aceasta actiune nu poate fi revocata!"}
-                    </DialogTitle>
-                    <DialogActions>
-                        <Button onClick={handleClose}>NU</Button>
-                        <Button onClick={deleteStoc} autoFocus>DA</Button>
-                    </DialogActions>
-                </Dialog> */}
+                <ToastContainer/>
+    <Dialog
+    open={open}
+    keepMounted
+    onClose={handleCloseNo}
+    aria-describedby="alert-dialog" >
+    <DialogTitle>{"Doriti stergerea acestui stoc de produse?"}</DialogTitle>
+    <DialogContent>
+      <DialogContentText >
+        Aceasta actiune nu poate fi revocata! Doriti stergerea stocului pentru produsul {nume}?
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button color="error" variant="contained" onClick={handleCloseYes}>Stergeti stocul</Button>
+      <Button variant="contained" onClick={handleCloseNo}>Anulare</Button>
+    </DialogActions>
+  </Dialog>
 
     </div>
     </>

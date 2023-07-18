@@ -60,6 +60,7 @@ function App() {
   return (
     <div className="App"> 
       <Router>
+        
       <Navbar/>
               {/* <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator, setDisplayBucatar, setDisplayAdmin }} >
                 {(displayVanzator || displayBucatar || displayAdmin) ? <Navbar /> : <ClientNavbar/>}
@@ -69,9 +70,7 @@ function App() {
              {/* swich is replaced  by routes */}
               {/* public route login*/}
             <Route  path='/login' element={
-            <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin, setDisplayVanzator }} >
-            {(displayBucatar || displayAdmin  || displayVanzator) ? <Navbar/> : <Login />}
-        </LoginContext.Provider>} />
+            <Login/>}/>
             
             {/* anyone can see the products */}
             
@@ -96,27 +95,27 @@ function App() {
             {/*  routes with authorization needed*/}
 
             <Route exact path='/retetar'  element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin }} >
-                  {(displayBucatar || displayAdmin) ? <Retetar /> : <Login />}
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                  {(displayBucatar ) ? <Retetar /> : <Login />}
               </LoginContext.Provider>} />
 
             <Route exact path='/retetar/:denumire' element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin }} >
-                {(displayBucatar || displayAdmin) ? <Recipe /> : <Login />}
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {(displayBucatar ) ? <Recipe /> : <Login />}
               </LoginContext.Provider>} />
 
             <Route exact path='/retetar/add' element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin }} >
-                {(displayBucatar|| displayAdmin) ? <AddRecipe /> : <Login />}
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar }} >
+                {(displayBucatar) ? <AddRecipe /> : <Login />}
               </LoginContext.Provider>} />
 
               <Route exact path='/produse'  element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin }} >
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator, setDisplayAdmin }} >
                   {(displayVanzator || displayAdmin) ? <Products /> : <Login />}
               </LoginContext.Provider>} />
 
               <Route exact path='/produse/:id'  element={
-              <LoginContext.Provider  value={{ userName, setUserName, setDisplayBucatar, setDisplayAdmin }} >
+              <LoginContext.Provider  value={{ userName, setUserName, setDisplayVanzator, setDisplayAdmin }} >
                   {(displayVanzator || displayAdmin) ? <ProductDetails /> : <Login />}
               </LoginContext.Provider>} />
 
@@ -130,7 +129,7 @@ function App() {
                 {(displayBucatar || displayAdmin) ? <Laboratory /> : <Login />}
               </LoginContext.Provider>} />
 
-              <Route exact path='/stoc_produse' element={
+              <Route exact path='/stoc_produs' element={
               <LoginContext.Provider  value={{ userName, setUserName, setDisplayAdmin  }} >
                 {displayAdmin ? <StocProduse /> : <Login />}
               </LoginContext.Provider>} />

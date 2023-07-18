@@ -127,7 +127,7 @@ return (
         <Button variant="contained" color="success" href = {`/achizitii/add`} startIcon={<AddIcon />}>Achizitie noua</Button>
                                                                              
     </Box>
-    <div style={{paddingBottom:20}}>
+    {/* <div style={{paddingBottom:20}}>
       <FormControl style={{minWidth: 220}}>
       <InputLabel >Furnizor</InputLabel>
       <Select label="Produsul comandat"
@@ -138,7 +138,7 @@ return (
                     ))}
       </Select>
       </FormControl>
-      </div>
+      </div> */}
      
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table">
@@ -177,9 +177,9 @@ return (
                 <Tooltip title="Sterge">
                   <DeleteIcon /></Tooltip>
                 </Button>
-                <Button><Tooltip title="Editeaza">
+                {/* <Button><Tooltip title="Editeaza">
                   <EditIcon /></Tooltip>
-                </Button>
+                </Button> */}
               </TableCell>
             </TableRow>
           ))}
